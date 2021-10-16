@@ -52,6 +52,22 @@ public class Container : MonoBehaviour
             }
         }
 
-        
+        else if (this.gameObject.name == "Container (2)")
+        {
+            //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
+            if (col.gameObject.tag == "Red" && !dc.isDragActive)
+            {
+                Debug.Log("Correct Item");
+                Destroy(col.gameObject);
+            }
+            else if (col.gameObject.tag != "Red" && !dc.isDragActive)
+            {
+                Debug.Log("Wrong Item");
+                Destroy(col.gameObject);
+            }
+        }
+
+
+
     }
 }
