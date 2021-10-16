@@ -6,8 +6,8 @@ public class Container : MonoBehaviour
 {
     public DragController dc;
     GameManager gm;
-    public int addedtime = 5;
-    public int losttime = 5;
+    public int addedtime = 3;
+    public int losttime = 10;
     // Start is called before the first frame update
     void Start()
     {

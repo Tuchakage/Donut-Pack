@@ -540,8 +540,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dc: {fileID: 0}
-  addedtime: 5
-  losttime: 5
+  addedtime: 3
+  losttime: 10
 --- !u!58 &559235326
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1058,8 +1058,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dc: {fileID: 0}
-  addedtime: 5
-  losttime: 5
+  addedtime: 3
+  losttime: 10
 --- !u!1 &1569392702
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,8 +1092,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dc: {fileID: 0}
-  addedtime: 5
-  losttime: 5
+  addedtime: 3
+  losttime: 10
 --- !u!58 &1569392704
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1452,4 +1452,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timertext: {fileID: 1902964320}
-  timeRemaining: 10
+  timeRemaining: 120
