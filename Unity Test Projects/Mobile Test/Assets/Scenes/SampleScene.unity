@@ -597,7 +597,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.93333334, g: 0.64705884, b: 0.653099, a: 1}
   m_FlipX: 0
@@ -1019,7 +1019,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.6556604, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1149,7 +1149,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: -2413806693520163455, guid: 4adeaf2d2b1c7417e89f026626d8264f, type: 3}
   m_Color: {r: 0.9339623, g: 0.9271396, b: 0.64760596, a: 1}
   m_FlipX: 0
@@ -1453,3 +1453,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timertext: {fileID: 1902964320}
   timeRemaining: 120
+  popupText: {fileID: 3157555354826601723, guid: 30623210fd551b940809ae1d213e3e2b, type: 3}

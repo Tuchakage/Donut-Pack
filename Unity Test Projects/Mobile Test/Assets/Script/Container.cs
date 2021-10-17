@@ -34,14 +34,14 @@ public class Container : MonoBehaviour
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
-                gm.addTime(addedtime);
+                gm.addTime(addedtime, this.transform.position);
             }
             else if (col.gameObject.tag != "Blue" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
-                gm.loseTime(losttime);
+                gm.loseTime(losttime, this.transform.position);
             }
         }
         else if (this.gameObject.name == "Container (1)")
@@ -52,14 +52,14 @@ public class Container : MonoBehaviour
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
-                gm.addTime(addedtime);
+                gm.addTime(addedtime, this.transform.position);
             }
             else if (col.gameObject.tag != "Yellow" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
-                gm.loseTime(losttime);
+                gm.loseTime(losttime, this.transform.position);
             }
         }
 
@@ -71,14 +71,14 @@ public class Container : MonoBehaviour
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
-                gm.addTime(addedtime);
+                gm.addTime(addedtime, this.transform.position);
             }
             else if (col.gameObject.tag != "Red" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
-                gm.loseTime(losttime);
+                gm.loseTime(losttime, this.transform.position);
             }
         }
 
