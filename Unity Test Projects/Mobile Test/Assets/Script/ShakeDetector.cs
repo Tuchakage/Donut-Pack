@@ -13,6 +13,8 @@ public class ShakeDetector : MonoBehaviour
     private float sqrShakeDetectionThreshold;
     private float timeSinceLastShake;
 
+    //The GameObject assigned here will be the pop up timer text that will spawn in
+    public GameObject popupText;
     private PhysicsController physicsController;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,12 @@ public class ShakeDetector : MonoBehaviour
         {
             physicsController.ShakeRigidbodies(Input.acceleration);
             timeSinceLastShake = Time.unscaledTime;
+        }
+
+        if (Input.acceleration.sqrMagnitude >= 5) 
+        {
+            Debug.Log("Hi");
+            TimeIndicator indicator = Instantiate(popupText, new Vector3(2 * 2.0F, 0, 0), Quaternion.identity).GetComponent<TimeIndicator>();
         }
     }
 }
