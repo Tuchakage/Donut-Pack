@@ -14,7 +14,7 @@ public class ShakeDetector : MonoBehaviour
     private float timeSinceLastShake;
 
     //The GameObject assigned here will be the pop up timer text that will spawn in
-    public GameObject popupText;
+    public GameObject Sprinkles;
     private PhysicsController physicsController;
     // Start is called before the first frame update
     void Start()
@@ -32,10 +32,10 @@ public class ShakeDetector : MonoBehaviour
             timeSinceLastShake = Time.unscaledTime;
         }
 
-        if (Input.acceleration.sqrMagnitude >= 5) 
+        if (Input.acceleration.sqrMagnitude >= 25) 
         {
             Debug.Log("Hi");
-            TimeIndicator indicator = Instantiate(popupText, new Vector3(2 * 2.0F, 0, 0), Quaternion.identity).GetComponent<TimeIndicator>();
+            TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(-4, 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
         }
     }
 }
