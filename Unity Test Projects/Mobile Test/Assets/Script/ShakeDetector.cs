@@ -26,6 +26,7 @@ public class ShakeDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (Input.acceleration.sqrMagnitude >= sqrShakeDetectionThreshold && Time.unscaledTime >= timeSinceLastShake + MinShakeInterval) 
         {
             physicsController.ShakeRigidbodies(Input.acceleration);
@@ -34,8 +35,9 @@ public class ShakeDetector : MonoBehaviour
 
         if (Input.acceleration.sqrMagnitude >= 25) 
         {
-            Debug.Log("Hi");
-            TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(-4, 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
+            Debug.Log("Shake Detected");
+            //Randomly spawns in Sprinkles between 2 points
+            TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-3.89f, 3.24f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
         }
     }
 }
