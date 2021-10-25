@@ -8,6 +8,8 @@ TagManager:
   - Blue
   - Yellow
   - Red
+  - GoodMilk
+  - BadMilk
   layers:
   - Default
   - TransparentFX

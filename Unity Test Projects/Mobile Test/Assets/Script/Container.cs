@@ -8,6 +8,7 @@ public class Container : MonoBehaviour
     GameManager gm;
     public int addedtime = 3;
     public int losttime = 10;
+    public int spoiledlosttime = 15;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,6 +80,33 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+            }
+        }
+
+        else if (this.gameObject.name == "Measuring Cup")
+        {
+            //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
+            if (col.gameObject.tag == "GoodMilk" && !dc.isDragActive)
+            {
+                Debug.Log("Correct Item");
+                Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
+            }
+            else if (col.gameObject.tag != "GoodMilk" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            {
+                Debug.Log("Wrong Item");
+                Destroy(col.gameObject);
+                //If you put the wrong object into the wrong container then you lose time
+                gm.loseTime(losttime, this.transform.position);
+            }
+
+            if (col.gameObject.tag == "BadMilk" && !dc.isDragActive)
+            {
+                Debug.Log("You Put Spoiled Milk in the measuring cup!");
+                Destroy(col.gameObject);
+                //If you put spoiled item in the container
+                gm.loseTime(spoiledlosttime, this.transform.position);
             }
         }
 
