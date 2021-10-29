@@ -278,7 +278,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.VRModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.WindModule.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/Variations/il2cpp/Managed/UnityEngine.XRModule.dll"
--r:"D:/Users/tucha/Documents/GitHub/Donut-Pack/Unity Test Projects/Mobile Test/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll"
+-r:"C:/Users/hbahe/Documents/Repo/Donut-Pack/Unity Test Projects/Mobile Test/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/AOT/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.2D.Animation.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.2D.Animation.Triangle.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.2D.Common.Runtime.ref.dll"
@@ -301,6 +301,9 @@
 "Assets/Script/PhysicsController.cs"
 "Assets/Script/ShakeDetector.cs"
 "Assets/Script/TimeIndicator.cs"
+"Assets/Scripts/Camera/CameraFollow.cs"
+"Assets/Scripts/Conveyor/MovingConveyor.cs"
+"Assets/Scripts/RollaBall/SwipeControls.cs"
 -langversion:8.0
 
 /deterministic

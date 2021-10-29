@@ -6,7 +6,6 @@ ScriptsOnlyBuild:
     - Draggable
     - GameManager
     - ItemSpawner
-    - ParticleCollision
     - PhysicsController
     - ShakeDetector
     - TimeIndicator
@@ -14,6 +13,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
@@ -27,6 +27,7 @@ ScriptsOnlyBuild:
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
     Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
@@ -34,6 +35,8 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.Editor.dll:
+    - TimelinePreferences
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -85,39 +88,39 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 1872}
+      Script: {instanceID: 1896}
     - Class: 114
-      Script: {instanceID: 2206}
+      Script: {instanceID: 2230}
     - Class: 114
-      Script: {instanceID: 2254}
+      Script: {instanceID: 2278}
     - Class: 114
-      Script: {instanceID: 2486}
+      Script: {instanceID: 2510}
     - Class: 114
-      Script: {instanceID: 2678}
+      Script: {instanceID: 2704}
     - Class: 114
-      Script: {instanceID: 2838}
+      Script: {instanceID: 2864}
     - Class: 114
-      Script: {instanceID: 2884}
+      Script: {instanceID: 2910}
     - Class: 114
-      Script: {instanceID: 3054}
+      Script: {instanceID: 3080}
     - Class: 114
-      Script: {instanceID: 3300}
+      Script: {instanceID: 3326}
     - Class: 114
-      Script: {instanceID: 3622}
+      Script: {instanceID: 3648}
     - Class: 114
-      Script: {instanceID: 3694}
+      Script: {instanceID: 3720}
     - Class: 114
-      Script: {instanceID: 4012}
+      Script: {instanceID: 4038}
     - Class: 114
-      Script: {instanceID: 4256}
+      Script: {instanceID: 4282}
     - Class: 114
-      Script: {instanceID: 4560}
+      Script: {instanceID: 4586}
     - Class: 114
-      Script: {instanceID: 4758}
+      Script: {instanceID: 4784}
     - Class: 114
-      Script: {instanceID: 5132}
+      Script: {instanceID: 5158}
     - Class: 114
-      Script: {instanceID: 5542}
+      Script: {instanceID: 5570}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -135,45 +138,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    Assets/Scenes/Shake.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 58
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 2206}
-    - Class: 114
-      Script: {instanceID: 3926}
-    - Class: 114
-      Script: {instanceID: 4560}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 198
-      Script: {instanceID: 0}
-    - Class: 199
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -206,6 +170,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: add23ce7fbed85f38ae92f634c94ad95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow
   - hash:
       serializedVersion: 2
       Hash: 61f2059db36c32396c3d12077855592b
@@ -332,6 +302,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
+  - hash:
+      serializedVersion: 2
+      Hash: 3e31c38c8dc6aa5d1f84a8da86eea33c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SwipeControls
   - hash:
       serializedVersion: 2
       Hash: 06fa49a6e484b4c3e67d41ed9b03d996
@@ -760,6 +736,12 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
+      Hash: 49724c757dc78b878f977fa541fc5852
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MovingConveyor
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -797,6 +779,5 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  - Assets/Scenes/Shake.unity
-  playerPath: D:/Users/tucha/Documents/GitHub/Donut-Pack/Unity Test Projects/Build
-    Version/Prototype.aab
+  playerPath: C:/Users/hbahe/Documents/Repo/Donut-Pack/Unity Test Projects/Mobile
+    Test/Builds/DonutGame.aab

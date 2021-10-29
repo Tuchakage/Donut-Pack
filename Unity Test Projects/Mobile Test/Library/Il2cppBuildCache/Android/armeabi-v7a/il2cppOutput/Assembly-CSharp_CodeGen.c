@@ -98,7 +98,31 @@ extern void TimeIndicator_Update_mF98D8382F4E806D13294DBE031F900AB61F61F26 (void
 extern void TimeIndicator_SetTimeText_m3A4D85CD38508614487EFAC72A6793F748936377 (void);
 // 0x0000002B System.Void TimeIndicator::.ctor()
 extern void TimeIndicator__ctor_mCAE9047A9A0E70214343C614B8993AC602BD4DFE (void);
-static Il2CppMethodPointer s_methodPointers[43] = 
+// 0x0000002C System.Void CameraFollow::FixedUpdate()
+extern void CameraFollow_FixedUpdate_mFECF5648CF148E8FAA66C90BFB5F694E66DC9AB1 (void);
+// 0x0000002D System.Void CameraFollow::.ctor()
+extern void CameraFollow__ctor_m29F88CCFD2ED12A7BCC75A9BBA892CEF179C83DE (void);
+// 0x0000002E System.Void MovingConveyor::Start()
+extern void MovingConveyor_Start_m2F39731B8F177DEB9B05E733C40E61616B9C8B08 (void);
+// 0x0000002F System.Void MovingConveyor::Update()
+extern void MovingConveyor_Update_m5F533ABF85C0FAD298C7A7C6B70B9B1BC77625B2 (void);
+// 0x00000030 System.Void MovingConveyor::OnCollisionEnter2D(UnityEngine.Collision2D)
+extern void MovingConveyor_OnCollisionEnter2D_m8CBC3CF6485E83F14F3ED4D128E1B99E4E1B572C (void);
+// 0x00000031 System.Void MovingConveyor::OnCollisionExit2D(UnityEngine.Collision2D)
+extern void MovingConveyor_OnCollisionExit2D_mF235495DEADC005AB133F1AE2F5676114FC76ED7 (void);
+// 0x00000032 System.Void MovingConveyor::.ctor()
+extern void MovingConveyor__ctor_mBDC834583EB54BF757C1BA3BE73C0BFD77E6109D (void);
+// 0x00000033 System.Void SwipeControls::Start()
+extern void SwipeControls_Start_m1BD14C44D69140490B320465BED4A4B28D195804 (void);
+// 0x00000034 System.Void SwipeControls::Update()
+extern void SwipeControls_Update_mE66A20C57B7D8E8C9BAABF117AD3D4F2B3345DED (void);
+// 0x00000035 System.Void SwipeControls::Swipe()
+extern void SwipeControls_Swipe_m9393D81440E2F7A7487A23611EA8B41B431A75E9 (void);
+// 0x00000036 System.Void SwipeControls::IncreaseSize()
+extern void SwipeControls_IncreaseSize_m297C38FB90A938266EFAEDF21C5BD7BD9D78879C (void);
+// 0x00000037 System.Void SwipeControls::.ctor()
+extern void SwipeControls__ctor_m3E0AA3227462380B9DA638C1F294D5434344C3F6 (void);
+static Il2CppMethodPointer s_methodPointers[55] = 
 {
 	CircleRotate_Start_mC68E4EABE12B5020C0F728CDAB9ADFD049575B5C,
 	CircleRotate_Update_mB1056439ED2467D1C96F1EDE44241406B82E71AF,
@@ -143,59 +167,83 @@ static Il2CppMethodPointer s_methodPointers[43] =
 	TimeIndicator_Update_mF98D8382F4E806D13294DBE031F900AB61F61F26,
 	TimeIndicator_SetTimeText_m3A4D85CD38508614487EFAC72A6793F748936377,
 	TimeIndicator__ctor_mCAE9047A9A0E70214343C614B8993AC602BD4DFE,
+	CameraFollow_FixedUpdate_mFECF5648CF148E8FAA66C90BFB5F694E66DC9AB1,
+	CameraFollow__ctor_m29F88CCFD2ED12A7BCC75A9BBA892CEF179C83DE,
+	MovingConveyor_Start_m2F39731B8F177DEB9B05E733C40E61616B9C8B08,
+	MovingConveyor_Update_m5F533ABF85C0FAD298C7A7C6B70B9B1BC77625B2,
+	MovingConveyor_OnCollisionEnter2D_m8CBC3CF6485E83F14F3ED4D128E1B99E4E1B572C,
+	MovingConveyor_OnCollisionExit2D_mF235495DEADC005AB133F1AE2F5676114FC76ED7,
+	MovingConveyor__ctor_mBDC834583EB54BF757C1BA3BE73C0BFD77E6109D,
+	SwipeControls_Start_m1BD14C44D69140490B320465BED4A4B28D195804,
+	SwipeControls_Update_mE66A20C57B7D8E8C9BAABF117AD3D4F2B3345DED,
+	SwipeControls_Swipe_m9393D81440E2F7A7487A23611EA8B41B431A75E9,
+	SwipeControls_IncreaseSize_m297C38FB90A938266EFAEDF21C5BD7BD9D78879C,
+	SwipeControls__ctor_m3E0AA3227462380B9DA638C1F294D5434344C3F6,
 };
-static const int32_t s_InvokerIndices[43] = 
+static const int32_t s_InvokerIndices[55] = 
 {
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1410,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1432,
-	807,
-	807,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1410,
-	1734,
-	1456,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	1734,
-	805,
-	1734,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1408,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1430,
+	806,
+	806,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1408,
+	1731,
+	1454,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	804,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1408,
+	1408,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
+	1731,
 };
 extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	43,
+	55,
 	s_methodPointers,
 	0,
 	NULL,
