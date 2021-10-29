@@ -1626,7 +1626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _movingSpeed: 200
-  _moveDir: {x: 1, y: 0, z: 0}
+  _moveDir: {x: 0, y: 1, z: 0}
   _onBelt: []
 --- !u!61 &1659369610
 BoxCollider2D:
