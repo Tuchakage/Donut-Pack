@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7967075311334604006}
   m_Layer: 0
   m_Name: yeastbag
-  m_TagString: Untagged
+  m_TagString: GoodYeast
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

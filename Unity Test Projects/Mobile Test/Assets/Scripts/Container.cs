@@ -18,10 +18,9 @@ public class Container : MonoBehaviour
 
     }
 
-    void OnTriggerStay2D(Collider2D col) 
+    void OnTriggerStay2D(Collider2D col)
     {
-        
-        if (this.gameObject.name == "Measuring Cup")
+        if (this.gameObject.name == "Measuring Cup")//If the gameObject this script is on is the Measuring Cup
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
             if (col.gameObject.tag == "GoodMilk" && !dc.isDragActive)
@@ -39,8 +38,37 @@ public class Container : MonoBehaviour
                 gm.loseTime(losttime, this.transform.position);
             }
         }
+        else if (this.gameObject.name == "Bin") //If the gameObject this script is on is the bin
+        {
+            //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
+            if (col.gameObject.tag == "BadItems" && !dc.isDragActive)
+            {
+                Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
 
+            }
+            else if (col.gameObject.tag != "BadItems" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            {
+                Destroy(col.gameObject);
+                //If you put the wrong object into the wrong container then you lose time
+                gm.loseTime(losttime, this.transform.position);
+            }
 
+            if (dc.isDragActive) //If the player is hovering an item over the bin
+            {
+                //Enable the Bin Open Game Object
+                this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            }
+        }
+    }
 
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (this.gameObject.name == "Bin") //If the gameObject this script is on is the bin
+        {
+            //Disables the Bin Open Game Object when the item leaves the collider of the bin
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
     }
 }

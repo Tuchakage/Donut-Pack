@@ -5,11 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Draggable
-  - Blue
-  - Yellow
-  - Red
   - GoodMilk
-  - BadMilk
+  - GoodYeast
+  - BadItems
   layers:
   - Default
   - TransparentFX
