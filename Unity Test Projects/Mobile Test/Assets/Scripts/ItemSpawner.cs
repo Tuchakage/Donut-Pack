@@ -38,7 +38,7 @@ public class ItemSpawner : MonoBehaviour
         {
             RandomiseItem();
             //Spawn in another random item
-            Instantiate(Items[rand], new Vector3(Random.Range(-3.89f, 3.24f), -3, 0), Quaternion.identity);
+            Instantiate(Items[rand], new Vector3(Random.Range(-0.59f, 1.37f), 4.18f, 0), Quaternion.identity);
 
             //Once the other item has spawned reset the timer with the value inside the cooldownTillNextItem variable
             timer = cooldownTillNextItem;
