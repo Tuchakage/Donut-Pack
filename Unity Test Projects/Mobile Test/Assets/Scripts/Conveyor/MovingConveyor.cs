@@ -24,12 +24,12 @@ public class MovingConveyor : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         _onBelt.Add(other.gameObject);
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         _onBelt.Remove(other.gameObject);
     }
