@@ -8,6 +8,10 @@ TagManager:
   - GoodMilk
   - GoodYeast
   - BadItems
+  - GoodSalt
+  - GoodSugar
+  - GoodFlour
+  - BadFlour
   layers:
   - Default
   - TransparentFX
