@@ -333,7 +333,6 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/CircleRotate.cs"
-"Assets/Scripts/Bin.cs"
 "Assets/Scripts/Camera/CameraFollow.cs"
 "Assets/Scripts/CircleRot.cs"
 "Assets/Scripts/Container.cs"

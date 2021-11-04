@@ -2190,7 +2190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2059f565e2de33d4bb4e7aaba9394b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movingSpeed: 500
+  _movingSpeed: 50
   _moveDir: {x: 0, y: -1, z: 0}
   _onBelt: []
 --- !u!61 &1956489524
