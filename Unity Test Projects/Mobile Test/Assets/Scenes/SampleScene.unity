@@ -315,11 +315,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 95
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 95
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -723,7 +723,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.22069883, y: 0.091399625}
@@ -889,6 +889,7 @@ GameObject:
   - component: {fileID: 1098739601}
   - component: {fileID: 1098739600}
   - component: {fileID: 1098739602}
+  - component: {fileID: 1098739603}
   m_Layer: 0
   m_Name: SUGARBOWL
   m_TagString: Untagged
@@ -978,6 +979,22 @@ MonoBehaviour:
   addedtime: 3
   losttime: 10
   spoiledlosttime: 15
+--- !u!70 &1098739603
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098739599}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 5.14, y: 4.83}
+  m_Direction: 0
 --- !u!1 &1298071433
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,12 +1024,12 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.06637335, y: 0.016595125}
+  m_Offset: {x: -0.11633857, y: 0.016594892}
   serializedVersion: 2
-  m_Radius: 2.234819
+  m_Radius: 2.1848536
 --- !u!114 &1298071435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1535,7 +1552,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -37, y: 0}
-  m_SizeDelta: {x: 119.52002, y: 30}
+  m_SizeDelta: {x: 319.5273, y: 122.55}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1591410362
 MonoBehaviour:
@@ -1708,6 +1725,7 @@ GameObject:
   - component: {fileID: 1812024837}
   - component: {fileID: 1812024836}
   - component: {fileID: 1812024838}
+  - component: {fileID: 1812024839}
   m_Layer: 0
   m_Name: saltbowl
   m_TagString: Untagged
@@ -1797,6 +1815,22 @@ MonoBehaviour:
   addedtime: 3
   losttime: 10
   spoiledlosttime: 15
+--- !u!70 &1812024839
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812024835}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 5.39, y: 5.13}
+  m_Direction: 0
 --- !u!1 &1846418531
 GameObject:
   m_ObjectHideFlags: 0
@@ -1893,7 +1927,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.08216834, y: -0.7230771}
@@ -1960,7 +1994,7 @@ RectTransform:
   m_AnchorMin: {x: 0.06046306, y: 1}
   m_AnchorMax: {x: 0.06046306, y: 1}
   m_AnchoredPosition: {x: -0.6999512, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 2152.6772, y: 353.9267}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1902964320
 MonoBehaviour:
@@ -2009,8 +2043,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 197.6
+  m_fontSizeBase: 197.6
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

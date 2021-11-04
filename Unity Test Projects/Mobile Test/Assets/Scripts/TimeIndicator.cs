@@ -28,7 +28,7 @@ public class TimeIndicator : MonoBehaviour
         //Distance the timer pop up text will go
         float dist = Random.Range(minDist, maxDist);
         //The target position the timer pop up text needs to go to
-        targetPos = iniPos + (Quaternion.Euler(0, 0, direction) * new Vector3(dist, dist, 0f));
+        targetPos = iniPos + (Quaternion.Euler(0, 0, -direction) * new Vector3(dist, dist, 0f));
         //Finds the GameManager script in the scene
         gm = GameObject.Find("GameplayController").GetComponent<GameManager>();
 

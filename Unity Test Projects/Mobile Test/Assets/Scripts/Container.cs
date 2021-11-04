@@ -29,6 +29,7 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+                Debug.Log(this.gameObject + " Used");
             }
             else if (col.gameObject.tag != "GoodMilk" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -38,6 +39,85 @@ public class Container : MonoBehaviour
                 gm.loseTime(losttime, this.transform.position);
             }
         }
+        else if (this.gameObject.name == "YeastBowl") //If the gameObject this script is on is the Yeast bowl
+        {
+            //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
+            if (col.gameObject.tag == "GoodYeast" && !dc.isDragActive)
+            {
+                Debug.Log("Correct Item");
+                Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
+                Debug.Log(this.gameObject + " Used");
+            }
+            else if (col.gameObject.tag != "GoodYeast" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            {
+                Debug.Log("Wrong Item");
+                Destroy(col.gameObject);
+                //If you put the wrong object into the wrong container then you lose time
+                gm.loseTime(losttime, this.transform.position);
+            }
+        }
+        else if (this.gameObject.name == "saltbowl") //If the gameObject this script is on is the Salt bowl
+        {
+            //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
+            if (col.gameObject.tag == "GoodSalt" && !dc.isDragActive)
+            {
+                Debug.Log("Correct Item");
+                Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
+                Debug.Log(this.gameObject + " Used");
+            }
+            else if (col.gameObject.tag != "GoodSalt" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            {
+                Debug.Log("Wrong Item");
+                Destroy(col.gameObject);
+                //If you put the wrong object into the wrong container then you lose time
+                gm.loseTime(losttime, this.transform.position);
+            }
+        }
+
+        else if (this.gameObject.name == "SUGARBOWL") //If the gameObject this script is on is the Sugar bowl
+        {
+            //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
+            if (col.gameObject.tag == "GoodSugar" && !dc.isDragActive)
+            {
+                Debug.Log("Correct Item");
+                Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
+                Debug.Log(this.gameObject + " Used");
+            }
+            else if (col.gameObject.tag != "GoodSugar" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            {
+                Debug.Log("Wrong Item");
+                Destroy(col.gameObject);
+                //If you put the wrong object into the wrong container then you lose time
+                gm.loseTime(losttime, this.transform.position);
+            }
+        }
+
+        else if (this.gameObject.name == "Wide Bowl") //If the gameObject this script is on is the Flour bowl
+        {
+            //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
+            if (col.gameObject.tag == "GoodFlour" && !dc.isDragActive)
+            {
+                Debug.Log("Correct Item");
+                Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
+                Debug.Log(this.gameObject + " Used");
+            }
+            else if (col.gameObject.tag != "GoodFlour" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            {
+                Debug.Log("Wrong Item");
+                Destroy(col.gameObject);
+                //If you put the wrong object into the wrong container then you lose time
+                gm.loseTime(losttime, this.transform.position);
+            }
+        }
+
         else if (this.gameObject.name == "Bin") //If the gameObject this script is on is the bin
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
@@ -46,6 +126,7 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+                Debug.Log(this.gameObject + " used");
 
             }
             else if (col.gameObject.tag != "BadItems" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
@@ -53,6 +134,7 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+                Debug.Log(this.gameObject + " used but wrong");
             }
 
             if (dc.isDragActive) //If the player is hovering an item over the bin
