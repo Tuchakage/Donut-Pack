@@ -991,7 +991,7 @@ GameObject:
   - component: {fileID: 1298071435}
   - component: {fileID: 1298071434}
   m_Layer: 0
-  m_Name: Bowl
+  m_Name: YeastBowl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1070,7 +1070,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 4851750565431800638, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6f6c772b7beee3949b360e65de16a6fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1443,7 +1443,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: d274f3852a903e948afe313aa38171c5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a9b0e594c554bd4478134bc9da7eebed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
