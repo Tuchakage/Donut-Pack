@@ -15,6 +15,10 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Roll-A-Ball Test");
     }
 
+    public void PlayLevel3() 
+    {
+        SceneManager.LoadScene("Shake");
+    }
     public void QuitGame()
     {
         Application.Quit();
