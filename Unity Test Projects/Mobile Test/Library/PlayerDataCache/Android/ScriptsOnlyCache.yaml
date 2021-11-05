@@ -18,13 +18,10 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.IK.Runtime.dll:
     - UnityEditor.U2D.IK.IKEditorManagerHelper
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
-    - UnityEditor.Tilemaps.GridPaletteBrushes
-    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -84,23 +81,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1876}
     - Class: 114
-      Script: {instanceID: 2260}
+      Script: {instanceID: 2258}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2684}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3420}
+      Script: {instanceID: 3418}
     - Class: 114
-      Script: {instanceID: 3836}
+      Script: {instanceID: 3834}
     - Class: 114
-      Script: {instanceID: 4768}
+      Script: {instanceID: 4766}
     - Class: 114
-      Script: {instanceID: 5142}
+      Script: {instanceID: 5140}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -145,17 +142,17 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1730}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2530}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2684}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3420}
+      Script: {instanceID: 3418}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -212,35 +209,35 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1876}
     - Class: 114
-      Script: {instanceID: 2212}
+      Script: {instanceID: 2210}
     - Class: 114
-      Script: {instanceID: 2492}
+      Script: {instanceID: 2490}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2684}
     - Class: 114
-      Script: {instanceID: 2846}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 2892}
+      Script: {instanceID: 2890}
     - Class: 114
-      Script: {instanceID: 3062}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3306}
     - Class: 114
-      Script: {instanceID: 3420}
+      Script: {instanceID: 3418}
     - Class: 114
-      Script: {instanceID: 3630}
+      Script: {instanceID: 3628}
     - Class: 114
-      Script: {instanceID: 3702}
+      Script: {instanceID: 3700}
     - Class: 114
-      Script: {instanceID: 4022}
+      Script: {instanceID: 4020}
     - Class: 114
-      Script: {instanceID: 4266}
+      Script: {instanceID: 4264}
     - Class: 114
-      Script: {instanceID: 4570}
+      Script: {instanceID: 4568}
     - Class: 114
-      Script: {instanceID: 5454}
+      Script: {instanceID: 5452}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 5552}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -380,12 +377,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UIElements
     className: PanelEventHandler
-  - hash:
-      serializedVersion: 2
-      Hash: dbb2e05de83f324c30dc7186bfcb1784
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Bin
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb

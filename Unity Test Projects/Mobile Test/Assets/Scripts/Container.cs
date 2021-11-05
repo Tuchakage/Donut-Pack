@@ -29,7 +29,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-                Debug.Log(this.gameObject + " Used");
             }
             else if (col.gameObject.tag != "GoodMilk" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -48,7 +47,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-                Debug.Log(this.gameObject + " Used");
             }
             else if (col.gameObject.tag != "GoodYeast" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -67,7 +65,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-                Debug.Log(this.gameObject + " Used");
             }
             else if (col.gameObject.tag != "GoodSalt" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -87,7 +84,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-                Debug.Log(this.gameObject + " Used");
             }
             else if (col.gameObject.tag != "GoodSugar" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -107,7 +103,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-                Debug.Log(this.gameObject + " Used");
             }
             else if (col.gameObject.tag != "GoodFlour" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -126,7 +121,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-                Debug.Log(this.gameObject + " used");
 
             }
             else if (col.gameObject.tag != "BadItems" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
@@ -134,7 +128,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
-                Debug.Log(this.gameObject + " used but wrong");
             }
 
             if (dc.isDragActive) //If the player is hovering an item over the bin
