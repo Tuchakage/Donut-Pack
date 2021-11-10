@@ -13,7 +13,9 @@ public class SwipeControls : MonoBehaviour
     //Player
     [SerializeField] private Transform _player;
     [SerializeField] private float _playerSpeed;
-    [SerializeField] private Vector2 _desiredPos;
+    [SerializeField] private float _currentSpeed;
+    [SerializeField] private float _maxSpeed;
+    [SerializeField] private Rigidbody2D _rb;
     [SerializeField] private Vector2 _desiredScale;
     [SerializeField] private Vector3 _currentSize;
     [SerializeField] private Vector3 _maxSize;
@@ -32,14 +34,17 @@ public class SwipeControls : MonoBehaviour
     void Update()
     {
         _currentSize = _player.transform.localScale;
+        _currentSpeed = _playerSpeed;
         Swipe();
-
-        _player.transform.position =
-            Vector2.MoveTowards(_player.transform.position, _desiredPos, _playerSpeed * Time.deltaTime);
 
         if (_player.transform.localScale.x >= _maxSize.x)
         {
             _player.transform.localScale = _maxSize;
+        }
+
+        if (_currentSpeed < _maxSpeed)
+        {
+            _playerSpeed = _maxSpeed;
         }
         
     }
@@ -68,14 +73,14 @@ public class SwipeControls : MonoBehaviour
                         if (_lastTouchPos.x > _startTouchPos.x)
                         {
                             //Right Swipe
+                            _rb.velocity = new Vector2(1f, 0f) * _playerSpeed;
                             _touchText.text = "Right";
-                            _desiredPos += Vector2.right;
                         }
                         else
                         {
                             //Left Swipe
+                            _rb.velocity = new Vector2(-1f, 0f) * _playerSpeed;
                             _touchText.text = "Left";
-                            _desiredPos += Vector2.left;
                         }
                     }
                     else
@@ -83,9 +88,10 @@ public class SwipeControls : MonoBehaviour
                         if (_lastTouchPos.y > _startTouchPos.y)
                         {
                             //Up Swipe
-                            _desiredPos += Vector2.up;
+                            _rb.velocity = new Vector2(0f, 1f) *_playerSpeed;
                             _touchText.text = "Up";
                             IncreaseSize();
+                            IncreaseSpeed();
                         }
                         else
                         {
@@ -106,5 +112,10 @@ public class SwipeControls : MonoBehaviour
     private void IncreaseSize()
     {
         _player.transform.localScale += new Vector3(_desiredScale.x, _desiredScale.y, 0);
+    }
+
+    private void IncreaseSpeed()
+    {
+        _playerSpeed -= 0.5f;
     }
 }
