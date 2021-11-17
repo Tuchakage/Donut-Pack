@@ -690,6 +690,7 @@ GameObject:
   - component: {fileID: 739513689}
   - component: {fileID: 739513688}
   - component: {fileID: 739513687}
+  - component: {fileID: 739513691}
   m_Layer: 0
   m_Name: Measuring Cup
   m_TagString: Untagged
@@ -716,6 +717,7 @@ MonoBehaviour:
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
+  amntgoodyeast: 0
 --- !u!70 &739513688
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -798,6 +800,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &739513691
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739513686}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 51f94256f72759349ab2672c7da08c8f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1050223194
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,6 +1006,7 @@ MonoBehaviour:
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
+  amntgoodyeast: 0
 --- !u!70 &1098739603
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1048,13 +1070,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  halffull: {fileID: 0}
-  full: {fileID: 0}
+  spriteRenderer: {fileID: 1298071436}
+  halffull: {fileID: -3270705656231000243, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
+  full: {fileID: -8965498504704500460, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
+  amntgoodyeast: 0
 --- !u!212 &1298071436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1431,6 +1454,7 @@ MonoBehaviour:
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
+  amntgoodyeast: 0
 --- !u!212 &1507854796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1800,6 +1824,7 @@ MonoBehaviour:
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
+  amntgoodyeast: 0
 --- !u!70 &1812024839
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1947,6 +1972,7 @@ MonoBehaviour:
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
+  amntgoodyeast: 0
 --- !u!1 &1902964318
 GameObject:
   m_ObjectHideFlags: 0

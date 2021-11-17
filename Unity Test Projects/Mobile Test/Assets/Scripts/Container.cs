@@ -18,7 +18,7 @@ public class Container : MonoBehaviour
     private int losttime = 10;
     //Amount of good items that go into the right containers
     [SerializeField]
-    private int amntgoodmilk = 0;
+    private int amntgoodmilk, amntgoodyeast;
     
     // Start is called before the first frame update
     void Start()
@@ -72,6 +72,22 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+
+                //Increment this variable
+                amntgoodyeast++;
+                //If the milk container is half way full
+                if (amntgoodyeast == items.maxAmntOfItem / 2)
+                {
+                    //Change into the Sprite with the Yeast bowl half full
+                    spriteRenderer.sprite = halffull;
+                }
+                else if (amntgoodyeast == items.maxAmntOfItem) //If the container is full
+                {
+                    //Change into the Sprite with the Yeast bowl full
+                    spriteRenderer.sprite = full;
+                }
+
+
             }
             else if (col.gameObject.tag != "GoodYeast" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
