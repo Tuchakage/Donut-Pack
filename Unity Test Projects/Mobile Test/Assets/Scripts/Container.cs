@@ -4,17 +4,29 @@ using UnityEngine;
 
 public class Container : MonoBehaviour
 {
+    //For changing the sprites for the containers
+    public SpriteRenderer spriteRenderer;
+    public Sprite halffull;
+    public Sprite full;
+
     public DragController dc;
     GameManager gm;
-    public int addedtime = 3;
-    public int losttime = 10;
-    public int spoiledlosttime = 15;
+    ItemSpawner items;
+    [SerializeField]
+    private int addedtime = 3;
+    [SerializeField]
+    private int losttime = 10;
+    //Amount of good items that go into the right containers
+    [SerializeField]
+    private int amntgoodmilk = 0;
+    
     // Start is called before the first frame update
     void Start()
     {
         //Finds the DragController Game Object and gets the DragController script on it so it can use the variables within
         dc = GameObject.Find("DragController").GetComponent<DragController>();
         gm = GameObject.Find("GameplayController").GetComponent<GameManager>();
+        items = GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>();
 
     }
 
@@ -29,6 +41,19 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+                //Increment this variable
+                amntgoodmilk++;
+                //If the milk container is half way full
+                if (amntgoodmilk == items.maxAmntOfItem / 2)
+                {
+                    //Change into the Sprite with the measuring cup half full
+                    spriteRenderer.sprite = halffull;
+                }
+                else if (amntgoodmilk == items.maxAmntOfItem) //If the container is full
+                {
+                    //Change into the Sprite with the measuring cup full
+                    spriteRenderer.sprite = full;
+                }
             }
             else if (col.gameObject.tag != "GoodMilk" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {

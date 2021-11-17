@@ -709,10 +709,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 739513689}
+  halffull: {fileID: -7491433212776631916, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
+  full: {fileID: 279258095228634330, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
-  spoiledlosttime: 15
+  amntgoodmilk: 0
 --- !u!70 &739513688
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -975,10 +978,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  halffull: {fileID: 0}
+  full: {fileID: 0}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
-  spoiledlosttime: 15
+  amntgoodmilk: 0
 --- !u!70 &1098739603
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1042,10 +1048,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  halffull: {fileID: 0}
+  full: {fileID: 0}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
-  spoiledlosttime: 15
+  amntgoodmilk: 0
 --- !u!212 &1298071436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1415,10 +1424,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  halffull: {fileID: 0}
+  full: {fileID: 0}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
-  spoiledlosttime: 15
+  amntgoodmilk: 0
 --- !u!212 &1507854796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1781,10 +1793,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  halffull: {fileID: 0}
+  full: {fileID: 0}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
-  spoiledlosttime: 15
+  amntgoodmilk: 0
 --- !u!70 &1812024839
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1925,10 +1940,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  halffull: {fileID: 0}
+  full: {fileID: 0}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
-  spoiledlosttime: 15
+  amntgoodmilk: 0
 --- !u!1 &1902964318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2160,7 +2178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2059f565e2de33d4bb4e7aaba9394b46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movingSpeed: 50
+  _movingSpeed: 500
   _moveDir: {x: 0, y: -1, z: 0}
   _onBelt: []
 --- !u!61 &1956489524
@@ -2469,7 +2487,7 @@ MonoBehaviour:
   randY: 7
   randZ: 0
   rand: 0
-  maxAmntOfItem: 3
+  maxAmntOfItem: 4
   timer: 5
   cooldownTillNextItem: 5
 --- !u!4 &2130994175
