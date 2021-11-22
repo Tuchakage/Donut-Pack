@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class TimeIndicator : MonoBehaviour
 {
-    GameManager gm;
     public Text timertext;
     public float lifetime = 0.6f;
     public float minDist = 2f;
@@ -29,8 +28,6 @@ public class TimeIndicator : MonoBehaviour
         float dist = Random.Range(minDist, maxDist);
         //The target position the timer pop up text needs to go to
         targetPos = iniPos + (Quaternion.Euler(0, direction, 0) * new Vector3(dist, dist, 0f));
-        //Finds the GameManager script in the scene
-        gm = GameObject.Find("GameplayController").GetComponent<GameManager>();
 
     }
 
