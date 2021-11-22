@@ -5,19 +5,17 @@ using UnityEngine;
 public class ItemSpawner : MonoBehaviour
 {
     public List <GameObject> Items = new List<GameObject>();
-
     [SerializeField] private float randX, randY, randZ;
 
     [SerializeField]
     private int rand; //Used to Randomise Items
-
+    [SerializeField]
     private int badmilk, goodmilk, goodflour, badflour, sugar, salt, goodyeast, badyeast; //Used to make a counter for each item
 
     public int maxAmntOfItem; //Max amount of an item that can spawn
 
     //Timer that indicates when the next item will spawn
     public float timer;
-
     //This variable indicates the cooldown between each item being spawned in
     public float cooldownTillNextItem;
 
@@ -55,10 +53,10 @@ public class ItemSpawner : MonoBehaviour
     {
         //Randomises the Item that will be spawned
         RandomiseItem();
-        //Adds a counter to the Item that has spawned (Counts how many times the item has spawned)
-        ItemCounter(Items[rand]);
         //Spawns a random item in the Items List
         Instantiate(Items[rand], new Vector3(Random.Range(-randX, randX), randY, randZ), Quaternion.identity);
+        //Adds a counter to the Item that has spawned (Counts how many times the item has spawned)
+        ItemCounter(Items[rand]);
         //Once the other item has spawned reset the timer with the value inside the cooldownTillNextItem variable
         timer = cooldownTillNextItem;
     }
@@ -72,7 +70,7 @@ public class ItemSpawner : MonoBehaviour
     //Count the number of items
     void ItemCounter(GameObject itemObject)
     {
-
+        Debug.Log(itemObject.name);
         //Check Which Item has been spawned
         if (itemObject.name == "GoodMilkPrefab")
         {
@@ -166,6 +164,107 @@ public class ItemSpawner : MonoBehaviour
                 //Remove the Item from the list so it cant be spawned in again
                 Items.RemoveAt(Items.IndexOf(itemObject));
             }
+        }
+    }
+
+    //If an item is put into the wrong container, make sure it can be spawned again
+    public void IncreaseSpawn(GameObject go) 
+    {
+        Debug.Log(go);
+        //Check The Item that is being sent from The "Container" Script
+        if (go.name == "GoodMilkPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (goodmilk == maxAmntOfItem) 
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            goodmilk--;
+
+        }
+        else if (go.name == "BadMilkPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (badmilk == maxAmntOfItem)
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            badmilk--;
+        }
+        else if (go.name == "FlourBagPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (goodflour == maxAmntOfItem)
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            goodflour--;
+        }
+
+        else if (go.name == "BadFlourbagPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (badflour == maxAmntOfItem)
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            badflour--;
+        }
+
+        else if (go.name == "yeastbagPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (goodyeast == maxAmntOfItem)
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            goodyeast--;
+        }
+
+        else if (go.tag == "badyeastPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (badyeast == maxAmntOfItem)
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            badyeast--;
+        }
+
+        else if (go.name == "SugarJarPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (sugar == maxAmntOfItem)
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            sugar--;
+        }
+
+        else if (go.name == "SaltjarPrefab(Clone)")
+        {
+            //Make sure that if the list no longer exists then recreate it
+            if (salt == maxAmntOfItem)
+            {
+                //add the item into the list
+                Items.Add(go);
+            }
+            //Decrease the amount of this item by 1
+            salt--;
         }
     }
 }

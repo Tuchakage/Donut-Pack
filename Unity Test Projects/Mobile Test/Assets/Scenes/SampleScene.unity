@@ -636,6 +636,7 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  isItemWrong: 0
 --- !u!70 &739513688
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -988,6 +989,7 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  isItemWrong: 0
 --- !u!70 &1098739603
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1060,6 +1062,7 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  isItemWrong: 0
 --- !u!212 &1298071436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1438,6 +1441,7 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  isItemWrong: 0
 --- !u!212 &1507854796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1809,6 +1813,7 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  isItemWrong: 0
 --- !u!70 &1812024839
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1959,6 +1964,7 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  isItemWrong: 0
 --- !u!1 &1902964318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2488,18 +2494,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - {fileID: 2949322145179775414, guid: 2800532a2debe78479cf146e95e80cda, type: 3}
-  - {fileID: 2972008579250378493, guid: 065528ade5dc6ae45ab6092e33182256, type: 3}
-  - {fileID: 3362883504307392481, guid: 841d7f1a9d1a85641850786a968e8fbe, type: 3}
-  - {fileID: 7241677531714265566, guid: e85a685362cc7d34aaadb219ec84cf07, type: 3}
-  - {fileID: 5189746939855992771, guid: be480e08d92796b4b9f1089dd9f35621, type: 3}
-  - {fileID: 3235110616768966046, guid: fa2c316d13b2c2248b3cb246165b21cf, type: 3}
-  - {fileID: 4051072609378099360, guid: 8c488daf697b0b649b3f748ea35b24a0, type: 3}
-  - {fileID: 419906755026049141, guid: 0d99b38943bf61548acebc412d95019f, type: 3}
   randX: 0
   randY: 7
   randZ: 0
   rand: 0
-  maxAmntOfItem: 4
+  badmilk: 0
+  goodmilk: 0
+  goodflour: 0
+  badflour: 0
+  sugar: 0
+  salt: 0
+  goodyeast: 0
+  badyeast: 0
+  maxAmntOfItem: 1
   timer: 5
   cooldownTillNextItem: 5
 --- !u!4 &2130994175

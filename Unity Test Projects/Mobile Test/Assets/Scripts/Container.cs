@@ -20,6 +20,8 @@ public class Container : MonoBehaviour
     //Amount of good items that go into the right containers
     [SerializeField]
     private int amntgoodmilk, amntgoodyeast;
+    [SerializeField]
+    private bool isItemWrong; //Check if the item put into the container was the wrong one
     
     // Start is called before the first frame update
     void Start()
@@ -44,6 +46,8 @@ public class Container : MonoBehaviour
                 gm.addTime(addedtime, this.transform.position);
                 //Increment this variable
                 amntgoodmilk++;
+                //Item that was put into this container was right
+                isItemWrong = false;
                 //If the milk container is half way full
                 if (amntgoodmilk == items.maxAmntOfItem / 2)
                 {
@@ -62,6 +66,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+                //Item that was put into this container was wrong
+                isItemWrong = true;
             }
         }
         else if (this.gameObject.name == "Yeast Bowl") //If the gameObject this script is on is the Yeast bowl
@@ -73,7 +79,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-
+                //Item that was put into this container was right
+                isItemWrong = false;
                 //Increment this variable
                 amntgoodyeast++;
                 //If the milk container is half way full
@@ -96,6 +103,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+                //Item that was put into this container was wrong
+                isItemWrong = true;
             }
         }
         else if (this.gameObject.name == "Salt Bowl") //If the gameObject this script is on is the Salt bowl
@@ -107,6 +116,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+                //Item that was put into this container was right
+                isItemWrong = false;
             }
             else if (col.gameObject.tag != "GoodSalt" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -114,6 +125,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+                //Item that was put into this container was wrong
+                isItemWrong = true;
             }
         }
 
@@ -126,6 +139,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+                //Item that was put into this container was right
+                isItemWrong = false;
             }
             else if (col.gameObject.tag != "GoodSugar" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -133,6 +148,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+                //Item that was put into this container was wrong
+                isItemWrong = true;
             }
         }
 
@@ -145,6 +162,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+                //Item that was put into this container was right
+                isItemWrong = false;
             }
             else if (col.gameObject.tag != "GoodFlour" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -152,6 +171,8 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+                //Item that was put into this container was wrong
+                isItemWrong = true;
             }
         }
 
@@ -163,12 +184,16 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
+                //Item that was put into this container was right
+                isItemWrong = false;
             }
             else if (col.gameObject.tag != "BadItems" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
+                //Item that was put into this container was wrong
+                isItemWrong = true;
             }
 
             if (dc.isDragActive) //If the player is hovering an item over the bin
@@ -176,6 +201,19 @@ public class Container : MonoBehaviour
                 //Enable the Bin Open Game Object
                 spriteRenderer.sprite = bin[1];
             }
+        }
+
+        //If the item has been dropped into the container
+        if (!dc.isDragActive) 
+        {
+            //Check if the item that was dropped in was the wrong one
+            if (isItemWrong) 
+            {
+                //Make sure the item can be respawned
+                items.IncreaseSpawn(col.gameObject);
+                Debug.Log(col.gameObject.name + "Dropped into " + this.gameObject.name+ " is wrong!");
+            }
+
         }
     }
 
