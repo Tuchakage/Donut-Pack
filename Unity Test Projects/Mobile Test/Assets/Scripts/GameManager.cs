@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     //This decides whether or not there will be a + or a - infront of the timer pop up text
     bool isLosingTime;
+
+   public int amntContainersComplete; //Indicates how many of the containers have been completed
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +41,12 @@ public class GameManager : MonoBehaviour
             //Makes sure the time is set to 0
             timeRemaining = 0;
             Debug.Log("GAME OVER");
+        }
+        //If all the containers have been filled up, the player has won the game
+        if (amntContainersComplete == 5) 
+        {
+            SceneManager.LoadScene("Roll-A-Ball Test");
+            Debug.Log("GAME COMPLETE");
         }
     }
 

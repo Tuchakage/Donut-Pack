@@ -636,6 +636,9 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  amntsalt: 0
+  amntsugar: 0
+  amntflour: 0
   isItemWrong: 0
 --- !u!70 &739513688
 CapsuleCollider2D:
@@ -989,6 +992,9 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  amntsalt: 0
+  amntsugar: 0
+  amntflour: 0
   isItemWrong: 0
 --- !u!70 &1098739603
 CapsuleCollider2D:
@@ -1062,6 +1068,9 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  amntsalt: 0
+  amntsugar: 0
+  amntflour: 0
   isItemWrong: 0
 --- !u!212 &1298071436
 SpriteRenderer:
@@ -1128,6 +1137,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1332303368
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1332303371}
+  - component: {fileID: 1332303370}
+  - component: {fileID: 1332303369}
+  m_Layer: 0
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1332303369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332303368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18925ec8e1f60e6408d0391e0eb184c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  bin: []
+  halffull: {fileID: 0}
+  full: {fileID: 0}
+  dc: {fileID: 0}
+  addedtime: 3
+  losttime: 10
+  amntgoodmilk: 0
+  amntgoodyeast: 0
+  amntsalt: 0
+  amntsugar: 0
+  amntflour: 0
+  isItemWrong: 0
+--- !u!61 &1332303370
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332303368}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!4 &1332303371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332303368}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.33, y: -6.33, z: -41.334152}
+  m_LocalScale: {x: 64.75398, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1353926017
 GameObject:
@@ -1441,6 +1533,9 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  amntsalt: 0
+  amntsugar: 0
+  amntflour: 0
   isItemWrong: 0
 --- !u!212 &1507854796
 SpriteRenderer:
@@ -1813,6 +1908,9 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  amntsalt: 0
+  amntsugar: 0
+  amntflour: 0
   isItemWrong: 0
 --- !u!70 &1812024839
 CapsuleCollider2D:
@@ -1964,6 +2062,9 @@ MonoBehaviour:
   losttime: 10
   amntgoodmilk: 0
   amntgoodyeast: 0
+  amntsalt: 0
+  amntsugar: 0
+  amntflour: 0
   isItemWrong: 0
 --- !u!1 &1902964318
 GameObject:
@@ -2319,7 +2420,7 @@ GameObject:
   - component: {fileID: 2076381077}
   - component: {fileID: 2076381080}
   m_Layer: 0
-  m_Name: GameplayController
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2386,6 +2487,7 @@ MonoBehaviour:
   timertext: {fileID: 1902964320}
   timeRemaining: 120
   popupText: {fileID: 3157555354826601723, guid: 30623210fd551b940809ae1d213e3e2b, type: 3}
+  amntContainersComplete: 0
 --- !u!1 &2111898872
 GameObject:
   m_ObjectHideFlags: 0
@@ -2494,6 +2596,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Items:
   - {fileID: 2949322145179775414, guid: 2800532a2debe78479cf146e95e80cda, type: 3}
+  - {fileID: 2972008579250378493, guid: 065528ade5dc6ae45ab6092e33182256, type: 3}
+  - {fileID: 3362883504307392481, guid: 841d7f1a9d1a85641850786a968e8fbe, type: 3}
+  - {fileID: 7241677531714265566, guid: e85a685362cc7d34aaadb219ec84cf07, type: 3}
+  - {fileID: 5189746939855992771, guid: be480e08d92796b4b9f1089dd9f35621, type: 3}
+  - {fileID: 3235110616768966046, guid: fa2c316d13b2c2248b3cb246165b21cf, type: 3}
+  - {fileID: 4051072609378099360, guid: 8c488daf697b0b649b3f748ea35b24a0, type: 3}
+  - {fileID: 419906755026049141, guid: 0d99b38943bf61548acebc412d95019f, type: 3}
   randX: 0
   randY: 7
   randZ: 0

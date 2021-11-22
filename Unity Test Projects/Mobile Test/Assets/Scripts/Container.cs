@@ -19,16 +19,16 @@ public class Container : MonoBehaviour
     private int losttime = 10;
     //Amount of good items that go into the right containers
     [SerializeField]
-    private int amntgoodmilk, amntgoodyeast;
+    private int amntgoodmilk, amntgoodyeast,amntsalt,amntsugar,amntflour;
     [SerializeField]
     private bool isItemWrong; //Check if the item put into the container was the wrong one
-    
+    private bool isComplete = false; // Checks if the container is full
     // Start is called before the first frame update
     void Start()
     {
         //Finds the DragController Game Object and gets the DragController script on it so it can use the variables within
         dc = GameObject.Find("DragController").GetComponent<DragController>();
-        gm = GameObject.Find("GameplayController").GetComponent<GameManager>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         items = GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>();
 
     }
@@ -58,6 +58,10 @@ public class Container : MonoBehaviour
                 {
                     //Change into the Sprite with the measuring cup full
                     spriteRenderer.sprite = full;
+                    //The container is full
+                    isComplete = true;
+                    //Tell the Game Manager that a container has been completed
+                    gm.amntContainersComplete++;
                 }
             }
             else if (col.gameObject.tag != "GoodMilk" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
@@ -93,6 +97,10 @@ public class Container : MonoBehaviour
                 {
                     //Change into the Sprite with the Yeast bowl full
                     spriteRenderer.sprite = full;
+                    //Set this container to being complete
+                    isComplete = true;
+                    //Tell the Game Manager that a container has been completed
+                    gm.amntContainersComplete++;
                 }
 
 
@@ -118,6 +126,16 @@ public class Container : MonoBehaviour
                 gm.addTime(addedtime, this.transform.position);
                 //Item that was put into this container was right
                 isItemWrong = false;
+                //Increment this variable 
+                amntsalt++;
+                //If Contrainer is full
+                if (amntsalt == items.maxAmntOfItem)
+                {
+                    //Set this container to being complete
+                    isComplete = true;
+                    //Tell the Game Manager that a container has been completed
+                    gm.amntContainersComplete++;
+                }
             }
             else if (col.gameObject.tag != "GoodSalt" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -141,6 +159,16 @@ public class Container : MonoBehaviour
                 gm.addTime(addedtime, this.transform.position);
                 //Item that was put into this container was right
                 isItemWrong = false;
+                //Increment this variable 
+                amntsugar++;
+                //If Contrainer is full
+                if (amntsugar == items.maxAmntOfItem)
+                {
+                    //Set this container to being complete
+                    isComplete = true;
+                    //Tell the Game Manager that a container has been completed
+                    gm.amntContainersComplete++;
+                }
             }
             else if (col.gameObject.tag != "GoodSugar" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -164,6 +192,16 @@ public class Container : MonoBehaviour
                 gm.addTime(addedtime, this.transform.position);
                 //Item that was put into this container was right
                 isItemWrong = false;
+                //Increment this variable 
+                amntflour++;
+                //If Contrainer is full
+                if (amntflour == items.maxAmntOfItem)
+                {
+                    //Set this container to being complete
+                    isComplete = true;
+                    //Tell the Game Manager that a container has been completed
+                    gm.amntContainersComplete++;
+                }
             }
             else if (col.gameObject.tag != "GoodFlour" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -202,6 +240,14 @@ public class Container : MonoBehaviour
                 spriteRenderer.sprite = bin[1];
             }
         }
+        else if (this.gameObject.name == "Border") // If an item hits the borders of the game
+        {
+            Destroy(col.gameObject);
+            //Set isItemWrong variable to true which means the item can be respawned
+            isItemWrong = true;
+        }
+
+
 
         //If the item has been dropped into the container
         if (!dc.isDragActive) 

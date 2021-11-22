@@ -177,8 +177,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (goodmilk == maxAmntOfItem) 
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("GoodMilkPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             goodmilk--;
@@ -189,8 +191,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (badmilk == maxAmntOfItem)
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("BadMilkPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             badmilk--;
@@ -200,8 +204,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (goodflour == maxAmntOfItem)
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("FlourBagPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             goodflour--;
@@ -212,8 +218,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (badflour == maxAmntOfItem)
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("BadFlourbagPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             badflour--;
@@ -224,8 +232,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (goodyeast == maxAmntOfItem)
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("yeastbagPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             goodyeast--;
@@ -236,8 +246,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (badyeast == maxAmntOfItem)
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("badyeastPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             badyeast--;
@@ -248,8 +260,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (sugar == maxAmntOfItem)
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("SugarJarPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             sugar--;
@@ -260,8 +274,10 @@ public class ItemSpawner : MonoBehaviour
             //Make sure that if the list no longer exists then recreate it
             if (salt == maxAmntOfItem)
             {
+                //Gets the Item from the Resources Folder
+                GameObject item = Resources.Load("SaltjarPrefab") as GameObject;
                 //add the item into the list
-                Items.Add(go);
+                Items.Add(item);
             }
             //Decrease the amount of this item by 1
             salt--;
