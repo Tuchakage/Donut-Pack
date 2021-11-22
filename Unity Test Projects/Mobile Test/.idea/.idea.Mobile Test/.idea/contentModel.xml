@@ -6,12 +6,12 @@
     <e p="C:\Users\hbahe\Documents\Repo\Donut-Pack\Unity Test Projects\Mobile Test" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CircleRotate.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Camera" t="Include">
             <e p="CameraFollow.cs" t="Include" />
           </e>
           <e p="CircleRot.cs" t="Include" />
+          <e p="CircleRotate.cs" t="Include" />
           <e p="Container.cs" t="Include" />
           <e p="Conveyor" t="Include">
             <e p="MovingConveyor.cs" t="Include" />
@@ -27,6 +27,7 @@
           </e>
           <e p="PhysicsController.cs" t="Include" />
           <e p="RollaBall" t="Include">
+            <e p="RockSpawner.cs" t="Include" />
             <e p="SwipeControls.cs" t="Include" />
           </e>
           <e p="ShakeDetector.cs" t="Include" />

@@ -6,6 +6,7 @@ public class Container : MonoBehaviour
 {
     //For changing the sprites for the containers
     public SpriteRenderer spriteRenderer;
+    public Sprite[] bin;
     public Sprite halffull;
     public Sprite full;
 
@@ -63,7 +64,7 @@ public class Container : MonoBehaviour
                 gm.loseTime(losttime, this.transform.position);
             }
         }
-        else if (this.gameObject.name == "YeastBowl") //If the gameObject this script is on is the Yeast bowl
+        else if (this.gameObject.name == "Yeast Bowl") //If the gameObject this script is on is the Yeast bowl
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
             if (col.gameObject.tag == "GoodYeast" && !dc.isDragActive)
@@ -97,7 +98,7 @@ public class Container : MonoBehaviour
                 gm.loseTime(losttime, this.transform.position);
             }
         }
-        else if (this.gameObject.name == "saltbowl") //If the gameObject this script is on is the Salt bowl
+        else if (this.gameObject.name == "Salt Bowl") //If the gameObject this script is on is the Salt bowl
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
             if (col.gameObject.tag == "GoodSalt" && !dc.isDragActive)
@@ -116,7 +117,7 @@ public class Container : MonoBehaviour
             }
         }
 
-        else if (this.gameObject.name == "SUGARBOWL") //If the gameObject this script is on is the Sugar bowl
+        else if (this.gameObject.name == "Sugar Bowl") //If the gameObject this script is on is the Sugar bowl
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
             if (col.gameObject.tag == "GoodSugar" && !dc.isDragActive)
@@ -162,7 +163,6 @@ public class Container : MonoBehaviour
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
-
             }
             else if (col.gameObject.tag != "BadItems" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
             {
@@ -174,7 +174,7 @@ public class Container : MonoBehaviour
             if (dc.isDragActive) //If the player is hovering an item over the bin
             {
                 //Enable the Bin Open Game Object
-                this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+                spriteRenderer.sprite = bin[1];
             }
         }
     }
@@ -184,7 +184,7 @@ public class Container : MonoBehaviour
         if (this.gameObject.name == "Bin") //If the gameObject this script is on is the bin
         {
             //Disables the Bin Open Game Object when the item leaves the collider of the bin
-            this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+            spriteRenderer.sprite = bin[0];
         }
     }
 }
