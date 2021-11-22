@@ -37,10 +37,7 @@ public class PauseGame : MonoBehaviour
     public void RestartLevel()
     {
         Scene scene = SceneManager.GetActiveScene();
-        if (scene.name == "Ingredients") 
-        {
-            SceneManager.LoadScene("Ingredients");
-        }
+        SceneManager.LoadScene(scene.name);
     }
     
 }
