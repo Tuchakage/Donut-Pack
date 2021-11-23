@@ -1841,8 +1841,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 739513689}
   bin: []
-  halffull: {fileID: -7491433212776631916, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
-  full: {fileID: 279258095228634330, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
+  containerFill:
+  - {fileID: 6863246505373101655, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
+  - {fileID: -7491433212776631916, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
+  - {fileID: 279258095228634330, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
@@ -1851,7 +1853,7 @@ MonoBehaviour:
   amntsalt: 0
   amntsugar: 0
   amntflour: 0
-  isItemWrong: 0
+  isComplete: 0
 --- !u!70 &739513688
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3193,8 +3195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   bin: []
-  halffull: {fileID: 0}
-  full: {fileID: 0}
+  containerFill: []
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
@@ -3203,7 +3204,7 @@ MonoBehaviour:
   amntsalt: 0
   amntsugar: 0
   amntflour: 0
-  isItemWrong: 0
+  isComplete: 0
 --- !u!70 &1098739603
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3680,8 +3681,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 1298071436}
   bin: []
-  halffull: {fileID: -3270705656231000243, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
-  full: {fileID: -8965498504704500460, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
+  containerFill:
+  - {fileID: 21300000, guid: 6f6c772b7beee3949b360e65de16a6fa, type: 3}
+  - {fileID: -6883987782544833177, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
+  - {fileID: -8965498504704500460, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
@@ -3690,7 +3693,7 @@ MonoBehaviour:
   amntsalt: 0
   amntsugar: 0
   amntflour: 0
-  isItemWrong: 0
+  isComplete: 0
 --- !u!212 &1298071436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3789,8 +3792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   bin: []
-  halffull: {fileID: 0}
-  full: {fileID: 0}
+  containerFill: []
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
@@ -3799,7 +3801,7 @@ MonoBehaviour:
   amntsalt: 0
   amntsugar: 0
   amntflour: 0
-  isItemWrong: 0
+  isComplete: 0
 --- !u!61 &1332303370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4571,8 +4573,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   bin: []
-  halffull: {fileID: 0}
-  full: {fileID: 0}
+  containerFill: []
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
@@ -4581,7 +4582,7 @@ MonoBehaviour:
   amntsalt: 0
   amntsugar: 0
   amntflour: 0
-  isItemWrong: 0
+  isComplete: 0
 --- !u!212 &1507854796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5527,8 +5528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 0}
   bin: []
-  halffull: {fileID: 0}
-  full: {fileID: 0}
+  containerFill: []
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
@@ -5537,7 +5537,7 @@ MonoBehaviour:
   amntsalt: 0
   amntsugar: 0
   amntflour: 0
-  isItemWrong: 0
+  isComplete: 0
 --- !u!70 &1812024839
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5764,8 +5764,7 @@ MonoBehaviour:
   bin:
   - {fileID: 21300000, guid: 1157921a06bb5354ca370fe78660d45e, type: 3}
   - {fileID: 21300000, guid: 70511c25dd3436e4b9e90d0b23abf0c6, type: 3}
-  halffull: {fileID: 0}
-  full: {fileID: 0}
+  containerFill: []
   dc: {fileID: 0}
   addedtime: 3
   losttime: 10
@@ -5774,7 +5773,7 @@ MonoBehaviour:
   amntsalt: 0
   amntsugar: 0
   amntflour: 0
-  isItemWrong: 0
+  isComplete: 0
 --- !u!1 &1885775726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,9 +6658,9 @@ MonoBehaviour:
   salt: 0
   goodyeast: 0
   badyeast: 0
-  maxAmntOfItem: 1
-  timer: 5
-  cooldownTillNextItem: 5
+  maxAmntOfItem: 2
+  timer: 3
+  cooldownTillNextItem: 3
 --- !u!4 &2130994175
 Transform:
   m_ObjectHideFlags: 0
