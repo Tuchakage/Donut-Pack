@@ -20,13 +20,7 @@ public class GameManager : MonoBehaviour
 
    public int amntContainersComplete; //Indicates how many of the containers have been completed
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+   // Update is called once per frame
     void Update()
     {
         DisplayTime(timeRemaining);

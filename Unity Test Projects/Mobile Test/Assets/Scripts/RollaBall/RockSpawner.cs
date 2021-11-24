@@ -22,9 +22,10 @@ public class RockSpawner : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(-10f, 10f);
+            randX = Random.Range(-5f, 5f);
             spawnPoint = new Vector2(randX, transform.position.y);
             GameObject clone = Instantiate(rocks, spawnPoint, Quaternion.identity);
+            clone.transform.parent = transform;
             Destroy(clone, 6f);
         }
     }

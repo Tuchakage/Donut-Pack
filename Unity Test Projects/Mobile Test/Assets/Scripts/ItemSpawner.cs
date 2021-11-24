@@ -54,7 +54,8 @@ public class ItemSpawner : MonoBehaviour
         //Randomises the Item that will be spawned
         RandomiseItem();
         //Spawns a random item in the Items List
-        Instantiate(Items[rand], new Vector3(Random.Range(-randX, randX), randY, randZ), Quaternion.identity);
+        GameObject item = Instantiate(Items[rand], new Vector3(Random.Range(-randX, randX), randY, randZ), Quaternion.identity);
+        item.transform.parent = transform;
         //Once the other item has spawned reset the timer with the value inside the cooldownTillNextItem variable
         timer = cooldownTillNextItem;
     }

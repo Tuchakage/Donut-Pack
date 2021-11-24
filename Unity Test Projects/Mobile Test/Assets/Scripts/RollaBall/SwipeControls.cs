@@ -42,7 +42,7 @@ public class SwipeControls : MonoBehaviour
             _player.transform.localScale = _maxSize;
         }
 
-        if (_currentSpeed < _maxSpeed)
+        if (_currentSpeed >= _maxSpeed)
         {
             _playerSpeed = _maxSpeed;
         }
@@ -116,6 +116,6 @@ public class SwipeControls : MonoBehaviour
 
     private void IncreaseSpeed()
     {
-        _playerSpeed -= 0.5f;
+        _playerSpeed += 0.5f;
     }
 }

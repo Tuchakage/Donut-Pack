@@ -429,9 +429,9 @@ public class Container : MonoBehaviour
                 spriteRenderer.sprite = bin[1];
             }
         }
-        else if (this.gameObject.name == "Border") // If an item hits the borders of the game
+        else if (this.CompareTag("Border")) // If an item hits the borders of the game
         {
-            Destroy(col.gameObject);
+            Destroy(col.gameObject, 2f);
         }
 
     }
