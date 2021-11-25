@@ -12,6 +12,7 @@ TagManager:
   - GoodSugar
   - GoodFlour
   - Border
+  - Icing
   layers:
   - Default
   - TransparentFX
