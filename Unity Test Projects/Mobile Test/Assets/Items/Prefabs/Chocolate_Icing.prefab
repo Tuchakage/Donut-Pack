@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8485581907788853338}
   m_Layer: 0
   m_Name: Chocolate_Icing
-  m_TagString: Untagged
+  m_TagString: Icing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,12 +74,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1241149153125297529, guid: 7900a94e27fae0149a81f69c5bab57fd, type: 3}
+  m_Sprite: {fileID: 2487949219134205852, guid: 79dbdcd5bb9f73140ad83f2f2d3dda94, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.65, y: 4.39}
+  m_Size: {x: 3.68, y: 4.4314203}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -123,8 +123,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.65, y: 4.39}
-    newSize: {x: 3.65, y: 4.39}
+    oldSize: {x: 3.68, y: 4.4314203}
+    newSize: {x: 3.68, y: 4.4314203}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0

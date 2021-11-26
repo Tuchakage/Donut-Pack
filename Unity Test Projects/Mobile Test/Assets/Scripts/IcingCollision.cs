@@ -24,14 +24,26 @@ public class IcingCollision : MonoBehaviour
         if (col.gameObject.name == "Chocolate_Icing(Clone)") 
         {
             //Make the Donut a Chocolate Donut
-            //spriteRenderer.sprite = Donuts[1];
+            spriteRenderer.sprite = Donuts[1];
             Debug.Log("This is now a Chocolate Donut");
         }
         else if (col.gameObject.name == "Strawberry_Icing(Clone)")
         {
-            //Make the Donut a Chocolate Donut
-            //spriteRenderer.sprite = Donuts[2];
+            //Make the Donut a Strawberry Donut
+            spriteRenderer.sprite = Donuts[2];
             Debug.Log("This is now a Strawberry Donut");
+        }
+        else if (col.gameObject.name == "BlueGlaze_Icing(Clone)")
+        {
+            //Make the Donut a Blue Glaze Donut
+            spriteRenderer.sprite = Donuts[3];
+
+        }
+        else if (col.gameObject.name == "Rainbow_Icing(Clone)")
+        {
+            //Make the Donut a Rainbow Donut
+            spriteRenderer.sprite = Donuts[4];
+
         }
 
         //If any type of icing touches the Donut
@@ -39,6 +51,7 @@ public class IcingCollision : MonoBehaviour
         {
             //Re enable the shaking mechanics
             sd.enabled = true;
+            Destroy(col.gameObject);
         }
     }
 }

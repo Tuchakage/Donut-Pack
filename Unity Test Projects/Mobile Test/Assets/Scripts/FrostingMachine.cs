@@ -25,4 +25,18 @@ public class FrostingMachine : MonoBehaviour
         //Spawn the Strawberry Icing
         Instantiate(Icing[1], spawnLocation.transform.position, Quaternion.identity);
     }
+
+    //Press on Blue Glaze button to activate this function
+    public void SpawnBlueGlazeIcing()
+    {
+        //Spawn in Icing Depending On Button Pressed
+        Instantiate(Icing[2], spawnLocation.transform.position, Quaternion.identity);
+    }
+
+    //Press on Rainbow button to activate this function
+    public void SpawnRainbowIcing()
+    {
+        //Spawn in Icing Depending On Button Pressed
+        Instantiate(Icing[3], spawnLocation.transform.position, Quaternion.identity);
+    }
 }
