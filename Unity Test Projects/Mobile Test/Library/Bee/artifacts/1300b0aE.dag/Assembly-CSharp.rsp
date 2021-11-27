@@ -344,12 +344,12 @@
 "Assets/Scripts/IcingCollision.cs"
 "Assets/Scripts/ItemSpawner.cs"
 "Assets/Scripts/MainMenu.cs"
-"Assets/Scripts/ParticleCollision.cs"
 "Assets/Scripts/Pauses/PauseGame.cs"
 "Assets/Scripts/PhysicsController.cs"
 "Assets/Scripts/RollaBall/RockSpawner.cs"
 "Assets/Scripts/RollaBall/SwipeControls.cs"
 "Assets/Scripts/ShakeDetector.cs"
+"Assets/Scripts/SprinklesCollision.cs"
 "Assets/Scripts/TimeIndicator.cs"
 -langversion:8.0
 

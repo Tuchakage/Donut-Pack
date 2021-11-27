@@ -8,6 +8,8 @@ public class IcingCollision : MonoBehaviour
     SpriteRenderer spriteRenderer;
     [SerializeField]
     private Sprite[] Donuts; //An arroy of the different types of Donuts
+    [SerializeField]
+    private GameObject[] disableElements; //List of Game Objects that need to be disabled when an icing has been chosen for the Donuts
     ShakeDetector sd;
 
     private void Start()
@@ -52,6 +54,11 @@ public class IcingCollision : MonoBehaviour
             //Re enable the shaking mechanics
             sd.enabled = true;
             Destroy(col.gameObject);
+            //Disable all the GameObjects in the "disableElements" array (In this case disable everything related to the icing machine)
+            foreach (GameObject ui in disableElements) 
+            {
+                ui.SetActive(false);
+            }
         }
     }
 }
