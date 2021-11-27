@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    LevelChanger lc; //Script that changes Level
     //The text assigned here will change to the timer
     public TMP_Text timertext;
 
@@ -20,9 +21,12 @@ public class GameManager : MonoBehaviour
 
     public int amntContainersComplete; //Indicates how many of the containers have been completed
 
-    public bool startTimer;
+    public bool startTimer; //For the sprinkles mini games to start the timer
+
+    public bool isGameFinished; //Tells the game when the mini game is finished
     private void Start()
     {
+        lc = GetComponent<LevelChanger>();
         //Only for the shaker scene
         startTimer = false;
         if (SceneManager.GetActiveScene().name == "Shake") 
@@ -37,13 +41,16 @@ public class GameManager : MonoBehaviour
     {
         DisplayTime(timeRemaining);
         //If we are not in the Shaker level
-        if (SceneManager.GetActiveScene().name != "Shake")
+        if (SceneManager.GetActiveScene().name == "Ingredients")
         {
             Timer();
             //If all the containers have been filled up, the player has won the game
             if (amntContainersComplete == 5)
             {
-                SceneManager.LoadScene("Roll-A-Ball Test");
+                //The Game is finished
+                isGameFinished = true;
+                //Tell Level Changer script that the game has been won
+                lc.ShowWinningScreen();
                 Debug.Log("GAME COMPLETE");
             }
         }
@@ -71,6 +78,18 @@ public class GameManager : MonoBehaviour
         {
             //Makes sure the time is set to 0
             timeRemaining = 0;
+            //The Game is finished
+            isGameFinished = true;
+            //If not on the Shaking Scene
+            if (SceneManager.GetActiveScene().name != "Shake")
+            {          
+                lc.ShowLosingScreen();
+            }
+            else //On the Shaking Scene
+            {
+                lc.ShowWinningScreen();
+            }
+
             Debug.Log("GAME OVER");
         }
     }

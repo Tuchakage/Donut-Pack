@@ -344,6 +344,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/IcingCollision.cs"
 "Assets/Scripts/ItemSpawner.cs"
+"Assets/Scripts/LevelChanger.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/Pauses/PauseGame.cs"
 "Assets/Scripts/PhysicsController.cs"
