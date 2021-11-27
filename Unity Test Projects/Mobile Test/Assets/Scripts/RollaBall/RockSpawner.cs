@@ -14,7 +14,7 @@ namespace RollaBall
         private void Start()
         {
             SpawnObstaclesRandom();
-            AddTransformObstacles();
+
         }
 
         public void SpawnObstaclesRandom()
@@ -25,25 +25,6 @@ namespace RollaBall
             GameObject obstacleClone = Instantiate(_obstacles[obstacleIndex], spawnPoints[transformIndex].position, Quaternion.identity);
             obstacleClone.transform.parent = transform;
         }
-
-        public void AddTransformObstacles()
-        {
-            //For each item in the Material list
-            for (int i = 0; i < spawnPoints.Count; i++) 
-            {
-                //Add them into the Dictionary for sprinkle colours
-                spawnPoints.Add(spawnPoints[i]);
-
-                Debug.Log(spawnPoints[i]);
-            }
-            
-            for (int i = 0; i < _obstacles.Count; i++) 
-            {
-                //Add them into the Dictionary for sprinkle colours
-                _obstacles.Add(_obstacles[i]);
-
-                Debug.Log(_obstacles[i]);
-            }
-        }
+        
     }
 }
