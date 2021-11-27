@@ -30,8 +30,10 @@
           </e>
           <e p="PhysicsController.cs" t="Include" />
           <e p="RollaBall" t="Include">
+            <e p="FinishLineScript.cs" t="Include" />
             <e p="RockSpawner.cs" t="Include" />
             <e p="SwipeControls.cs" t="Include" />
+            <e p="TimerController.cs" t="Include" />
           </e>
           <e p="ShakeDetector.cs" t="Include" />
           <e p="SprinklesCollision.cs" t="Include" />

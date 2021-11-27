@@ -14,7 +14,6 @@ namespace RollaBall
         private void Start()
         {
             SpawnObstaclesRandom();
-
         }
 
         public void SpawnObstaclesRandom()

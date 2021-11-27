@@ -12,16 +12,13 @@ public class SwipeControls : MonoBehaviour
 
     //Player
     [SerializeField] private Transform _player;
-    [SerializeField] private float _playerSpeed;
+    public float _playerSpeed;
     [SerializeField] private float _currentSpeed;
     [SerializeField] private float _maxSpeed;
-    [SerializeField] private Rigidbody2D _rb;
+    public Rigidbody2D _rb;
     [SerializeField] private Vector2 _desiredScale;
     [SerializeField] private Vector3 _currentSize;
     [SerializeField] private Vector3 _maxSize;
-
-    //UI
-    [SerializeField] private Text _touchText;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +46,7 @@ public class SwipeControls : MonoBehaviour
         
     }
 
+    //Swipe Controls for the doughball
     private void Swipe()
     {
         if (Input.touchCount > 0)
@@ -74,13 +72,11 @@ public class SwipeControls : MonoBehaviour
                         {
                             //Right Swipe
                             _rb.velocity = new Vector2(1f, 0f) * _playerSpeed;
-                            _touchText.text = "Right";
                         }
                         else
                         {
                             //Left Swipe
                             _rb.velocity = new Vector2(-1f, 0f) * _playerSpeed;
-                            _touchText.text = "Left";
                         }
                     }
                     else
@@ -89,31 +85,26 @@ public class SwipeControls : MonoBehaviour
                         {
                             //Up Swipe
                             _rb.velocity = new Vector2(0f, 1f) *_playerSpeed;
-                            _touchText.text = "Up";
                             IncreaseSize();
                             IncreaseSpeed();
                         }
                         else
                         {
                             //Down Swipe
-                            _touchText.text = "Down";
                         }
                     }
-                }
-                else
-                {
-                    //Tap
-                    _touchText.text = "Tap";
                 }
             }
         }
     }
 
+    //Increase Doughball size
     private void IncreaseSize()
     {
         _player.transform.localScale += new Vector3(_desiredScale.x, _desiredScale.y, 0);
     }
 
+    //Increase doughball speed
     private void IncreaseSpeed()
     {
         _playerSpeed += 0.5f;
