@@ -18,12 +18,49 @@ public class GameManager : MonoBehaviour
     //This decides whether or not there will be a + or a - infront of the timer pop up text
     bool isLosingTime;
 
-   public int amntContainersComplete; //Indicates how many of the containers have been completed
+    public int amntContainersComplete; //Indicates how many of the containers have been completed
 
-   // Update is called once per frame
+    public bool startTimer;
+    private void Start()
+    {
+        //Only for the shaker scene
+        startTimer = false;
+        if (SceneManager.GetActiveScene().name == "Shake") 
+        {
+            //Disable the timer text
+            timertext.enabled = false;
+        }
+    }
+
+    // Update is called once per frame
     void Update()
     {
         DisplayTime(timeRemaining);
+        //If we are not in the Shaker level
+        if (SceneManager.GetActiveScene().name != "Shake")
+        {
+            Timer();
+            //If all the containers have been filled up, the player has won the game
+            if (amntContainersComplete == 5)
+            {
+                SceneManager.LoadScene("Roll-A-Ball Test");
+                Debug.Log("GAME COMPLETE");
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Shake") //If we are in Shaker scene
+        {
+            //When this is set to true then start the timer (Will be set to true by the IcingCollision script)
+            if (startTimer) 
+            {
+                timertext.enabled = true;
+                Timer();
+            }
+        }
+
+    }
+
+    void Timer() 
+    {
         //If the timer is set to something that is more than 0
         if (timeRemaining > 0)
         {
@@ -35,12 +72,6 @@ public class GameManager : MonoBehaviour
             //Makes sure the time is set to 0
             timeRemaining = 0;
             Debug.Log("GAME OVER");
-        }
-        //If all the containers have been filled up, the player has won the game
-        if (amntContainersComplete == 5) 
-        {
-            SceneManager.LoadScene("Roll-A-Ball Test");
-            Debug.Log("GAME COMPLETE");
         }
     }
 

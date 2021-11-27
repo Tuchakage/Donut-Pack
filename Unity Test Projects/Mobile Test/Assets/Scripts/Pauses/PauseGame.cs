@@ -8,6 +8,7 @@ public class PauseGame : MonoBehaviour
 {
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private GameObject _toBeDisabled;
+    public GameObject Sprinkles;
 
     private void Start()
     {
@@ -39,5 +40,12 @@ public class PauseGame : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }
-    
+
+    //JUST HERE TO TEST OUT SPAWNING OFF SPRINKLES
+    public void Spawn()
+    {
+        //Randomly spawns in Sprinkles between 2 points
+        TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-2.52f, 2.88f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
+    }
+
 }

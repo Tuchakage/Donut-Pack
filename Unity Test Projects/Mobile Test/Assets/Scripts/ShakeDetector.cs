@@ -37,7 +37,8 @@ public class ShakeDetector : MonoBehaviour
         {
             Debug.Log("Shake Detected");
             //Randomly spawns in Sprinkles between 2 points
-            TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-3.89f, 3.24f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
+            TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-2.52f, 2.88f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
         }
+        
     }
 }

@@ -11,14 +11,20 @@ public class IcingCollision : MonoBehaviour
     [SerializeField]
     private GameObject[] disableElements; //List of Game Objects that need to be disabled when an icing has been chosen for the Donuts
     ShakeDetector sd;
-
+    [SerializeField]
+    private GameObject sprinkles;
+    GameManager gm;
     private void Start()
     {
         //Get the Sprite Renderer of the GameObject this script is attached to (The Donut Game Object)
         spriteRenderer = GetComponent<SpriteRenderer>();
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>(); 
         sd = GameObject.Find("GameManager").GetComponent<ShakeDetector>();
+
         //Disable the Shaking
         sd.enabled = false;
+        //Disable the Sprinkles Colliders
+        sprinkles.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -53,12 +59,16 @@ public class IcingCollision : MonoBehaviour
         {
             //Re enable the shaking mechanics
             sd.enabled = true;
+            //Re enable Sprinkles Colliders
+            sprinkles.SetActive(true);
             Destroy(col.gameObject);
             //Disable all the GameObjects in the "disableElements" array (In this case disable everything related to the icing machine)
             foreach (GameObject ui in disableElements) 
             {
                 ui.SetActive(false);
             }
+            //Start the timer
+            gm.startTimer = true;
         }
     }
 }
