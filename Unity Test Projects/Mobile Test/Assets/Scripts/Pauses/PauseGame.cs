@@ -45,7 +45,6 @@ public class PauseGame : MonoBehaviour
     public void Spawn()
     {
         //Randomly spawns in Sprinkles between 2 points
-        TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-2.52f, 2.88f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
+        TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-1.85f, 2.6f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
     }
-
 }

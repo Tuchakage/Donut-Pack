@@ -13,6 +13,7 @@ TagManager:
   - GoodFlour
   - Border
   - Icing
+  - Donut
   layers:
   - Default
   - TransparentFX

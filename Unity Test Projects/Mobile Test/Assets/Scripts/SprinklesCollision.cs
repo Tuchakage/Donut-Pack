@@ -18,30 +18,31 @@ public class SprinklesCollision : MonoBehaviour
         
     }
 
-    void OnParticleCollision(GameObject other) 
+    void OnParticleCollision(GameObject col) 
     {
-        numofParticles++;
+        
 
-        //if there is less than 2 sprinkles in the spot, then sprinkles can stick onto that space of the Donut
-        if (numofParticles < 2)
+        ParticleSystem.MainModule psm = col.gameObject.GetComponent<ParticleSystem>().main;
+        //Disable the gravity
+        psm.gravityModifier = 0;
+        //if there is less than 1 sprinkles in the spot, then sprinkles can stick onto that space of the Donut
+        if (numofParticles < 1)
         {
             //Puts the Sprinkle Particles that collided with the object into the Sprinkles variable
-            Sprinkles = other.gameObject;
+            Sprinkles = col.gameObject;
             //Save the current scale of the Sprinkle Particles
             Vector3 scale = Sprinkles.transform.localScale;
             //Make the Sprinkle particles a child object of the Donut
-            Sprinkles.transform.parent = transform;
+            Sprinkles.transform.parent = this.transform;
             //When the Sprinkle becomes a child object of the Donut its scale changes, so we prevent this by applying the scale of the Sprinkle before it was a child object of the Donut
             Sprinkles.transform.localScale = scale;
+            //Makes it so the game knows 1 particle is on the collider
+            numofParticles++;
         }
         else 
         {
             //Disable the particles so no more sprinkles can go on it
             gameObject.GetComponent<CircleCollider2D>().enabled= false;
         }
-
-
-
-        Debug.Log("hi " + other.name);
     }
 }

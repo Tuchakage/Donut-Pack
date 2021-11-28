@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
                 lc.ShowWinningScreen();
             }
 
-            Debug.Log("GAME OVER");
+            //Debug.Log("GAME OVER");
         }
     }
 

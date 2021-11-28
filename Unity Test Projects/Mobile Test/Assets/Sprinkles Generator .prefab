@@ -286,7 +286,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.5
+      scalar: 0.25
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -551,7 +551,7 @@ ParticleSystem:
     startRotation:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5707963
+      scalar: 6.283185
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -609,7 +609,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1.8
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1483,7 +1483,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: a153b4171e6155542bb905768347351d, type: 3}
+    - sprite: {fileID: 21300000, guid: 7b79848e6a2bb62459f0dd98003104a3, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4840,3 +4840,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 5ec6fdb24d8b43049bed0979467a21b8, type: 2}
   - {fileID: 2100000, guid: f65cb7a38edd1d64da9e72cf20dc505e, type: 2}
   - {fileID: 2100000, guid: 2cb40d01fb150de45b998a990b8fca70, type: 2}
+  sprinkleShape:
+  - {fileID: 21300000, guid: 7b79848e6a2bb62459f0dd98003104a3, type: 3}
+  - {fileID: 21300000, guid: a153b4171e6155542bb905768347351d, type: 3}
