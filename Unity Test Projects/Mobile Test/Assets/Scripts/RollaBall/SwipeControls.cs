@@ -17,14 +17,13 @@ public class SwipeControls : MonoBehaviour
     [SerializeField] private float _maxSpeed;
     public Rigidbody2D _rb;
     [SerializeField] private Vector2 _desiredScale;
-    [SerializeField] private Vector3 _currentSize;
+    public Vector3 _currentSize;
     [SerializeField] private Vector3 _maxSize;
 
     // Start is called before the first frame update
     void Start()
     {
         _swipeRange = Screen.height * 15 / 100;
-
     }
 
     // Update is called once per frame

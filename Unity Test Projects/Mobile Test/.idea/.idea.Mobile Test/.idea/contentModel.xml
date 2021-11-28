@@ -31,6 +31,7 @@
           <e p="PhysicsController.cs" t="Include" />
           <e p="RollaBall" t="Include">
             <e p="FinishLineScript.cs" t="Include" />
+            <e p="RockCollision.cs" t="Include" />
             <e p="RockSpawner.cs" t="Include" />
             <e p="SwipeControls.cs" t="Include" />
             <e p="TimerController.cs" t="Include" />
