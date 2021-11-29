@@ -2071,18 +2071,18 @@ static void CapsuleCollider2D_tF11350A4C377237B7E78A224D978E9F57A872C39_CustomAt
 		NativeHeaderAttribute__ctor_m0E83F29C5939F185D6E90541591802EB2845FD76(tmp, il2cpp_codegen_string_new_wrapper("\x4D\x6F\x64\x75\x6C\x65\x73\x2F\x50\x68\x79\x73\x69\x63\x73\x32\x44\x2F\x50\x75\x62\x6C\x69\x63\x2F\x43\x61\x70\x73\x75\x6C\x65\x43\x6F\x6C\x6C\x69\x64\x65\x72\x32\x44\x2E\x68"), NULL);
 	}
 }
-static void EdgeCollider2D_t95C53E6DB7B534AD62A86D161BB0F5AB0C4E2A4B_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
-{
-	{
-		NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C * tmp = (NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C *)cache->attributes[0];
-		NativeHeaderAttribute__ctor_m0E83F29C5939F185D6E90541591802EB2845FD76(tmp, il2cpp_codegen_string_new_wrapper("\x4D\x6F\x64\x75\x6C\x65\x73\x2F\x50\x68\x79\x73\x69\x63\x73\x32\x44\x2F\x50\x75\x62\x6C\x69\x63\x2F\x45\x64\x67\x65\x43\x6F\x6C\x6C\x69\x64\x65\x72\x32\x44\x2E\x68"), NULL);
-	}
-}
 static void BoxCollider2D_t929D014FDE69DCA5443296C432D640BCBE7E30B9_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
 {
 	{
 		NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C * tmp = (NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C *)cache->attributes[0];
 		NativeHeaderAttribute__ctor_m0E83F29C5939F185D6E90541591802EB2845FD76(tmp, il2cpp_codegen_string_new_wrapper("\x4D\x6F\x64\x75\x6C\x65\x73\x2F\x50\x68\x79\x73\x69\x63\x73\x32\x44\x2F\x50\x75\x62\x6C\x69\x63\x2F\x42\x6F\x78\x43\x6F\x6C\x6C\x69\x64\x65\x72\x32\x44\x2E\x68"), NULL);
+	}
+}
+static void PolygonCollider2D_t0DE3E0562D6B75598DFDB71D7605BD8A1761835D_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
+{
+	{
+		NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C * tmp = (NativeHeaderAttribute_t7F0E4B53790AA75CDB4C44E6D644267F8FE3066C *)cache->attributes[0];
+		NativeHeaderAttribute__ctor_m0E83F29C5939F185D6E90541591802EB2845FD76(tmp, il2cpp_codegen_string_new_wrapper("\x4D\x6F\x64\x75\x6C\x65\x73\x2F\x50\x68\x79\x73\x69\x63\x73\x32\x44\x2F\x50\x75\x62\x6C\x69\x63\x2F\x50\x6F\x6C\x79\x67\x6F\x6E\x43\x6F\x6C\x6C\x69\x64\x65\x72\x32\x44\x2E\x68"), NULL);
 	}
 }
 static void PhysicsMaterial2D_tBB400C4D07B2AA7F4D3B7060E588C6D46B63EBBD_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
@@ -2105,8 +2105,8 @@ const CustomAttributesCacheGenerator g_UnityEngine_Physics2DModule_AttributeGene
 	Collider2D_tDDBF081328B83D21D0BA3B5036D77B32528BA722_CustomAttributesCacheGenerator,
 	CircleCollider2D_tD909965F1FE89EA6CAF32E86E3675F16A79EB913_CustomAttributesCacheGenerator,
 	CapsuleCollider2D_tF11350A4C377237B7E78A224D978E9F57A872C39_CustomAttributesCacheGenerator,
-	EdgeCollider2D_t95C53E6DB7B534AD62A86D161BB0F5AB0C4E2A4B_CustomAttributesCacheGenerator,
 	BoxCollider2D_t929D014FDE69DCA5443296C432D640BCBE7E30B9_CustomAttributesCacheGenerator,
+	PolygonCollider2D_t0DE3E0562D6B75598DFDB71D7605BD8A1761835D_CustomAttributesCacheGenerator,
 	PhysicsMaterial2D_tBB400C4D07B2AA7F4D3B7060E588C6D46B63EBBD_CustomAttributesCacheGenerator,
 	ContactFilter2D_t82BBB159A7E392A24921803A0E79669F4E34DFCB_CustomAttributesCacheGenerator_useTriggers,
 	ContactFilter2D_t82BBB159A7E392A24921803A0E79669F4E34DFCB_CustomAttributesCacheGenerator_useLayerMask,

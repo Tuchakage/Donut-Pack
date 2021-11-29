@@ -42,11 +42,11 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
                 if (amntgoodmilk < items.maxAmntOfItem) 
                 {
-                    //If you put the right object in the right container you get more time
-                    gm.addTime(addedtime, this.transform.position);
                     //Increment this variable
                     amntgoodmilk++;
                     //If the container is 25% full
@@ -116,11 +116,11 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
                 if (amntgoodyeast < items.maxAmntOfItem)
                 {
-                    //If you put the right object in the right container you get more time
-                    gm.addTime(addedtime, this.transform.position);
                     //Increment this variable
                     amntgoodyeast++;
                     //If the container is 25% full
@@ -190,11 +190,12 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
                 if (amntsalt < items.maxAmntOfItem) 
                 {
-                    //If you put the right object in the right container you get more time
-                    gm.addTime(addedtime, this.transform.position);
+
                     //Increment this variable 
                     amntsalt++;
                     //If the container is 25% full
@@ -265,11 +266,11 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
                 if (amntsugar < items.maxAmntOfItem) 
                 {
-                    //If you put the right object in the right container you get more time
-                    gm.addTime(addedtime, this.transform.position);
                     //Increment this variable 
                     amntsugar++;
                     //If the container is 25% full
@@ -340,11 +341,11 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                //If you put the right object in the right container you get more time
+                gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
                 if (amntflour < items.maxAmntOfItem)
                 {
-                    //If you put the right object in the right container you get more time
-                    gm.addTime(addedtime, this.transform.position);
                     //Increment this variable 
                     amntflour++;
                     //If the container is 25% full

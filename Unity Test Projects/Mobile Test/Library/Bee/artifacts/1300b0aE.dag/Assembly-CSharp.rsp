@@ -357,6 +357,7 @@
 "Assets/Scripts/ShakeDetector.cs"
 "Assets/Scripts/SprinklesCollision.cs"
 "Assets/Scripts/TimeIndicator.cs"
+"Assets/Test.cs"
 -langversion:8.0
 
 /deterministic

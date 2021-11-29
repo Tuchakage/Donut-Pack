@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class IcingCollision : MonoBehaviour
 {
     [SerializeField]
     SpriteRenderer spriteRenderer;
     [SerializeField]
-    private Sprite[] Donuts; //An arroy of the different types of Donuts
+    private Sprite[] Donuts; //An array of the different types of Donuts
     [SerializeField]
     private GameObject[] disableElements; //List of Game Objects that need to be disabled when an icing has been chosen for the Donuts
     ShakeDetector sd;
     [SerializeField]
-    private GameObject sprinkles;
+    private GameObject sprinkles; //Sprinkles Colliders
+    [SerializeField]
+    private GameObject tutorial;
     GameManager gm;
     private void Start()
     {
@@ -67,6 +70,8 @@ public class IcingCollision : MonoBehaviour
             {
                 ui.SetActive(false);
             }
+            //Enable the text that tells players to shake their phone
+            tutorial.SetActive(true);
             //Start the timer
             gm.startTimer = true;
         }
