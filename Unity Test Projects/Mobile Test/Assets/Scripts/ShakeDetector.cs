@@ -33,7 +33,7 @@ public class ShakeDetector : MonoBehaviour
             timeSinceLastShake = Time.unscaledTime;
         }
 
-        if (Input.acceleration.sqrMagnitude >= 25) 
+        if (Input.acceleration.sqrMagnitude >= 15) 
         {
             Debug.Log("Shake Detected");
             //Randomly spawns in Sprinkles between 2 points

@@ -41,11 +41,10 @@ public class SprinklesCollision : MonoBehaviour
         }
         else 
         {
-            //Disable the particles so no more sprinkles can go on it
+            //Disable the circle colliders so no more sprinkles can go on it
             gameObject.GetComponent<CircleCollider2D>().enabled= false;
         }
 
-        //If the Sprinkles touch the border then delete them
         if (this.gameObject.name == "Border") 
         {
             Destroy(col.gameObject);
