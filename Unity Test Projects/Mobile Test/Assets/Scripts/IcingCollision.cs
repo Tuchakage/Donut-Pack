@@ -29,6 +29,15 @@ public class IcingCollision : MonoBehaviour
         //Disable the Sprinkles Colliders
         sprinkles.SetActive(false);
     }
+
+    private void Update()
+    {
+        //If Game is finished then disable the tutorial text
+        if (gm.isGameFinished) 
+        {
+            tutorial.SetActive(false);
+        }
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         //If the Chocolate icing touches the Donut

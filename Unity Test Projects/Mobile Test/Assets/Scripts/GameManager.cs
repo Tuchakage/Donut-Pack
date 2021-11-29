@@ -88,6 +88,8 @@ public class GameManager : MonoBehaviour
             else //On the Shaking Scene
             {
                 lc.ShowWinningScreen();
+                //Disable Timer Text
+                timertext.enabled = false;
             }
 
             //Debug.Log("GAME OVER");

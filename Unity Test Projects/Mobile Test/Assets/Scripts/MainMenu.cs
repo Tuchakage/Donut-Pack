@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public void ShowTutorialForLevel1() 
+    {
+        SceneManager.LoadScene("IngredientsTutorial");
+    }
     public void PlayLevel1()
     {
         SceneManager.LoadScene("Ingredients");
@@ -12,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayLevel2()
     {
-        SceneManager.LoadScene("Roll-A-Ball Test");
+        SceneManager.LoadScene("Roll-A-Ball - (1)");
     }
 
     public void PlayLevel3() 

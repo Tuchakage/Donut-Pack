@@ -2,13 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class TimerController : MonoBehaviour
 {
     public float timeRemaining;
     public bool timerIsRunning = false;
-    public Text timeText;
+    public TMP_Text timeText;
     [SerializeField] private FinishLineScript fl;
     [SerializeField] private LevelChanger lc;
 

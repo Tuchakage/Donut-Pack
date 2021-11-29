@@ -44,12 +44,15 @@ public class LevelChanger : MonoBehaviour
         if (currentSceneName == "Ingredients")
         {
             //Go To Next Mini Game
-            SceneManager.LoadScene("Roll-A-Ball - (1)");
+            SceneManager.LoadScene("RollABallTutorial");
         }
-
-        if (currentSceneName == "Roll-A-Ball - (1)")
+        else if (currentSceneName == "Roll-A-Ball - (1)")
         {
-            SceneManager.LoadScene("Shake");
+            SceneManager.LoadScene("ShakeTutorial");
+        }
+        else if (currentSceneName == "Shake") 
+        {
+            SceneManager.LoadScene("Packing");
         }
     }
 

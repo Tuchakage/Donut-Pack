@@ -9,12 +9,24 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 40872f8806a2aef438924d6c12a217a9
   - enabled: 1
+    path: Assets/Scenes/IngredientsTutorial.unity
+    guid: dd38327d82d367346a949540fc6fb114
+  - enabled: 1
     path: Assets/Scenes/Ingredients.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/RollABallTutorial.unity
+    guid: f4dc4814dc4379b409982c2c48100918
   - enabled: 1
     path: Assets/Scenes/Roll-A-Ball - (1).unity
     guid: 840b1200bee88164bbf6081e6b8b0330
   - enabled: 1
+    path: Assets/Scenes/ShakeTutorial.unity
+    guid: 5300b4d9e1c00dd4189c4ce260b178d3
+  - enabled: 1
     path: Assets/Scenes/Shake.unity
     guid: 7bb42132bcff1304f9456fd25a80f031
+  - enabled: 1
+    path: Assets/Scenes/Packing.unity
+    guid: a44a13a17c27fb64bb16a872f7965445
   m_configObjects: {}
