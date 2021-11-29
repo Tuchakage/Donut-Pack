@@ -85,10 +85,12 @@ public class Container : MonoBehaviour
                 //If there is already ingredients in this container and then a wrong item is put into the container
                 if (amntgoodmilk > 0) 
                 {
-                    //Decrease the amount of milk
+                    //Decrease the amount of Milk
                     amntgoodmilk--;
                     if (amntgoodmilk == items.maxAmntOfItem / 4 * 3)  //75% of a container
                     {
+                        //Tell the game manager that the container is no longer full
+                        gm.amntContainersComplete--;
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntgoodmilk == items.maxAmntOfItem / 2)
@@ -163,6 +165,8 @@ public class Container : MonoBehaviour
                     amntgoodyeast--;
                     if (amntgoodyeast == items.maxAmntOfItem / 4 * 3)  //75% of a container
                     {
+                        //Tell the game manager that the container is no longer full
+                        gm.amntContainersComplete--;
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntgoodyeast == items.maxAmntOfItem / 2)
@@ -234,10 +238,12 @@ public class Container : MonoBehaviour
                 //If there is already ingredients in this container and then a wrong item is put into the container
                 if (amntsalt > 0)
                 {
-                    //Decrease the amount of milk
+                    //Decrease the amount of Salt
                     amntsalt--;
                     if (amntsalt == items.maxAmntOfItem / 4 * 3)  //75% of a container
                     {
+                        //Tell the game manager that the container is no longer full
+                        gm.amntContainersComplete--;
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntsalt == items.maxAmntOfItem / 2)
@@ -309,10 +315,12 @@ public class Container : MonoBehaviour
                 //If there is already ingredients in this container and then a wrong item is put into the container
                 if (amntsugar > 0)
                 {
-                    //Decrease the amount of milk
+                    //Decrease the amount of Sugar
                     amntsugar--;
                     if (amntsugar == items.maxAmntOfItem / 4 * 3)  //75% of a container
                     {
+                        //Tell the game manager that the container is no longer full
+                        gm.amntContainersComplete--;
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntsugar == items.maxAmntOfItem / 2)
@@ -383,10 +391,12 @@ public class Container : MonoBehaviour
                 gm.loseTime(losttime, this.transform.position);
                 if (amntflour > 0)
                 {
-                    //Decrease the amount of milk
+                    //Decrease the amount of Flour
                     amntflour--;
                     if (amntflour == items.maxAmntOfItem / 4 * 3)  //75% of a container
                     {
+                        //Tell the game manager that the container is no longer full
+                        gm.amntContainersComplete--;
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntflour == items.maxAmntOfItem / 2)
