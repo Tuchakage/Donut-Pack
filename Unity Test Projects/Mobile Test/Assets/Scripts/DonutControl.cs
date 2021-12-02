@@ -1,15 +1,37 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class DonutControl : MonoBehaviour
 {
-    public float power = 10f;
-    public float maxDrag = 5f;
-    public Rigidbody2D rb;
+    public float maxDragDistance = 2f;
+    public float releaseTime = 0.15f;
 
-    Vector3 dragStartPos;
+    private float circleRadius;
+
+    public Rigidbody2D rb;
+    public Rigidbody2D Hook;
+
+    SpawnDonuts dm;
+
+    public LineRenderer catapultLineFront;
+    public LineRenderer catapultLineBack;
+
+    private Ray leftCatapultToProjectile;
     Touch touch;
+
+
+    private void Start()
+    {
+        dm = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
+        //Make the next Donut the same one
+        dm.NextDonut = this.gameObject;
+        LineRendererSetup();
+
+        //Create a line based on the front catapult
+        leftCatapultToProjectile = new Ray(catapultLineFront.transform.position, Vector3.zero);
+    }
 
     private void Update()
     {
@@ -30,28 +52,79 @@ public class DonutControl : MonoBehaviour
                 DragRelease();
             }
         }
+        LineRendererUpdate();
     }
 
     void DragStart() 
     {
-        dragStartPos = Camera.main.ScreenToWorldPoint(touch.position);
-        dragStartPos.z = 0f;
+        //Enabled Kinematic when you touch the screen
+        rb.isKinematic = true;
     }
     void Dragging() 
     {
-        Vector3 draggingPos = Camera.main.ScreenToWorldPoint(touch.position);
-        draggingPos.z = 0f;
+        
+        Vector2 dragPos = Camera.main.ScreenToWorldPoint(touch.position);
+        //Drag the ball to the position of the mouse but make sure it doesnt go too far
+        if (Vector3.Distance(dragPos, Hook.position) > maxDragDistance)
+        {
+            rb.position = Hook.position + (dragPos - Hook.position).normalized * maxDragDistance;
+        }
+        else 
+        {
+            rb.position = dragPos;
+        }     
     }
 
     void DragRelease() 
     {
-        Vector3 dragReleasePos = Camera.main.ScreenToWorldPoint(touch.position);
-        dragReleasePos.z = 0f;
-        
-        Vector3 force = dragStartPos - dragReleasePos;
-        //Clamps the force(Makes sure item cant be launched too far)
-        Vector3 clampedForce = Vector3.ClampMagnitude(force, maxDrag) * power;
-        //Launches The Item
-        rb.AddForce(clampedForce, ForceMode2D.Impulse);
+        //Disable Kinematic when you stop touching the screen
+        rb.isKinematic = false;
+
+        StartCoroutine(Release());
+    }
+
+    void LineRendererSetup()
+    {
+        catapultLineFront.SetPosition(0, catapultLineFront.transform.position);
+        catapultLineBack.SetPosition(0, catapultLineBack.transform.position);
+
+        catapultLineFront.sortingLayerName = "Foreground";
+        catapultLineBack.sortingLayerName = "Foreground";
+
+        catapultLineFront.sortingOrder = 3;
+        catapultLineBack.sortingOrder = 1;
+    }
+
+    void LineRendererUpdate()
+    {
+        Vector2 catapultToProjectile = transform.position - catapultLineFront.transform.position;
+        leftCatapultToProjectile.direction = catapultToProjectile;
+        Vector3 holdPoint = leftCatapultToProjectile.GetPoint(catapultToProjectile.magnitude + circleRadius);
+        catapultLineFront.SetPosition(1, holdPoint);
+        catapultLineBack.SetPosition(1, holdPoint);
+    }
+
+    IEnumerator Release()
+    {
+        //Gives the Donut enough time to be launched
+        yield return new WaitForSeconds(releaseTime);
+        //Detachs the Donut from the Sling shot (If this wasnt here the Donut would never get launched)
+        GetComponent<SpringJoint2D>().enabled = false;
+        //Disable this script so that the Line Renderers dont continue to follow the Donut
+        this.enabled = false;
+        yield return new WaitForSeconds(0.1f);
+        //Turn off the band
+        BandScript.BandVisible = 0;
+
+        //Wait a few seconds until spawning in the Next Donut
+        yield return new WaitForSeconds(2f);
+        //If the variable isnt null
+        if (dm.NextDonut != null)
+        {
+            dm.SpawnDonut();
+            //Turn the band back on
+            BandScript.BandVisible = 1;
+            Destroy(this.gameObject);
+        }
     }
 }

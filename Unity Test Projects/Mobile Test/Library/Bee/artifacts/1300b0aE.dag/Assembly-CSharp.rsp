@@ -332,6 +332,8 @@
 -r:"Library/Bee/artifacts/1300b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/DonutManager.cs"
+"Assets/Scripts/BandScript.cs"
 "Assets/Scripts/Camera/CameraFollow.cs"
 "Assets/Scripts/ChangeSprinkleColour.cs"
 "Assets/Scripts/CircleRot.cs"
@@ -339,7 +341,6 @@
 "Assets/Scripts/Container.cs"
 "Assets/Scripts/Conveyor/MovingConveyor.cs"
 "Assets/Scripts/DonutControl.cs"
-"Assets/Scripts/DonutManager.cs"
 "Assets/Scripts/DragController.cs"
 "Assets/Scripts/Draggable.cs"
 "Assets/Scripts/FrostingMachine.cs"
@@ -358,6 +359,7 @@
 "Assets/Scripts/ShakeDetector.cs"
 "Assets/Scripts/SprinklesCollision.cs"
 "Assets/Scripts/TimeIndicator.cs"
+"Assets/SpawnDonuts.cs"
 "Assets/Test.cs"
 -langversion:8.0
 
