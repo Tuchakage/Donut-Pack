@@ -10,7 +10,6 @@ public class Container : MonoBehaviour
     public Sprite[] bin;
     public Sprite[] containerFill; //Sprites for how full the Containers will show as
 
-    public DragController dc;
     GameManager gm;
     ItemSpawner items;
     [SerializeField]
@@ -25,8 +24,6 @@ public class Container : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Finds the DragController Game Object and gets the DragController script on it so it can use the variables within
-        dc = GameObject.Find("DragController").GetComponent<DragController>();
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         items = GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -35,10 +32,12 @@ public class Container : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D col)
     {
+        //Used so we can check if the Item is currently being dragged or not
+        Draggable isBeingDragged = col.gameObject.GetComponent<Draggable>();
         if (this.gameObject.name == "Measuring Cup")//If the gameObject this script is on is the Measuring Cup
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
-            if (col.gameObject.tag == "GoodMilk" && !dc.isDragActive)
+            if (col.gameObject.tag == "GoodMilk" && !isBeingDragged.pickedUp)
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
@@ -76,7 +75,7 @@ public class Container : MonoBehaviour
                 }
 
             }
-            else if (col.gameObject.tag != "GoodMilk" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            else if (col.gameObject.tag != "GoodMilk" && !isBeingDragged.pickedUp) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
@@ -114,7 +113,7 @@ public class Container : MonoBehaviour
         else if (this.gameObject.name == "Yeast Bowl") //If the gameObject this script is on is the Yeast bowl
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
-            if (col.gameObject.tag == "GoodYeast" && !dc.isDragActive)
+            if (col.gameObject.tag == "GoodYeast" && !isBeingDragged.pickedUp)
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
@@ -152,7 +151,7 @@ public class Container : MonoBehaviour
                 }
 
             }
-            else if (col.gameObject.tag != "GoodYeast" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            else if (col.gameObject.tag != "GoodYeast" && !isBeingDragged.pickedUp) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
@@ -190,7 +189,7 @@ public class Container : MonoBehaviour
         else if (this.gameObject.name == "Salt Bowl") //If the gameObject this script is on is the Salt bowl
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
-            if (col.gameObject.tag == "GoodSalt" && !dc.isDragActive)
+            if (col.gameObject.tag == "GoodSalt" && !isBeingDragged.pickedUp)
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
@@ -229,7 +228,7 @@ public class Container : MonoBehaviour
                 }
 
             }
-            else if (col.gameObject.tag != "GoodSalt" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            else if (col.gameObject.tag != "GoodSalt" && !isBeingDragged.pickedUp) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
@@ -268,7 +267,7 @@ public class Container : MonoBehaviour
         else if (this.gameObject.name == "Sugar Bowl") //If the gameObject this script is on is the Sugar bowl
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
-            if (col.gameObject.tag == "GoodSugar" && !dc.isDragActive)
+            if (col.gameObject.tag == "GoodSugar" && !isBeingDragged.pickedUp)
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
@@ -306,7 +305,7 @@ public class Container : MonoBehaviour
                 }
 
             }
-            else if (col.gameObject.tag != "GoodSugar" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            else if (col.gameObject.tag != "GoodSugar" && !isBeingDragged.pickedUp) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
@@ -345,7 +344,7 @@ public class Container : MonoBehaviour
         else if (this.gameObject.name == "Wide Bowl") //If the gameObject this script is on is the Flour bowl
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
-            if (col.gameObject.tag == "GoodFlour" && !dc.isDragActive)
+            if (col.gameObject.tag == "GoodFlour" && !isBeingDragged.pickedUp)
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
@@ -383,7 +382,7 @@ public class Container : MonoBehaviour
                 }
 
             }
-            else if (col.gameObject.tag != "GoodFlour" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            else if (col.gameObject.tag != "GoodFlour" && !isBeingDragged.pickedUp) //If the gameobject is colliding with the wrong container
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
@@ -421,20 +420,20 @@ public class Container : MonoBehaviour
         else if (this.gameObject.name == "Bin") //If the gameObject this script is on is the bin
         {
             //If the gameobject that is colliding with the container is the right one and dragging is not active (So its been dropped)
-            if (col.gameObject.tag == "BadItems" && !dc.isDragActive)
+            if (col.gameObject.tag == "BadItems" && !isBeingDragged.pickedUp)
             {
                 Destroy(col.gameObject);
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
             }
-            else if (col.gameObject.tag != "BadItems" && !dc.isDragActive) //If the gameobject is colliding with the wrong container
+            else if (col.gameObject.tag != "BadItems" && !isBeingDragged.pickedUp) //If the gameobject is colliding with the wrong container
             {
                 Destroy(col.gameObject);
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
             }
 
-            if (dc.isDragActive) //If the player is hovering an item over the bin
+            if (isBeingDragged.pickedUp) //If the player is hovering an item over the bin
             {
                 //Enable the Bin Open Game Object
                 spriteRenderer.sprite = bin[1];

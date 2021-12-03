@@ -635,7 +635,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   bin: []
   containerFill: []
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -2368,7 +2367,6 @@ MonoBehaviour:
   - {fileID: 279258095228634330, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
   - {fileID: 6135918749906333967, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
   - {fileID: -1562478901628554297, guid: 87bc724bec1a62b4aac1b97246b9ebee, type: 3}
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -4107,7 +4105,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 8ecf01f00435c6442bfe35327036cd08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4567,7 +4565,6 @@ MonoBehaviour:
   - {fileID: 1211377944422144025, guid: ca48baa95e9ddd840bd71d1fe37168a4, type: 3}
   - {fileID: -7777037033416424934, guid: ca48baa95e9ddd840bd71d1fe37168a4, type: 3}
   - {fileID: -8121902195355666299, guid: ca48baa95e9ddd840bd71d1fe37168a4, type: 3}
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -5017,7 +5014,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   bin: []
   containerFill: []
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -5516,7 +5512,6 @@ MonoBehaviour:
   - {fileID: -8965498504704500460, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
   - {fileID: 7921955485689022747, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
   - {fileID: 6952410763447120045, guid: f0e5cdf23d670994b87a93a304ee7850, type: 3}
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -5708,7 +5703,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   bin: []
   containerFill: []
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -6443,7 +6437,6 @@ MonoBehaviour:
   - {fileID: 6119458936918956016, guid: d7d2f65813264844c965245966cba2bf, type: 3}
   - {fileID: 848356716104414797, guid: d7d2f65813264844c965245966cba2bf, type: 3}
   - {fileID: -1047752954603386182, guid: d7d2f65813264844c965245966cba2bf, type: 3}
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -7596,7 +7589,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   bin: []
   containerFill: []
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -7737,7 +7729,6 @@ MonoBehaviour:
   - {fileID: 1211377944422144025, guid: ca48baa95e9ddd840bd71d1fe37168a4, type: 3}
   - {fileID: -7777037033416424934, guid: ca48baa95e9ddd840bd71d1fe37168a4, type: 3}
   - {fileID: -8121902195355666299, guid: ca48baa95e9ddd840bd71d1fe37168a4, type: 3}
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0
@@ -7974,7 +7965,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1157921a06bb5354ca370fe78660d45e, type: 3}
   - {fileID: 21300000, guid: 70511c25dd3436e4b9e90d0b23abf0c6, type: 3}
   containerFill: []
-  dc: {fileID: 0}
   addedtime: 3
   losttime: 10
   amntgoodmilk: 0

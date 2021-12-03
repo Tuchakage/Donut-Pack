@@ -96,7 +96,7 @@ Rigidbody2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7241677531714265566}
   m_BodyType: 0
-  m_Simulated: 1
+  m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ca62f8065825c04a917373f93283640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickedUp: 0
 --- !u!96 &428696883299817306
 TrailRenderer:
   serializedVersion: 2
