@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5459448471352799224}
   - component: {fileID: 1003445965441384707}
   - component: {fileID: 1370942860676603031}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SugarJarPrefab
   m_TagString: GoodSugar
   m_Icon: {fileID: 0}

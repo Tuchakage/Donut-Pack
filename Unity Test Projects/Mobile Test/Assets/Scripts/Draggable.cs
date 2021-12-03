@@ -10,6 +10,8 @@ public class Draggable : MonoBehaviour
     {
         //When the item has just spawned in make sure this variable is false
         pickedUp = false;
+        //Ignore Collision between all item
+        Physics2D.IgnoreLayerCollision(3, 3);
     }
 
     // Update is called once per frame

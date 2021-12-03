@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5300152063665163655}
   - component: {fileID: 1126677845271536508}
   - component: {fileID: -8769477104231163411}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlourBagPrefab
   m_TagString: GoodFlour
   m_Icon: {fileID: 0}

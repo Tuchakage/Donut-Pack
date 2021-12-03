@@ -76,8 +76,6 @@ public class DragController : MonoBehaviour
         isDragActive = true;
         //Tell the item it has been picked up
         _lastDragged.HasBeenPickedUp(true);
-        //When Item has been picked up Disable colliders so it cant collide into the other items
-        _lastDragged.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     void Drag() 
@@ -92,7 +90,5 @@ public class DragController : MonoBehaviour
         isDragActive = false;
         //Tell the item it has not been picked up
         _lastDragged.HasBeenPickedUp(false);
-        //When item has been dropped Enable colliders so it can collide with the containers
-        _lastDragged.GetComponent<BoxCollider2D>().enabled = true;
     }
 }

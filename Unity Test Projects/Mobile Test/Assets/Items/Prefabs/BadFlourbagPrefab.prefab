@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 241272272270271416}
   - component: {fileID: 5005192871586073923}
   - component: {fileID: 428696883299817306}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BadFlourbagPrefab
   m_TagString: BadItems
   m_Icon: {fileID: 0}

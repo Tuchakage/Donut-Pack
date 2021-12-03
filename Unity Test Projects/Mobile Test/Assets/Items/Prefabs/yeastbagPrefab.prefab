@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6854194484336943814}
   - component: {fileID: 1815463220115065917}
   - component: {fileID: -5740866118991526922}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: yeastbagPrefab
   m_TagString: GoodYeast
   m_Icon: {fileID: 0}

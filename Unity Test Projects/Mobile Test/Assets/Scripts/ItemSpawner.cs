@@ -55,8 +55,6 @@ public class ItemSpawner : MonoBehaviour
         RandomiseItem();
         //Spawns a random item in the Items List
         GameObject item = Instantiate(Items[rand], new Vector3(Random.Range(-randX, randX), randY, randZ), Quaternion.identity);
-        Physics2D.IgnoreCollision(item.GetComponent<Collider2D>(), item.GetComponent<Collider2D>());
-
         item.transform.parent = transform;
         //Once the other item has spawned reset the timer with the value inside the cooldownTillNextItem variable
         timer = cooldownTillNextItem;

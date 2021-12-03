@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8062270600991686628}
   - component: {fileID: 2949322145179775415}
   - component: {fileID: -7546988978768346708}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BadMilkPrefab
   m_TagString: BadItems
   m_Icon: {fileID: 0}

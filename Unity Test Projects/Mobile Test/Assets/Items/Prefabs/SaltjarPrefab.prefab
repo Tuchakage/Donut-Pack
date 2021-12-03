@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3396593568576107941}
   - component: {fileID: 7569478285541530462}
   - component: {fileID: -4242505858212418525}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: SaltjarPrefab
   m_TagString: GoodSalt
   m_Icon: {fileID: 0}

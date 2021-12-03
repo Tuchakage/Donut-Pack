@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2043252048722489950}
   - component: {fileID: 2972008579250378432}
   - component: {fileID: 1789479923333589315}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GoodMilkPrefab
   m_TagString: GoodMilk
   m_Icon: {fileID: 0}
