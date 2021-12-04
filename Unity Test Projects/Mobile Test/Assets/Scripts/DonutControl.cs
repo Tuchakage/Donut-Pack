@@ -29,6 +29,7 @@ public class DonutControl : MonoBehaviour
         dm.NextDonut = this.gameObject;
         LineRendererSetup();
 
+        circleRadius = 0.3f;
         //Create a line based on the front catapult
         leftCatapultToProjectile = new Ray(catapultLineFront.transform.position, Vector3.zero);
     }

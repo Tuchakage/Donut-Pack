@@ -42,7 +42,7 @@ public class SwipeControls : MonoBehaviour
         {
             _playerSpeed = _maxSpeed;
         }
-        
+
     }
 
     //Swipe Controls for the doughball
