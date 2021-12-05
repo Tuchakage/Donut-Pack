@@ -52,6 +52,8 @@ public class LevelChanger : MonoBehaviour
         }
         else if (currentSceneName == "Shake") 
         {
+            GameObject donut = GameObject.FindGameObjectWithTag("Donut");
+            donut.AddComponent<DontDestroyOnLoad>();
             SceneManager.LoadScene("Packing");
         }
     }

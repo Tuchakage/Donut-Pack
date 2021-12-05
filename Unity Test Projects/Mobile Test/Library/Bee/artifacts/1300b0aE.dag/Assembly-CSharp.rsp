@@ -339,6 +339,7 @@
 "Assets/Scripts/CircleRotate.cs"
 "Assets/Scripts/Container.cs"
 "Assets/Scripts/Conveyor/MovingConveyor.cs"
+"Assets/Scripts/DontDestroyOnLoad.cs"
 "Assets/Scripts/DonutControl.cs"
 "Assets/Scripts/DonutManager.cs"
 "Assets/Scripts/DragController.cs"

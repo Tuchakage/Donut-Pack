@@ -9,7 +9,6 @@ public class PauseGame : MonoBehaviour
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private GameObject _toBeDisabled;
     public GameObject Sprinkles;
-
     private void Start()
     {
         //Make sure that the game is not paused when a new scene is loaded
@@ -45,6 +44,6 @@ public class PauseGame : MonoBehaviour
     public void Spawn()
     {
         //Randomly spawns in Sprinkles between 2 points
-        TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-1.85f, 2.6f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
+        GameObject indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-1.85f, 2.6f), 3, 0), Quaternion.identity);
     }
 }

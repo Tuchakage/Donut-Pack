@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class DonutControl : MonoBehaviour
 {
-    public float maxDragDistance = 2f;
+    public float maxDragDistance = 5f;
     public float releaseTime = 0.15f;
 
     private float circleRadius;
@@ -27,6 +27,17 @@ public class DonutControl : MonoBehaviour
         dm = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
         //Make the next Donut the same one
         dm.NextDonut = this.gameObject;
+
+        //Set the Rigidbody of this Donut
+        rb = GetComponent<Rigidbody2D>();
+        //Makes sure Kinematic is enabled
+        rb.isKinematic = true;
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        //Get The Rigidbody of the hook
+        Hook = GameObject.Find("Hook").GetComponent<Rigidbody2D>();
+        //Find The Catapults line renderer
+        catapultLineBack = GameObject.Find("Backpoint").GetComponent<LineRenderer>();
+        catapultLineFront = GameObject.Find("Backpoint").GetComponent<LineRenderer>();
         LineRendererSetup();
 
         circleRadius = 0.3f;
