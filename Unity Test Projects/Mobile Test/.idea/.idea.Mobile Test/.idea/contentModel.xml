@@ -32,6 +32,7 @@
           <e p="ItemSpawner.cs" t="Include" />
           <e p="LevelChanger.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
+          <e p="PacketAnim.cs" t="Include" />
           <e p="Pauses" t="Include">
             <e p="PauseGame.cs" t="Include" />
           </e>

@@ -14,6 +14,7 @@ TagManager:
   - Border
   - Icing
   - Donut
+  - Packet
   layers:
   - Default
   - TransparentFX
