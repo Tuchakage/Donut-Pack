@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Scene
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -46,7 +46,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 875, y: 300}
+  m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
   m_UseTopView: 1
   m_TopViewHeight: 30
@@ -116,10 +116,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 507, y: 492}
+  m_MinSize: {x: 506, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 98
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 231, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18
+  controlID: 31
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -222,10 +222,10 @@ MonoBehaviour:
     y: 0
     width: 579
     height: 947
-  m_MinSize: {x: 276, y: 271}
+  m_MinSize: {x: 275, y: 271}
   m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
-  controlID: 107
+  controlID: 99
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,8 +245,8 @@ MonoBehaviour:
     y: 0
     width: 579
     height: 383
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 383
     width: 579
     height: 564
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -315,9 +315,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -176.22662, y: 6.76732, z: -77.602196}
+    m_Target: {x: -1.776062, y: 2.3380754, z: -7.182273}
     speed: 2
-    m_Value: {x: -167.73132, y: 4.9933586, z: -76.97934}
+    m_Value: {x: -1.776062, y: 2.3380754, z: -7.182273}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -368,9 +368,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 144.6415
+    m_Target: 11.935572
     speed: 2
-    m_Value: 138.41292
+    m_Value: 11.935572
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -528,23 +528,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Items/Prefabs
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Items/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\hbahe\Documents\Repo\Donut-Pack\Unity Test Projects\Mobile
+  m_LastProjectPath: C:\Users\K1917661\Documents\Donut-Pack\Unity Test Projects\Mobile
     Test
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0c4f0000
-    m_LastClickedID: 20236
-    m_ExpandedIDs: 000000002c4e00002e4e0000304e0000
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 924f0000
+    m_LastClickedID: 20370
+    m_ExpandedIDs: 00000000904f0000924f00009a4f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -572,7 +572,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000002c4e00002e4e0000304e0000
+    m_ExpandedIDs: 00000000904f0000924f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 37818
+  m_LastSelectedObjectID: 72460
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -701,17 +701,17 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1
-    y: 19
+    x: 1341
+    y: 73
     width: 578
     height: 362
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: c2140000
       m_LastClickedID: 0
-      m_ExpandedIDs: 202af2ffd865f3ff5e66f3ff7ef1f4ffa4fcf5ff4cbaf6ffd2baf6ff2655f7ffde55f7ff36c1f7ff40a3fcffe0f9ffffc2fafffff4ffffff
+      m_ExpandedIDs: 1665d3ff944fd5ffc265d7ff0866d7ff5e66d7ffa4dad7ffecdad7ff887bd9ff4626dcff78ccdcffe48fddffa4afddff28b1ddff96b1ddffdab5ddffe8b6ddfff4b8ddff6076dffff476dfff8442e0fffe64e0ff2266e0ffb6dce1ffe6f4e1ff4065e3ff7265e3ff9266e3ffc4c7e6ffae9cfbfff655fcff4aefffffb6f9ffffc4fafffff28300007a840000e28d00005a8f0000669d00001aa300001aac000012b50000bab70000dac300003ac6000010cc0000f0cc0000a0d600007ad8000010db0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -826,7 +826,7 @@ MonoBehaviour:
   m_SerializedViewNames:
   - UnityEditor.GameView
   m_SerializedViewValues:
-  - D:\Users\tucha\Documents\GitHub\Donut-Pack\Unity Test Projects\Mobile Test\Library\PlayModeViewStates\18db33002aa8ec7498e78fb7788f2888
+  - C:\Users\K1917661\Documents\Donut-Pack\Unity Test Projects\Mobile Test\Library\PlayModeViewStates\b69a8487f6d3ffc4d979c9a38d74cde7
   m_PlayModeViewName: Device Simulator
   m_ShowGizmos: 0
   m_TargetDisplay: 0

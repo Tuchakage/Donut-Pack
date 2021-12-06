@@ -9,34 +9,6 @@ public class DonutManager : MonoBehaviour
     [SerializeField]
     private string currentSceneName;
     public GameObject Donut;
-    // This is a C# property - the code below isn't using it
-    // as it is accessing the private static instance directly.
-    // Use this property from other classes.
-    //public static DonutManager Instance
-    //{
-    //    get
-    //    {
-    //        return instance;
-    //    }
-    //}
-
-    //private static DonutManager instance = null;
-
-    //void Awake()
-    //{
-    //    //Get the name of the curretn scene
-    //    currentSceneName = SceneManager.GetActiveScene().name;
-    //    if (instance)
-    //    {
-    //        Debug.Log("already an instance so destroying new one");
-    //        DestroyImmediate(gameObject);
-    //        return;
-    //    }
-
-    //    instance = this;
-
-    //    DontDestroyOnLoad(gameObject);
-    //}
 
     private void Start()
     {

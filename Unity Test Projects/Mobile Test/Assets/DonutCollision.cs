@@ -30,7 +30,5 @@ public class DonutCollision : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         //Respawn Donut
         go.GetComponent<DonutControl>().SpawnAfterRelease();
-        //Destroy Package
-        Destroy(this.gameObject);
     }
 }
