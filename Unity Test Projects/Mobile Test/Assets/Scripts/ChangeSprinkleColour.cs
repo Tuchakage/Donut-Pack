@@ -13,17 +13,15 @@ public class ChangeSprinkleColour : MonoBehaviour
     {;
         //Pick a random Colour and Shape
         RandomSprinkle();
-        //Find the particle System
-        ParticleSystem ps = GetComponent<ParticleSystem>();
-        //Change the sprite shape
-        ps.textureSheetAnimation.SetSprite(0, sprinkleShape[randomShape]);
-        //Get the Particle System Main Module 
-        var main = ps.main;
-        ChangeSprinkleSize(main, randomShape);
-        //Find the Particle System Renderer
-        ParticleSystemRenderer psr = GetComponent<ParticleSystemRenderer>();
-        //Change the colour
-        psr.material = materials[randomColour];
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        //Choose A Shape
+        sr.sprite = sprinkleShape[randomShape];
+        //Choose A Colour
+        sr.material = materials[randomColour];
+        //Change Scale Of Object
+        this.gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+        //Change Rotation
+        this.gameObject.transform.eulerAngles = new Vector3(0, 0, Random.Range(0, -90));
     }
 
     // Update is called once per frame
@@ -38,19 +36,5 @@ public class ChangeSprinkleColour : MonoBehaviour
         randomColour = Random.Range(0, materials.Count);
         //Pick a number between 0 and the amount of shapes in the list
         randomShape = Random.Range(0, sprinkleShape.Count);
-    }
-
-
-    //Changes the sprinkle size depending on the shape of the sprinkle
-    void ChangeSprinkleSize(ParticleSystem.MainModule psmain, int ShapeOfSprinkle) 
-    {
-        if (ShapeOfSprinkle == 0)
-        {
-            psmain.startSize = 0.25f;
-        }
-        else if (ShapeOfSprinkle == 1) 
-        {
-            psmain.startSize = 0.5f;
-        }
     }
 }

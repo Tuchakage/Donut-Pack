@@ -37,7 +37,7 @@ public class DonutControl : MonoBehaviour
         Hook = GameObject.Find("Hook").GetComponent<Rigidbody2D>();
         //Find The Catapults line renderer
         catapultLineBack = GameObject.Find("Backpoint").GetComponent<LineRenderer>();
-        catapultLineFront = GameObject.Find("Backpoint").GetComponent<LineRenderer>();
+        catapultLineFront = GameObject.Find("Frontpoint").GetComponent<LineRenderer>();
         LineRendererSetup();
 
         circleRadius = 0.3f;
@@ -48,7 +48,7 @@ public class DonutControl : MonoBehaviour
     private void Update()
     {
         //Check if there is a finger touching the screen
-        if (Input.touchCount > 0) 
+        if (Input.touchCount > 0)
         {
             touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
@@ -59,7 +59,7 @@ public class DonutControl : MonoBehaviour
             {
                 Dragging();
             }
-            else if (touch.phase == TouchPhase.Ended) 
+            else if (touch.phase == TouchPhase.Ended)
             {
                 DragRelease();
             }
@@ -67,27 +67,27 @@ public class DonutControl : MonoBehaviour
         LineRendererUpdate();
     }
 
-    void DragStart() 
+    void DragStart()
     {
         //Enabled Kinematic when you touch the screen
         rb.isKinematic = true;
     }
-    void Dragging() 
+    void Dragging()
     {
-        
+
         Vector2 dragPos = Camera.main.ScreenToWorldPoint(touch.position);
         //Drag the ball to the position of the mouse but make sure it doesnt go too far
         if (Vector3.Distance(dragPos, Hook.position) > maxDragDistance)
         {
             rb.position = Hook.position + (dragPos - Hook.position).normalized * maxDragDistance;
         }
-        else 
+        else
         {
             rb.position = dragPos;
-        }     
+        }
     }
 
-    void DragRelease() 
+    void DragRelease()
     {
         //Disable Kinematic when you stop touching the screen
         rb.isKinematic = false;
@@ -133,10 +133,15 @@ public class DonutControl : MonoBehaviour
         //If the variable isnt null
         if (dm.NextDonut != null)
         {
-            dm.SpawnDonut();
-            //Turn the band back on
-            BandScript.BandVisible = 1;
-            Destroy(this.gameObject);
+            SpawnAfterRelease();
         }
+    }
+
+    public void SpawnAfterRelease() 
+    {
+        dm.SpawnDonut();
+        //Turn the band back on
+        BandScript.BandVisible = 1;
+        Destroy(this.gameObject);
     }
 }

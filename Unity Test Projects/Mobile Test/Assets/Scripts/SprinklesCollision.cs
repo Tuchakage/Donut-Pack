@@ -18,32 +18,30 @@ public class SprinklesCollision : MonoBehaviour
         
     }
 
-    void OnParticleCollision(GameObject col) 
+    void OnTriggerEnter2D(Collider2D col) 
     {
-        
+        if (col.gameObject.tag == "Sprinkles") 
+        {
+            //if there is less than 6 sprinkles in the spot, then sprinkles can stick onto that space of the Donut
+            if (numofParticles < 6)
+            {
+                //Make the Sprinkle Object a child object of the Donut
+                col.gameObject.transform.parent = this.transform;
+                col.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+                //Makes it so the game knows 1 particle is on the collider
+                numofParticles++;
+            }
+            else
+            {
+                //Disable the circle colliders so no more sprinkles can go on it
+                gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            }
 
-        ParticleSystem.MainModule psm = col.gameObject.GetComponent<ParticleSystem>().main;
-        //Disable the gravity
-        psm.gravityModifier = 0;
-        //if there is less than 6 sprinkles in the spot, then sprinkles can stick onto that space of the Donut
-        if (numofParticles < 6)
-        {
-            //Puts the Sprinkle Particles that collided with the object into the Sprinkles variable
-            Sprinkles = col.gameObject;
-            //Make the Sprinkle particles a child object of the Donut
-            Sprinkles.transform.parent = this.transform;
-            //Makes it so the game knows 1 particle is on the collider
-            numofParticles++;
-        }
-        else 
-        {
-            //Disable the circle colliders so no more sprinkles can go on it
-            gameObject.GetComponent<CircleCollider2D>().enabled= false;
+            if (this.gameObject.name == "Border")
+            {
+                Destroy(col.gameObject);
+            }
         }
 
-        if (this.gameObject.name == "Border") 
-        {
-            Destroy(col.gameObject);
-        }
     }
 }

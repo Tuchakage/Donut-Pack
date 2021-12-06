@@ -59,12 +59,6 @@ public class DonutManager : MonoBehaviour
         SpawnDonuts ds = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
         //Destroy the DontDestroyOnLoad so we can keep respawning the Donut
         Destroy(Donut.GetComponent<DontDestroyOnLoad>());
-
-
-        //Disable The Donut
-        // Donut.SetActive(false);
-        //Spawn Donut
-        //Instantiate(Donut, new Vector2(-0.381000012f, -0.666999996f), Quaternion.identity);
     }
     private void Update()
     {
