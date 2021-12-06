@@ -9,7 +9,7 @@ public class PacketAnim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = GameObject.FindGameObjectWithTag("Packet").GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         anim.Play("PacketMovingLeftRight");
     }
 

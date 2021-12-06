@@ -54,6 +54,7 @@ public class DonutManager : MonoBehaviour
         Donut.AddComponent<Rigidbody2D>();
         Donut.AddComponent<DonutControl>();
         Donut.AddComponent<SpringJoint2D>();
+        Donut.GetComponent<CircleCollider2D>().enabled = true;
         Donut.GetComponent<SpringJoint2D>().connectedBody = GameObject.Find("Hook").GetComponent<Rigidbody2D>();
         Donut.GetComponent<SpringJoint2D>().frequency = 1.5f;
         SpawnDonuts ds = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
