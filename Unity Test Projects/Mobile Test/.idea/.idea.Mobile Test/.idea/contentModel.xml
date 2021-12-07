@@ -48,10 +48,14 @@
             <e p="TimerController.cs" t="Include" />
           </e>
           <e p="ShakeDetector.cs" t="Include" />
+          <e p="Sound" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="Sound.cs" t="Include" />
+          </e>
+          <e p="SpawnDonuts.cs" t="Include" />
           <e p="SprinklesCollision.cs" t="Include" />
           <e p="TimeIndicator.cs" t="Include" />
         </e>
-        <e p="SpawnDonuts.cs" t="Include" />
         <e p="Test.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
