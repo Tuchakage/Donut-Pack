@@ -33,4 +33,9 @@ public class MovingConveyor : MonoBehaviour
     {
         _onBelt.Remove(other.gameObject);
     }
+
+    public void SetConveyorSpeed(float speed) 
+    {
+        _movingSpeed = speed;
+    }
 }

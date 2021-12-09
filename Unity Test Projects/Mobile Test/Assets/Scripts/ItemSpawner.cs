@@ -66,4 +66,9 @@ public class ItemSpawner : MonoBehaviour
         rand = Random.Range(0, Items.Count);
     }
 
+    public void SetMaxAmntOfItem(int itemamount) 
+    {
+        maxAmntOfItem = itemamount;
+    }
+
 }
