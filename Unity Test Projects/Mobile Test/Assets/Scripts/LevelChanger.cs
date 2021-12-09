@@ -41,7 +41,7 @@ public class LevelChanger : MonoBehaviour
     }
 
     //To be called when a mini game has been won
-    public void MiniGameWon() 
+    public void MiniGameWon()
     {
         //Make a pop up screen that gives you option to go to next mini game
         //Win Screen will pop up which allows you to go to next level
@@ -54,10 +54,16 @@ public class LevelChanger : MonoBehaviour
         {
             SceneManager.LoadScene("ShakeTutorial");
         }
-        else if (currentSceneName == "Shake") 
+        else if (currentSceneName == "Shake")
         {
+            //Find the Donut that was created
             GameObject donut = GameObject.FindGameObjectWithTag("Donut");
+            //Make it so it cant be destroyed when a new scene is loaded
             donut.AddComponent<DontDestroyOnLoad>();
+            SceneManager.LoadScene("DonutShowcase");
+        }
+        else if (currentSceneName == "DonutShowcase") 
+        {
             SceneManager.LoadScene("Packing");
         }
     }

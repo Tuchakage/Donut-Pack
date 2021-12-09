@@ -55,13 +55,14 @@ public class RatingManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
         //Everytime a Mini Game is loaded make sure this is false so that the rating can be applied once
         ratingApplied = false;
-        //If the Scene that is loading is the Ingredients Scene
-        if (currentSceneName == "Ingredients")
+        //If the Scene has Gameplay
+        if (currentSceneName == "Ingredients" || currentSceneName == "Shake" || currentSceneName == "Roll-A-Ball" || currentSceneName == "Packing")
         {
             DisableWinScreen();
-            gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+
         }
-        DisableWinScreen();
+
+
     }
 
 

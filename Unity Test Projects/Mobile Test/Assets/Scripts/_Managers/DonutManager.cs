@@ -14,13 +14,15 @@ public class DonutManager : MonoBehaviour
     {
         //Find the Donut Object and save it
         Donut = GameObject.FindGameObjectWithTag("Donut");
+
         //Change Scale
         Donut.transform.localScale = new Vector3(0.0645455122f, 0.0787723586f, 0.583067f);
+        //Rotate Donut
+        Donut.transform.rotation = Quaternion.Euler(0, 0, 0);
         //Change Position
         Donut.transform.position = new Vector2(-0.381000012f, -0.666999996f);
-        //Destroy Components
-        Destroy(Donut.GetComponent<IcingCollision>());
-        Destroy(Donut.GetComponent<BoxCollider2D>());
+
+
 
         //Add all the components so that the Donut can be shot from the sling shot
         Donut.AddComponent<Rigidbody2D>();
