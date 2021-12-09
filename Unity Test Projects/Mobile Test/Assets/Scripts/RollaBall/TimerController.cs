@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class TimerController : MonoBehaviour
 {
     public float timeRemaining;
+    public float maxTimer;
     public bool timerIsRunning = false;
     public TMP_Text timeText;
     [SerializeField] private FinishLineScript fl;
@@ -15,6 +16,8 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
+        //Start the timer from the value in the maxTimer variable
+        timeRemaining = maxTimer;
         lc = GameObject.Find("GameController").GetComponent<LevelChanger>();
         fl = GameObject.Find("FinishLine").GetComponent<FinishLineScript>();
         // Starts the timer automatically

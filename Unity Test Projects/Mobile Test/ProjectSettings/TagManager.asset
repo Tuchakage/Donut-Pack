@@ -17,6 +17,7 @@ TagManager:
   - Packet
   - Sprinkles
   - Score Manager
+  - Stars
   layers:
   - Default
   - TransparentFX

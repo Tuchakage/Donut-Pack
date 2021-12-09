@@ -24,6 +24,8 @@ public class DonutCollision : MonoBehaviour
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3f;
             //Make the Donut invisible
             col.gameObject.SetActive(false);
+            //Make Sure the Package cant collide with another Donut that has been spawned in
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             //Increment Score
             ScoreManager.IncrementScore(1);
             //Spawn Another Donut In and delete the one that collided with the Package

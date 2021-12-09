@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FinishLineScript : MonoBehaviour
 {
+    RatingManager rm;
     public SwipeControlsNew _playerControls;
     public TimerController tc;
     public bool hasCrossedFinishLine;
@@ -16,6 +17,7 @@ public class FinishLineScript : MonoBehaviour
         hasCrossedFinishLine = false;
         lc = GameObject.Find("GameController").GetComponent<LevelChanger>();
         tc = GameObject.Find("GameController").GetComponent<TimerController>();
+        rm = GameObject.Find("RatingManager").GetComponent<RatingManager>();
         _playerControls = GameObject.Find("TouchManager").GetComponent<SwipeControlsNew>();
     }
 
@@ -29,6 +31,8 @@ public class FinishLineScript : MonoBehaviour
             {
                 Invoke("StopEverything", 1f);
                 lc.ShowWinningScreen();
+                //The Rating Of The Player depends on the time remaining in the game
+                rm.RatingForRollABall(tc.timeRemaining, tc.maxTimer);
             }
         }
     }

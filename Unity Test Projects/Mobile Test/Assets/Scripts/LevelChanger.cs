@@ -5,13 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class LevelChanger : MonoBehaviour
 {
+    RatingManager rm;
     string currentSceneName; //Gets the current Scene name
     public GameObject winScreen;
     public GameObject loseScreen;
     // Start is called before the first frame update
     void Start()
     {
+        //Get Current Scene Name
         currentSceneName = SceneManager.GetActiveScene().name;
+        //Get Rating Manager
+        rm = GameObject.Find("RatingManager").GetComponent<RatingManager>();
     }
 
     // Update is called once per frame
@@ -44,9 +48,9 @@ public class LevelChanger : MonoBehaviour
         if (currentSceneName == "Ingredients")
         {
             //Go To Next Mini Game
-            SceneManager.LoadScene("RollABallTutorial");
+            SceneManager.LoadScene("Roll-A-Ball-Tutorial");
         }
-        else if (currentSceneName == "Roll-A-Ball - (1)")
+        else if (currentSceneName == "Roll-A-Ball")
         {
             SceneManager.LoadScene("ShakeTutorial");
         }
