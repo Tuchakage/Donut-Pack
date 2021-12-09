@@ -10442,7 +10442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timertext: {fileID: 1074010770}
   timeRemaining: 0
-  maxTimer: 60
+  maxTimer: 120
   popupText: {fileID: 3157555354826601723, guid: 30623210fd551b940809ae1d213e3e2b, type: 3}
   amntContainersComplete: 0
   startTimer: 0
