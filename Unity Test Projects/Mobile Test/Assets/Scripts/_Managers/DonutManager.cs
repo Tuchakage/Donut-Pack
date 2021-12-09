@@ -22,8 +22,6 @@ public class DonutManager : MonoBehaviour
         //Change Position
         Donut.transform.position = new Vector2(-0.381000012f, -0.666999996f);
 
-
-
         //Add all the components so that the Donut can be shot from the sling shot
         Donut.AddComponent<Rigidbody2D>();
         Donut.AddComponent<DonutControl>();

@@ -1382,6 +1382,7 @@ MonoBehaviour:
   - {fileID: 6114422616969166077, guid: 18e13a35e26c4394392814960146bf02, type: 3}
   - {fileID: 6114422616969166077, guid: 12831dde2356ca54a94a4e8b3a237a2f, type: 3}
   - {fileID: 6114422616969166077, guid: 7a57f5d029fcd0f4ba2172d495129806, type: 3}
+  pressedButton: 0
 --- !u!1 &531430922
 GameObject:
   m_ObjectHideFlags: 0
