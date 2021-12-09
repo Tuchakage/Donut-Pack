@@ -36,8 +36,7 @@ public class PauseGame : MonoBehaviour
 
     public void RestartLevel()
     {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     //JUST HERE TO TEST OUT SPAWNING OFF SPRINKLES

@@ -6,14 +6,14 @@ using UnityEngine;
 public class RockCollision : MonoBehaviour
 {
 
-    [SerializeField] private SwipeControls sc;
+    [SerializeField] private SwipeControlsNew sc;
     [SerializeField] private Transform _player;
 
     private void Start()
     {
         //grab components of player transform and controller
         _player = GameObject.Find("DoughBall").GetComponent<Transform>();
-        sc = GameObject.Find("TouchManager").GetComponent<SwipeControls>();
+        sc = GameObject.Find("TouchManager").GetComponent<SwipeControlsNew>();
     }
 
     private void OnCollisionEnter2D(Collision2D other)

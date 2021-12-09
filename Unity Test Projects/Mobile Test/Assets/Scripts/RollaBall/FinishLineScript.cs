@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FinishLineScript : MonoBehaviour
 {
-    public SwipeControls _playerControls;
+    public SwipeControlsNew _playerControls;
     public TimerController tc;
     public bool hasCrossedFinishLine;
     [SerializeField] private LevelChanger lc;
@@ -16,7 +16,7 @@ public class FinishLineScript : MonoBehaviour
         hasCrossedFinishLine = false;
         lc = GameObject.Find("GameController").GetComponent<LevelChanger>();
         tc = GameObject.Find("GameController").GetComponent<TimerController>();
-        _playerControls = GameObject.Find("TouchManager").GetComponent<SwipeControls>();
+        _playerControls = GameObject.Find("TouchManager").GetComponent<SwipeControlsNew>();
     }
 
 

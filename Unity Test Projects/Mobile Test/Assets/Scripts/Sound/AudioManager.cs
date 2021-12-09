@@ -1,6 +1,7 @@
 using System;
 using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
@@ -11,14 +12,6 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        if (instance == null) {
-            instance = this;
-        } else {
-            Destroy(gameObject);
-        }
-        
-        DontDestroyOnLoad(gameObject);
-        
         foreach (Sound s in sounds)
         {
            s.source = gameObject.AddComponent<AudioSource>();
@@ -30,9 +23,41 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Main Menu")
+        {
+            Play("MainMenuBGM");
+        }
+
+        if (SceneManager.GetActiveScene().name == "IngredientsTutorial" || SceneManager.GetActiveScene().name == "Ingredients")
+        {
+            Play("Ingredients Tutorial Music");
+        }
+        
+    /*  if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball")
+        {
+            Play("FrostingBGM");
+        }*/
+
+        if (SceneManager.GetActiveScene().name == "ShakeTutorial" || SceneManager.GetActiveScene().name == "Shake")
+        {
+            Play("FrostingBGM");
+        }
+
+        if (SceneManager.GetActiveScene().name == "Packing")
+        {
+            Play("PackingBGM");
+        }
+    }
+    
+
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+            return;
+        
         s.source.Play();
     }
 }

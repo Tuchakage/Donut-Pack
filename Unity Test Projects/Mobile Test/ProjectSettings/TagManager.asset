@@ -16,6 +16,7 @@ TagManager:
   - Donut
   - Packet
   - Sprinkles
+  - Score Manager
   layers:
   - Default
   - TransparentFX

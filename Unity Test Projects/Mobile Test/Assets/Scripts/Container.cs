@@ -79,6 +79,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Bad Ingredient");
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
                 //If there is already ingredients in this container and then a wrong item is put into the container
@@ -155,6 +156,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Bad Ingredient");
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
                 //If there is already ingredients in this container and then a wrong item is put into the container
@@ -232,6 +234,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Bad Ingredient");
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
                 //If there is already ingredients in this container and then a wrong item is put into the container
@@ -309,6 +312,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Bad Ingredient");
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
                 //If there is already ingredients in this container and then a wrong item is put into the container
@@ -386,6 +390,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Wrong Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Bad Ingredient");
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
                 if (amntflour > 0)
@@ -429,6 +434,7 @@ public class Container : MonoBehaviour
             else if (col.gameObject.tag != "BadItems" && !isBeingDragged.pickedUp) //If the gameobject is colliding with the wrong container
             {
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Bad Ingredient");
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
             }

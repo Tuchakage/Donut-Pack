@@ -19,6 +19,7 @@
           <e p="Conveyor" t="Include">
             <e p="MovingConveyor.cs" t="Include" />
           </e>
+          <e p="DifficultyManager.cs" t="Include" />
           <e p="DontDestroyOnLoad.cs" t="Include" />
           <e p="DonutControl.cs" t="Include" />
           <e p="DonutManager.cs" t="Include" />
@@ -44,9 +45,10 @@
             <e p="FinishLineScript.cs" t="Include" />
             <e p="RockCollision.cs" t="Include" />
             <e p="RockSpawner.cs" t="Include" />
-            <e p="SwipeControls.cs" t="Include" />
+            <e p="SwipeControlsNew.cs" t="Include" />
             <e p="TimerController.cs" t="Include" />
           </e>
+          <e p="ScoreManager.cs" t="Include" />
           <e p="ShakeDetector.cs" t="Include" />
           <e p="Sound" t="Include">
             <e p="AudioManager.cs" t="Include" />

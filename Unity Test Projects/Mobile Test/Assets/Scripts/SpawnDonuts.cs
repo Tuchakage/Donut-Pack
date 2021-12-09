@@ -26,6 +26,8 @@ public class SpawnDonuts : MonoBehaviour
         {
             //Spawn in another Donut
             GameObject donut = Instantiate(NextDonut, new Vector2(-0.381000012f, -0.666999996f), Quaternion.identity);
+            donut.transform.parent = transform;
+            donut.name = "Donut";
             //Make it so we can see the Donut
             donut.SetActive(true);
             donut.GetComponent<Rigidbody2D>().isKinematic = true;

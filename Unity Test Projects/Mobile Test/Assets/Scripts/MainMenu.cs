@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayLevel2()
     {
-        SceneManager.LoadScene("Roll-A-Ball - (1)");
+        SceneManager.LoadScene("Roll-A-Ball");
     }
 
     public void PlayLevel3() 

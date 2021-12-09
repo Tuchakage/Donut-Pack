@@ -184,6 +184,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fe386ffb58f3f408f7522f55e35186, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 5964640076089116960}
+  packets:
+  - {fileID: 21300000, guid: 14cd2cf2b8d2afa46b85a3e0719e0553, type: 3}
+  - {fileID: 21300000, guid: a6ee606b514828c4eb6995264eb2a001, type: 3}
+  scoreManager: {fileID: 4943336636052894760, guid: 439a0aab87dac1646acbe721b56eacf4, type: 3}
 --- !u!61 &5964640076376088335
 BoxCollider2D:
   m_ObjectHideFlags: 0
