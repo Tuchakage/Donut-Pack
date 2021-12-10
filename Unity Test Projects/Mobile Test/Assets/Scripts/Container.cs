@@ -21,6 +21,8 @@ public class Container : MonoBehaviour
     private int amntgoodmilk, amntgoodyeast,amntsalt,amntsugar,amntflour;
     [SerializeField]
     private bool isComplete = false; // Checks if the container is full
+    [SerializeField]
+    private bool isFull; //Indicates whether the container is full or not
     // Start is called before the first frame update
     void Start()
     {
@@ -87,27 +89,32 @@ public class Container : MonoBehaviour
                 {
                     //Decrease the amount of Milk
                     amntgoodmilk--;
-                    if (amntgoodmilk == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    if (amntgoodmilk < 1) //If the amount in this container is back to 0
                     {
-                        //Tell the game manager that the container is no longer full
-                        gm.amntContainersComplete--;
+                        wasFull();
+                        //Make the Measuring Cup Sprite Empty again
+                        spriteRenderer.sprite = containerFill[0];
+                    }
+                    else if (amntgoodmilk == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    {
+                        //Tell the game manager that the container is no longer full if it was full
+                        wasFull();
                         spriteRenderer.sprite = containerFill[4];
+                        
                     }
                     else if (amntgoodmilk == items.maxAmntOfItem / 2)
                     {
+                        wasFull();
                         //Change the sprite to being half full again
                         spriteRenderer.sprite = containerFill[1];
                     }
                     //If the container is 25% full
                     else if (amntgoodmilk == items.maxAmntOfItem / 4)
                     {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[3];
                     }
-                    else if (amntgoodmilk < 1) //If the amount in this container is back to 0
-                    {
-                        //Make the Measuring Cup Sprite Empty again
-                        spriteRenderer.sprite = containerFill[0];
-                    }
+
                 }
             }
         }
@@ -164,27 +171,30 @@ public class Container : MonoBehaviour
                 {
                     //Decrease the amount of Yeast
                     amntgoodyeast--;
-                    if (amntgoodyeast == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    if (amntgoodyeast < 1) //If the amount in this container is back to 0
                     {
-                        //Tell the game manager that the container is no longer full
-                        gm.amntContainersComplete--;
+                        wasFull();
+                        //Make the Measuring Cup Sprite Empty again
+                        spriteRenderer.sprite = containerFill[0];
+                    }
+                    else if (amntgoodyeast == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntgoodyeast == items.maxAmntOfItem / 2)
                     {
+                        wasFull();
                         //Change the sprite to being half full again
                         spriteRenderer.sprite = containerFill[1];
                     }
                     //If the container is 25% full
                     else if (amntgoodyeast == items.maxAmntOfItem / 4)
                     {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[3];
                     }
-                    else if (amntgoodyeast < 1) //If the amount in this container is back to 0
-                    {
-                        //Make the Measuring Cup Sprite Empty again
-                        spriteRenderer.sprite = containerFill[0];
-                    }
+
                 }
             }
         }
@@ -242,27 +252,30 @@ public class Container : MonoBehaviour
                 {
                     //Decrease the amount of Salt
                     amntsalt--;
-                    if (amntsalt == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    if (amntsalt < 1) //If the amount in this container is back to 0
                     {
-                        //Tell the game manager that the container is no longer full
-                        gm.amntContainersComplete--;
+                        wasFull();
+                        //Make the Measuring Cup Sprite Empty again
+                        spriteRenderer.sprite = containerFill[0];
+                    }
+                    else if (amntsalt == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntsalt == items.maxAmntOfItem / 2)
                     {
+                        wasFull();
                         //Change the sprite to being half full again
                         spriteRenderer.sprite = containerFill[1];
                     }
                     //If the container is 25% full
                     else if (amntsalt == items.maxAmntOfItem / 4)
                     {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[3];
                     }
-                    else if (amntsalt < 1) //If the amount in this container is back to 0
-                    {
-                        //Make the Measuring Cup Sprite Empty again
-                        spriteRenderer.sprite = containerFill[0];
-                    }
+
                 }
             }
         }
@@ -320,27 +333,30 @@ public class Container : MonoBehaviour
                 {
                     //Decrease the amount of Sugar
                     amntsugar--;
-                    if (amntsugar == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    if (amntsugar < 1) //If the amount in this container is back to 0
                     {
-                        //Tell the game manager that the container is no longer full
-                        gm.amntContainersComplete--;
+                        wasFull();
+                        //Make the Measuring Cup Sprite Empty again
+                        spriteRenderer.sprite = containerFill[0];
+                    }
+                    else if (amntsugar == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntsugar == items.maxAmntOfItem / 2)
                     {
+                        wasFull();
                         //Change the sprite to being half full again
                         spriteRenderer.sprite = containerFill[1];
                     }
                     //If the container is 25% full
                     else if (amntsugar == items.maxAmntOfItem / 4)
                     {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[3];
                     }
-                    else if (amntsugar < 1) //If the amount in this container is back to 0
-                    {
-                        //Make the Measuring Cup Sprite Empty again
-                        spriteRenderer.sprite = containerFill[0];
-                    }
+
                 }
             }
         }
@@ -397,27 +413,30 @@ public class Container : MonoBehaviour
                 {
                     //Decrease the amount of Flour
                     amntflour--;
-                    if (amntflour == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    if (amntflour < 1) //If the amount in this container is back to 0
                     {
-                        //Tell the game manager that the container is no longer full
-                        gm.amntContainersComplete--;
+                        wasFull();
+                        //Make the Measuring Cup Sprite Empty again
+                        spriteRenderer.sprite = containerFill[0];
+                    }
+                    else if (amntflour == items.maxAmntOfItem / 4 * 3)  //75% of a container
+                    {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[4];
                     }
                     else if (amntflour == items.maxAmntOfItem / 2)
                     {
+                        wasFull();
                         //Change the sprite to being half full again
                         spriteRenderer.sprite = containerFill[1];
                     }
                     //If the container is 25% full
                     else if (amntflour == items.maxAmntOfItem / 4)
                     {
+                        wasFull();
                         spriteRenderer.sprite = containerFill[3];
                     }
-                    else if (amntflour < 1) //If the amount in this container is back to 0
-                    {
-                        //Make the Measuring Cup Sprite Empty again
-                        spriteRenderer.sprite = containerFill[0];
-                    }
+
                 }
             }
         }
@@ -458,6 +477,19 @@ public class Container : MonoBehaviour
         {
             //Disables the Bin Open Game Object when the item leaves the collider of the bin
             spriteRenderer.sprite = bin[0];
+        }
+    }
+
+    //Used to Check if the Container was full before decreasing the amount of ingredients it has
+    void wasFull() 
+    {
+        //If it was full
+        if (isComplete) 
+        {
+            //Tell the GameManager that a Container is no longer full
+            gm.amntContainersComplete--;
+            //Indicate that it is no longer full
+            isComplete = false;
         }
     }
 }

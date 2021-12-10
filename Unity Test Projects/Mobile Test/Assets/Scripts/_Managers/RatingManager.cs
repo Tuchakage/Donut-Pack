@@ -148,7 +148,7 @@ public class RatingManager : MonoBehaviour
         else if (timeRemaining > maxTime / 2 && timeRemaining < maxTime && !ratingApplied) //If the time left is more than half of the max time and less than max time then you get 2 stars
         {
             //Keep note of the rating for this level
-            ratingsForLevel.Add("Ingredients", 2);
+            ratingsForLevel.Add("RollABall", 2);
             //Set the rating for this level
             setRating(2);
             //Tell the GameManager that the rating has been applied so it cant call it again
@@ -157,7 +157,39 @@ public class RatingManager : MonoBehaviour
         else if (timeRemaining < maxTime / 2 && !ratingApplied) // If time left is less than half of the max time
         {
             //Keep note of the rating for this level
-            ratingsForLevel.Add("Ingredients", 1);
+            ratingsForLevel.Add("RollABall", 1);
+            //Set the rating for this level
+            setRating(1);
+            //Tell the GameManager that the rating has been applied so it cant call it again
+            ratingApplied = true;
+        }
+    }
+
+    public void RatingForPacking(int maxamntdonuts, int score) 
+    {
+        //If the player gets all the Donuts in the Packages
+        if (score == maxamntdonuts && !ratingApplied)
+        {
+            //Keep note of the rating for this level
+            ratingsForLevel.Add("Packing", 3);
+            //Set the rating for this level
+            setRating(3);
+            //Tell the GameManager that the rating has been applied so it cant call it again
+            ratingApplied = true;
+        }
+        else if (score == maxamntdonuts / 2 && !ratingApplied) 
+        {
+            //Keep note of the rating for this level
+            ratingsForLevel.Add("Packing", 2);
+            //Set the rating for this level
+            setRating(2);
+            //Tell the GameManager that the rating has been applied so it cant call it again
+            ratingApplied = true;
+        }
+        else if (score == maxamntdonuts / 4 && !ratingApplied)
+        {
+            //Keep note of the rating for this level
+            ratingsForLevel.Add("Packing", 1);
             //Set the rating for this level
             setRating(1);
             //Tell the GameManager that the rating has been applied so it cant call it again
@@ -172,7 +204,11 @@ public class RatingManager : MonoBehaviour
         {
             stars[i].SetActive(true);
         }
+    }
 
-
+    void FinalRatingCalc() 
+    {
+        //Add up the Total Score for all the ratings
+        int totalscore = ratingsForLevel["Ingredients"] + ratingsForLevel["RollABall"] +ratingsForLevel["Packing"];
     }
 }

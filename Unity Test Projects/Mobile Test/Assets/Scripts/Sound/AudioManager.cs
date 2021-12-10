@@ -34,11 +34,11 @@ public class AudioManager : MonoBehaviour
         {
             Play("Ingredients Tutorial Music");
         }
-        
-    /*  if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball")
+
+        if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball")
         {
-            Play("FrostingBGM");
-        }*/
+            Play("Roll-A-Ball-BGM");
+        }
 
         if (SceneManager.GetActiveScene().name == "ShakeTutorial" || SceneManager.GetActiveScene().name == "Shake")
         {

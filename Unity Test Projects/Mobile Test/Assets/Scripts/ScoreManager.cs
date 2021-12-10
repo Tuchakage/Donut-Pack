@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    LevelChanger lc;
+    RatingManager rm;
+    SpawnDonuts sd;
     public static int score;
     public static TextMeshProUGUI textScore;
 
@@ -15,7 +18,6 @@ public class ScoreManager : MonoBehaviour
         textScore = GameObject.Find("Score").GetComponent<TextMeshProUGUI>();
         textScore.text = $"Donut Packed: 0";
     }
-
 
     public static void IncrementScore(int amount)
     {

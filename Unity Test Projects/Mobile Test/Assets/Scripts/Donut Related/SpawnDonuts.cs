@@ -44,4 +44,9 @@ public class SpawnDonuts : MonoBehaviour
         }
 
     }
+
+    public void SetMaxDonuts(int d) 
+    {
+        maxDonut = d;
+    }
 }

@@ -6562,6 +6562,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Roll-A-Ball-BGM
+    clip: {fileID: 8300000, guid: c97bcbcde38425543a247fa3d673b563, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1714976697
 Transform:
   m_ObjectHideFlags: 0

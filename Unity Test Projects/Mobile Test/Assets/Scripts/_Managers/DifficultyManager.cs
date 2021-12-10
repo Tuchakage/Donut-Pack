@@ -7,7 +7,7 @@ public class DifficultyManager : MonoBehaviour
 {
 
     [SerializeField]
-    private int maxamntitem; //Set the Max amount of items for the Level in the button
+    private int maxamntitem, maxDonuts; //Set the Max amount of items for the Level in the button
     [SerializeField]
     private float maxTimeIngredients, maxTimeRollABall; //Set the Max amount of time you have for Ingredients and Roll A Ball Level
     [SerializeField]
@@ -58,6 +58,10 @@ public class DifficultyManager : MonoBehaviour
             //Set The Conveyor Speed
             GameObject.Find("Conveyor").GetComponent<MovingConveyor>().SetConveyorSpeed(conveyorSpeed);
         }
+        else if (currentSceneName == "Packing") 
+        {
+            GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>().SetMaxDonuts(maxDonuts);
+        }
     }
 
     // called when the game is terminated
@@ -67,6 +71,7 @@ public class DifficultyManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
+    //Functions called by Buttons (Value is also set in the buttons)
     public void SetMaxAmntItems(int maxitems) 
     {
         //Whatever value is put into the parameters will be set for the actual mini games
@@ -88,6 +93,10 @@ public class DifficultyManager : MonoBehaviour
     {
         //Whatever value is put into the parameters will be set for the actual mini games
         maxTimeRollABall = time;
+    }
+    public void maxDonutSpawned(int maxD) 
+    {
+        maxDonuts = maxD;
     }
 }
 

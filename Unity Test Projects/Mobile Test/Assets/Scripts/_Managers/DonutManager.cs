@@ -33,10 +33,7 @@ public class DonutManager : MonoBehaviour
         //Destroy the DontDestroyOnLoad so we can keep respawning the Donut
         Destroy(Donut.GetComponent<DontDestroyOnLoad>());
     }
-    private void Update()
-    {
 
-    }
     public void SetDonut(GameObject go) 
     {
         Donut = go;

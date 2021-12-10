@@ -14,6 +14,7 @@ public class DonutControl : MonoBehaviour
     public Rigidbody2D Hook;
 
     SpawnDonuts dm;
+    GameManager gm;
 
     public LineRenderer catapultLineFront;
     public LineRenderer catapultLineBack;
@@ -24,6 +25,7 @@ public class DonutControl : MonoBehaviour
 
     private void Start()
     {
+        gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         dm = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
         //Make the next Donut the same one
         dm.NextDonut = this.gameObject;
@@ -143,5 +145,7 @@ public class DonutControl : MonoBehaviour
         //Turn the band back on
         BandScript.BandVisible = 1;
         Destroy(this.gameObject);
+        //Tell The Game Manager that i have shot a Donut from the Slingshot
+        gm.IncreaseDonutShots();
     }
 }
