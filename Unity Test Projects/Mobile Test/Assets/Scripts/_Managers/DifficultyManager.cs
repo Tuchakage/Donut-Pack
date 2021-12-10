@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class DifficultyManager : MonoBehaviour
 {
-    [SerializeField]
-    private int difficulty;
 
+    [SerializeField]
+    private int maxamntitem; //Set the Max amount of items for the Level in the button
+    [SerializeField]
+    private float maxTimeIngredients, maxTimeRollABall; //Set the Max amount of time you have for Ingredients and Roll A Ball Level
+    [SerializeField]
+    private float conveyorSpeed; //Set the speed of the Conveyor Belt
     private string currentSceneName;
     public static DifficultyManager Instance
     {
@@ -19,7 +23,7 @@ public class DifficultyManager : MonoBehaviour
 
     private static DifficultyManager instance = null;
 
-     void Awake()
+    void Awake()
     {
         if (instance)
         {
@@ -47,37 +51,13 @@ public class DifficultyManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
 
         //If the Scene that is loading is the Ingredients Scene
-        if (currentSceneName == "Ingredients") 
+        if (currentSceneName == "Ingredients")
         {
-            //Easy Difficulty
-            if (difficulty == 0)
-            {
-                //Set the max amount of items for easy mode
-                GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>().SetMaxAmntOfItem(4);
-                //Set The Conveyor Speed
-                GameObject.Find("Conveyor").GetComponent<MovingConveyor>().SetConveyorSpeed(50);
-            }
-            else if (difficulty == 1) //Medium Difficulty
-            {
-                //Set the max amount of items for easy mode
-                GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>().SetMaxAmntOfItem(8);
-                //Set The Conveyor Speed
-                GameObject.Find("Conveyor").GetComponent<MovingConveyor>().SetConveyorSpeed(150);
-            }
+            //Set the max amount of items for Ingredients Level depending on value of buttons
+            GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>().SetMaxAmntOfItem(maxamntitem);
+            //Set The Conveyor Speed
+            GameObject.Find("Conveyor").GetComponent<MovingConveyor>().SetConveyorSpeed(conveyorSpeed);
         }
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     // called when the game is terminated
@@ -87,13 +67,27 @@ public class DifficultyManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    public void EasyMode() 
+    public void SetMaxAmntItems(int maxitems) 
     {
-        difficulty = 0;
+        //Whatever value is put into the parameters will be set for the actual mini games
+        maxamntitem = maxitems;
     }
 
-    public void MediumMode() 
+    public void SetConveyorSpeed(float speed) 
     {
-        difficulty = 1;
+        //Whatever value is put into the parameters will be set for the actual mini games
+        conveyorSpeed = speed;
+    }
+    public void SetTimeForIngredients(float time) 
+    {
+        //Whatever value is put into the parameters will be set for the actual mini games
+        maxTimeIngredients = time;
+    }
+
+    public void SetTimeForRollABall(float time) 
+    {
+        //Whatever value is put into the parameters will be set for the actual mini games
+        maxTimeRollABall = time;
     }
 }
+
