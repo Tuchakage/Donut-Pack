@@ -7,22 +7,28 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="DonutCollision.cs" t="Include" />
+        <e p="DonutShowcase.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="_Managers" t="Include">
+            <e p="DifficultyManager.cs" t="Include" />
+            <e p="DonutManager.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="RatingManager.cs" t="Include" />
+          </e>
           <e p="BandScript.cs" t="Include" />
           <e p="Camera" t="Include">
             <e p="CameraFollow.cs" t="Include" />
           </e>
-          <e p="ChangeSprinkleColour.cs" t="Include" />
           <e p="CircleRot.cs" t="Include" />
-          <e p="CircleRotate.cs" t="Include" />
           <e p="Container.cs" t="Include" />
           <e p="Conveyor" t="Include">
             <e p="MovingConveyor.cs" t="Include" />
           </e>
-          <e p="DifficultyManager.cs" t="Include" />
           <e p="DontDestroyOnLoad.cs" t="Include" />
-          <e p="DonutControl.cs" t="Include" />
-          <e p="DonutManager.cs" t="Include" />
+          <e p="Donut Related" t="Include">
+            <e p="DonutControl.cs" t="Include" />
+            <e p="SpawnDonuts.cs" t="Include" />
+          </e>
           <e p="DragController.cs" t="Include" />
           <e p="Draggable.cs" t="Include" />
           <e p="Fitting Game On Screen" t="Include">
@@ -30,7 +36,6 @@
             <e p="CameraViewportHandler.cs" t="Include" />
           </e>
           <e p="FrostingMachine.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
           <e p="IcingCollision.cs" t="Include" />
           <e p="ItemSpawner.cs" t="Include" />
           <e p="LevelChanger.cs" t="Include" />
@@ -42,6 +47,7 @@
           </e>
           <e p="PhysicsController.cs" t="Include" />
           <e p="RollaBall" t="Include">
+            <e p="DonutCutterCollision.cs" t="Include" />
             <e p="FinishLineScript.cs" t="Include" />
             <e p="RockCollision.cs" t="Include" />
             <e p="RockSpawner.cs" t="Include" />
@@ -49,13 +55,15 @@
             <e p="TimerController.cs" t="Include" />
           </e>
           <e p="ScoreManager.cs" t="Include" />
-          <e p="ShakeDetector.cs" t="Include" />
           <e p="Sound" t="Include">
             <e p="AudioManager.cs" t="Include" />
             <e p="Sound.cs" t="Include" />
           </e>
-          <e p="SpawnDonuts.cs" t="Include" />
-          <e p="SprinklesCollision.cs" t="Include" />
+          <e p="Sprinkles Scene" t="Include">
+            <e p="ChangeSprinkleColour.cs" t="Include" />
+            <e p="ShakeDetector.cs" t="Include" />
+            <e p="SprinklesCollision.cs" t="Include" />
+          </e>
           <e p="TimeIndicator.cs" t="Include" />
         </e>
         <e p="Test.cs" t="Include" />

@@ -899,6 +899,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!61 &214909250
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2851,6 +2852,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!70 &739513688
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -4032,7 +4034,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Ingredients Tutorial Music
     clip: {fileID: 8300000, guid: 23689cfb61b9c0640ab8150abee6b1d1, type: 3}
-    volume: 0.5
+    volume: 0.35
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -5376,6 +5378,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!70 &1098739603
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -5852,6 +5855,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!61 &1206310767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6371,6 +6375,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!212 &1298071436
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6577,6 +6582,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!61 &1332303370
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7312,6 +7318,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!212 &1507854796
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8685,6 +8692,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!61 &1786061688
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8925,6 +8933,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!70 &1812024839
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -9177,6 +9186,7 @@ MonoBehaviour:
   amntsugar: 0
   amntflour: 0
   isComplete: 0
+  isFull: 0
 --- !u!114 &1846418536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10443,8 +10453,9 @@ MonoBehaviour:
   timertext: {fileID: 1074010770}
   timeRemaining: 0
   maxTimer: 120
-  popupText: {fileID: 3157555354826601723, guid: 30623210fd551b940809ae1d213e3e2b, type: 3}
   amntContainersComplete: 0
+  donutsShot: 0
+  popupText: {fileID: 3157555354826601723, guid: 30623210fd551b940809ae1d213e3e2b, type: 3}
   startTimer: 0
   isGameFinished: 0
 --- !u!114 &2076381081
