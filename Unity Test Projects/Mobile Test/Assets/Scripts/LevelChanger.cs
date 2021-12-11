@@ -62,9 +62,13 @@ public class LevelChanger : MonoBehaviour
             donut.AddComponent<DontDestroyOnLoad>();
             SceneManager.LoadScene("DonutShowcase");
         }
-        else if (currentSceneName == "DonutShowcase") 
+        else if (currentSceneName == "DonutShowcase")
         {
             SceneManager.LoadScene("Packing");
+        }
+        else if (currentSceneName == "Packing") 
+        {
+            SceneManager.LoadScene("FinalRating");
         }
     }
 

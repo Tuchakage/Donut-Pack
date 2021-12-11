@@ -58,10 +58,16 @@ public class RatingManager : MonoBehaviour
         //If the Scene has Gameplay
         if (currentSceneName == "Ingredients" || currentSceneName == "Shake" || currentSceneName == "Roll-A-Ball" || currentSceneName == "Packing")
         {
-            DisableWinScreen();
+            FindStars();
+            //Then disable the Win Screen
+            winScreen = GameObject.Find("Win Screen");
+            winScreen.SetActive(false);
+        }
+        else if (currentSceneName == "FinalRating") 
+        {
+            FindStars();
 
         }
-
 
     }
 
@@ -71,6 +77,16 @@ public class RatingManager : MonoBehaviour
     {
         //Create a Dictionary so we can hold the ratings for each level
         ratingsForLevel = new Dictionary<string, int>();
+        //FOR TESTING DELETE LATER
+        if (currentSceneName == "FinalRating") 
+        {
+            ratingsForLevel.Add("Ingredients", 3);
+            ratingsForLevel.Add("RollABall", 3);
+            ratingsForLevel.Add("Packing", 3);
+            FinalRatingCalc();
+        }
+        
+
     }
 
     // Update is called once per frame
@@ -86,7 +102,7 @@ public class RatingManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    void DisableWinScreen()
+    void FindStars()
     {
         //Find all the Stars in the canvas and disable them
         foreach (GameObject ratingStars in GameObject.FindGameObjectsWithTag("Stars"))
@@ -96,9 +112,7 @@ public class RatingManager : MonoBehaviour
             //Disable them so they cant be seen
             ratingStars.SetActive(false);
         }
-        //Then disable the Win Screen
-        winScreen = GameObject.Find("Win Screen");
-        winScreen.SetActive(false);
+
     }
 
     public void RatingForIngredients(float timeRemaining, float maxTime) 
@@ -113,7 +127,7 @@ public class RatingManager : MonoBehaviour
             //Tell the GameManager that the rating has been applied so it cant call it again
             ratingApplied = true;
         }
-        else if (timeRemaining > maxTime / 2 && timeRemaining < maxTime && !ratingApplied) //If the time left is more than half of the max time and less than max time then you get 2 stars
+        else if ((timeRemaining > maxTime / 2 && timeRemaining < maxTime) && !ratingApplied) //If the time left is more than half of the max time and less than max time then you get 2 stars
         {
             //Keep note of the rating for this level
             ratingsForLevel.Add("Ingredients", 2);
@@ -165,7 +179,7 @@ public class RatingManager : MonoBehaviour
         }
     }
 
-    public void RatingForPacking(int maxamntdonuts, int score) 
+    public void RatingForPacking(float maxamntdonuts, float score) 
     {
         //If the player gets all the Donuts in the Packages
         if (score == maxamntdonuts && !ratingApplied)
@@ -177,7 +191,7 @@ public class RatingManager : MonoBehaviour
             //Tell the GameManager that the rating has been applied so it cant call it again
             ratingApplied = true;
         }
-        else if (score == maxamntdonuts / 2 && !ratingApplied) 
+        else if ((score >= maxamntdonuts / 2 && score < maxamntdonuts) && !ratingApplied) //Score is more than or equal to half of the max amount of donuts and its less than the max amount
         {
             //Keep note of the rating for this level
             ratingsForLevel.Add("Packing", 2);
@@ -186,7 +200,7 @@ public class RatingManager : MonoBehaviour
             //Tell the GameManager that the rating has been applied so it cant call it again
             ratingApplied = true;
         }
-        else if (score == maxamntdonuts / 4 && !ratingApplied)
+        else if ((score > 0 && score < maxamntdonuts / 2) && !ratingApplied) //The score is more than 0 and less than half of the max Amount of donuts
         {
             //Keep note of the rating for this level
             ratingsForLevel.Add("Packing", 1);
@@ -197,6 +211,7 @@ public class RatingManager : MonoBehaviour
         }
     }
 
+    //Makes The Stars Show Up
     void setRating(int amntofStars) 
     {
         //Depending on the rating the player got, re enable the star game Objects 
@@ -208,7 +223,14 @@ public class RatingManager : MonoBehaviour
 
     void FinalRatingCalc() 
     {
+
         //Add up the Total Score for all the ratings
         int totalscore = ratingsForLevel["Ingredients"] + ratingsForLevel["RollABall"] +ratingsForLevel["Packing"];
+
+        if (totalscore == 9) 
+        {
+            //They Get 3 Stars for that level
+            setRating(3);
+        }
     }
 }

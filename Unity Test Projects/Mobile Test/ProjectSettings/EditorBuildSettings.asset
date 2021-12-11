@@ -32,4 +32,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Packing.unity
     guid: a44a13a17c27fb64bb16a872f7965445
+  - enabled: 1
+    path: Assets/Scenes/FinalRating.unity
+    guid: 3edfc43529ad2e448939de3e1ccffaeb
   m_configObjects: {}

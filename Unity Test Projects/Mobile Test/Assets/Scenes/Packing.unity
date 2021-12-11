@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c94924b6dc7274742aabec3c339a108d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDragDistance: 5
+  maxDragDistance: 3
   releaseTime: 0.15
   rb: {fileID: 108539266}
   Hook: {fileID: 213968425}
@@ -845,7 +845,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &200870986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -987,7 +987,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261871003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.0405, y: -8.92, z: 32.12876}
+  m_LocalPosition: {x: -1.0405, y: -9.76, z: 32.12876}
   m_LocalScale: {x: 28.215437, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1057509952}
@@ -2338,22 +2338,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 893679956}
         m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
         m_MethodName: MiniGameWon
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2997,6 +2985,18 @@ MonoBehaviour:
           m_StringArgument: Button
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1704673749}
+        m_TargetAssemblyTypeName: PauseGame, Assembly-CSharp
+        m_MethodName: RestartLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1614555084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3130,6 +3130,18 @@ MonoBehaviour:
           m_StringArgument: Button
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 893679956}
+        m_TargetAssemblyTypeName: LevelChanger, Assembly-CSharp
+        m_MethodName: MiniGameLost
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1616786741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3201,7 +3213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pausePanel: {fileID: 1575602267}
-  _toBeDisabled: {fileID: 1057509951}
+  _toBeDisabled: {fileID: 108539264}
   Sprinkles: {fileID: 1938461453963477472, guid: 50b305acd409a124c84f424b827c46fc, type: 3}
 --- !u!114 &1704673750
 MonoBehaviour:
@@ -3300,7 +3312,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1722942106}
   - component: {fileID: 1722942105}
-  - component: {fileID: 1722942107}
   m_Layer: 0
   m_Name: DonutManager
   m_TagString: Untagged
@@ -3336,26 +3347,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1722942107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722942104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e258c08d38ad4f74a8e49819b4078d60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timertext: {fileID: 0}
-  timeRemaining: 0
-  maxTimer: 0
-  amntContainersComplete: 0
-  donutsShot: 0
-  popupText: {fileID: 0}
-  startTimer: 0
-  isGameFinished: 0
 --- !u!1 &1736893111
 GameObject:
   m_ObjectHideFlags: 0

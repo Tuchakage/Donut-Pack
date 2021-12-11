@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     LevelChanger lc;
     RatingManager rm;
     SpawnDonuts sd;
-    public static int score;
+    public static float score;
     public static TextMeshProUGUI textScore;
 
     private void Start()

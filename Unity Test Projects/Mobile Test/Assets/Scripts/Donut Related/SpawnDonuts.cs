@@ -7,8 +7,8 @@ public class SpawnDonuts : MonoBehaviour
 {
     public GameObject NextDonut;
     public int donutSpawned; //Tracks how many Donuts has been spawned
-    public int maxDonut = 0; //Max Amount Of Donuts that can be spawned
-    public int donutRemaining;
+    public float maxDonut = 0; //Max Amount Of Donuts that can be spawned
+    public float donutRemaining;
     public TextMeshProUGUI donutRemainingText;
     // Start is called before the first frame update
     void Start()
