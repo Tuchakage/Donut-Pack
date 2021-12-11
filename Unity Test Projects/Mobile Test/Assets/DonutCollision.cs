@@ -18,7 +18,6 @@ public class DonutCollision : MonoBehaviour
     {
         if (col.tag == "Donut") 
         {
-            Debug.Log("Ok");
             spriteRenderer.sprite = packets[1];
             //Make the Package fall down quicker
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3f;

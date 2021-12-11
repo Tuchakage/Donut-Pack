@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
         timeRemaining = maxTimer;
         lc = GetComponent<LevelChanger>();
         rm = GameObject.Find("RatingManager").GetComponent<RatingManager>();
+        if (SceneManager.GetActiveScene().name == "Packing")
         sd = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
         //Only for the shaker scene
         startTimer = false;

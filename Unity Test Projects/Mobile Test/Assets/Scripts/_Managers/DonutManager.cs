@@ -14,7 +14,7 @@ public class DonutManager : MonoBehaviour
     {
         //Find the Donut Object and save it
         Donut = GameObject.FindGameObjectWithTag("Donut");
-
+        Debug.Log(Donut);
         //Change Scale
         Donut.transform.localScale = new Vector3(0.0645455122f, 0.0787723586f, 0.583067f);
         //Rotate Donut

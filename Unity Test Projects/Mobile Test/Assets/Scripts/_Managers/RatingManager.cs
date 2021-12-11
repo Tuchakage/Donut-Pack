@@ -58,15 +58,17 @@ public class RatingManager : MonoBehaviour
         //If the Scene has Gameplay
         if (currentSceneName == "Ingredients" || currentSceneName == "Shake" || currentSceneName == "Roll-A-Ball" || currentSceneName == "Packing")
         {
+            ClearList();         
             FindStars();
+            
             //Then disable the Win Screen
             winScreen = GameObject.Find("Win Screen");
             winScreen.SetActive(false);
         }
         else if (currentSceneName == "FinalRating") 
         {
+            ClearList();
             FindStars();
-
         }
 
     }
@@ -113,6 +115,15 @@ public class RatingManager : MonoBehaviour
             ratingStars.SetActive(false);
         }
 
+    }
+
+    void ClearList() 
+    {
+        //If there is things in the Stars list when a mini game is loaded, clear the list
+        if (stars != null)
+        {
+            stars.Clear();
+        }
     }
 
     public void RatingForIngredients(float timeRemaining, float maxTime) 
@@ -217,6 +228,7 @@ public class RatingManager : MonoBehaviour
         //Depending on the rating the player got, re enable the star game Objects 
         for (int i = 0; i < amntofStars; i++) 
         {
+            Debug.Log(i);
             stars[i].SetActive(true);
         }
     }
