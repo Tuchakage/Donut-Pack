@@ -51,6 +51,7 @@ public class PauseGame : MonoBehaviour
     //JUST HERE TO TEST OUT SPAWNING OFF SPRINKLES
     public void Spawn()
     {
+        FindObjectOfType<AudioManager>().Play("Shaker");
         //Randomly spawns in Sprinkles between 2 points
         GameObject indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-1.85f, 2.6f), 3, 0), Quaternion.identity);
     }

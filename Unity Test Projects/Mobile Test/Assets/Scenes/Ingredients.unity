@@ -4038,8 +4038,20 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: Conveyor Belt
+    clip: {fileID: 8300000, guid: 30d29ae122edb884d8e3b2f241bc1b2b, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
   - name: Bad Ingredient
     clip: {fileID: 8300000, guid: 0cbdb684c24d8d041a451565ee183f6b, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Right Ingredient
+    clip: {fileID: 8300000, guid: a7ed25bdcbdcc614a9a7a2ad87ebb595, type: 3}
     volume: 0.75
     pitch: 1
     loop: 0

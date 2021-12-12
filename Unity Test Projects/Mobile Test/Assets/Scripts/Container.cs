@@ -43,6 +43,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Right Ingredient");
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
@@ -125,6 +126,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Right Ingredient");
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
@@ -205,6 +207,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Right Ingredient");
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
@@ -287,6 +290,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Right Ingredient");
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
@@ -368,6 +372,7 @@ public class Container : MonoBehaviour
             {
                 Debug.Log("Correct Item");
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Right Ingredient");
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
@@ -447,6 +452,7 @@ public class Container : MonoBehaviour
             if (col.gameObject.tag == "BadItems" && !isBeingDragged.pickedUp)
             {
                 Destroy(col.gameObject);
+                FindObjectOfType<AudioManager>().Play("Right Ingredient");
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
             }

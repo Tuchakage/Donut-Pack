@@ -36,6 +36,7 @@ public class ShakeDetector : MonoBehaviour
         if (Input.acceleration.sqrMagnitude >= 10) 
         {
             Debug.Log("Shake Detected");
+            FindObjectOfType<AudioManager>().Play("Shaker");
             //Randomly spawns in Sprinkles between 2 points
             TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-2.52f, 2.88f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
         }
