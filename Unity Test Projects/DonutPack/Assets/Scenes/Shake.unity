@@ -3213,6 +3213,8 @@ MonoBehaviour:
   stars: []
   winScreen: {fileID: 0}
   ratingApplied: 0
+  finalRating: 0
+  totalscore: 0
 --- !u!4 &1230874608
 Transform:
   m_ObjectHideFlags: 0
