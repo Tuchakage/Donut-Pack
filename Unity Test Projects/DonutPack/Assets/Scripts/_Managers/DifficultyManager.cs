@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 //Purpose of this script is to set the Difficulty of each level
 public class DifficultyManager : MonoBehaviour
 {
+    [SerializeField]
     private int levelNumber;
     private string currentSceneName;
     public static DifficultyManager Instance

@@ -312,87 +312,60 @@ public class RatingManager : MonoBehaviour
         Debug.Log(totalscore);
         if (totalscore <= 9)
         {
-            //They Get 3 Stars for that level
-            setRating(1);
-            finalRating = 1;
-
-            LevelData ld = GameObject.Find("LevelManager").GetComponent<LevelData>();
-            DifficultyManager dm = GameObject.Find("DifficultyManager").GetComponent<DifficultyManager>();
-            //Add the final rating to the Dictionary (Gets the Level number and convert it into a string and then give the level the rating the player got)
-
-            //If there is no key for this Level (Check If The Level Has Been completed before)
-            if (!ld.levelRating.TryGetValue("Level " + dm.GetLevelNumber().ToString(), out result))
-            {
-                //Then add a key for the level and then tell the game that this level has been completed
-                ld.isLevelComplete.Add("Level " + dm.GetLevelNumber().ToString(), 1);
-                Debug.Log("Creating Key.....");
-            }
-
-
-            //If there is no key for this Level (Check If The Level Has a rating already)
-            if (!ld.levelRating.TryGetValue("Level " + dm.GetLevelNumber().ToString(), out result))
-            {
-                //Then add a key for the level and the rating the Player got
-                ld.levelRating.Add("Level " + dm.GetLevelNumber().ToString(), finalRating);
-                Debug.Log("Creating Key.....");
-            }
-            else //If the Level already has a key
-            {
-                //Find the old rating of this level
-                int oldrating = ld.levelRating["Level " + dm.GetLevelNumber().ToString()];
-                //If the rating from playing again is higher than the current rating
-                if (finalRating > oldrating)
-                {
-                    //Change the rating to the final rating
-                    ld.levelRating["Level " + dm.GetLevelNumber().ToString()] = finalRating;
-                    Debug.Log("Changing Key.......");
-                }
-            }
-            //Save The Rating
-            SaveDict.SaveDictionary(ld);
-            Debug.Log("Level " + dm.GetLevelNumber().ToString());
+            SetFinalRating(1);
         }
         else 
         {
-            //They Get 3 Stars for that level
-            setRating(3);
-            finalRating = 3;
-
-            LevelData ld = GameObject.Find("LevelManager").GetComponent<LevelData>();
-            DifficultyManager dm = GameObject.Find("DifficultyManager").GetComponent<DifficultyManager>();
-            //Add the final rating to the Dictionary (Gets the Level number and convert it into a string and then give the level the rating the player got)
-
-            //If there is no key for this Level (Check If The Level Has Been completed before)
-            if (!ld.levelRating.TryGetValue("Level " + dm.GetLevelNumber().ToString(), out result))
-            {
-                //Then add a key for the level and then tell the game that this level has been completed
-                ld.isLevelComplete.Add("Level " + dm.GetLevelNumber().ToString(), 1);
-                Debug.Log("Creating Key.....");
-            }
-
-
-            //If there is no key for this Level (Check If The Level Has a rating already)
-            if (!ld.levelRating.TryGetValue("Level " + dm.GetLevelNumber().ToString(), out result))
-            {
-                //Then add a key for the level and the rating the Player got
-                ld.levelRating.Add("Level " + dm.GetLevelNumber().ToString(), finalRating);
-                Debug.Log("Creating Key.....");
-            }
-            else //If the Level already has a key
-            {
-                //Find the old rating of this level
-                int oldrating = ld.levelRating["Level " + dm.GetLevelNumber().ToString()];
-                //If the rating from playing again is higher than the current rating
-                if (finalRating > oldrating)
-                {
-                    //Change the rating to the final rating
-                    ld.levelRating["Level " + dm.GetLevelNumber().ToString()] = finalRating;
-                    Debug.Log("Changing Key.......");
-                }
-            }
-            //Save The Rating
-            SaveDict.SaveDictionary(ld);
-            Debug.Log("Level " + dm.GetLevelNumber().ToString());
+            SetFinalRating(3);
         }
+    }
+
+    void SetFinalRating(int rating) 
+    {
+        setRating(rating);
+        finalRating = rating;
+
+        LevelData ld = GameObject.Find("LevelManager").GetComponent<LevelData>();
+        DifficultyManager dm = GameObject.Find("DifficultyManager").GetComponent<DifficultyManager>();
+        //Add the final rating to the Dictionary (Gets the Level number and convert it into a string and then give the level the rating the player got)
+        //Load the current save data first
+        SaveDict.LoadDictionary(ld.levelRating, ld.isLevelComplete);
+
+        //If there is no key for this Level (If the Level hasnt been completed before)
+        if (!ld.levelRating.TryGetValue("Level " + dm.GetLevelNumber().ToString(), out result))
+        {
+            //Then add a key for the level and then tell the game that this level has been completed
+            ld.isLevelComplete.Add("Level " + dm.GetLevelNumber().ToString(), 1);
+            Debug.Log("Creating Key For Level Complete.....");
+        }
+        else 
+        {
+            Debug.Log("No need to create new Key");
+        }
+
+
+        //If there is no key for this Level (If the Level does not have a rating)
+        if (!ld.levelRating.TryGetValue("Level " + dm.GetLevelNumber().ToString(), out result))
+        {
+            //Then add a key for the level and the rating the Player got
+            ld.levelRating.Add("Level " + dm.GetLevelNumber().ToString(), finalRating);
+            Debug.Log("Creating Key For Level Rating.....");
+        }
+        else //If the Level already has a key (Already has a rating)
+        {
+            //Find the old rating of this level 
+            int oldrating = ld.levelRating["Level " + dm.GetLevelNumber().ToString()];
+
+            //If the rating from playing again is higher than the old rating stored in the dictionary
+            if (finalRating > oldrating)
+            {
+                //Change the rating to the final rating
+                ld.levelRating["Level " + dm.GetLevelNumber().ToString()] = finalRating;
+                Debug.Log("Changing Key.......");
+            }
+        }
+        //Save The Rating
+        SaveDict.SaveDictionary(ld);
+        Debug.Log("Level " + dm.GetLevelNumber().ToString());
     }
 }
