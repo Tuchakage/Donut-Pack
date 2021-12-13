@@ -126,7 +126,7 @@ public class MainMenu : MonoBehaviour
 
     public void LoadLevel()
     {
-        SaveDict.LoadDictionary(ld.levelRating, ld.isLevelComplete);
+        SaveDict.LoadDictionary(ld,ld.levelRating, ld.isLevelComplete);
     }
 
     public void CheckDictionaries() 

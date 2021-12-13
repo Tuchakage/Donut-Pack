@@ -329,7 +329,7 @@ public class RatingManager : MonoBehaviour
         DifficultyManager dm = GameObject.Find("DifficultyManager").GetComponent<DifficultyManager>();
         //Add the final rating to the Dictionary (Gets the Level number and convert it into a string and then give the level the rating the player got)
         //Load the current save data first
-        SaveDict.LoadDictionary(ld.levelRating, ld.isLevelComplete);
+        SaveDict.LoadDictionary(ld,ld.levelRating, ld.isLevelComplete);
 
         //If there is no key for this Level (If the Level hasnt been completed before)
         if (!ld.levelRating.TryGetValue("Level " + dm.GetLevelNumber().ToString(), out result))

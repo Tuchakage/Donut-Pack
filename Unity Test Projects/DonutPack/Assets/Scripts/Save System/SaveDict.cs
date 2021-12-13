@@ -15,9 +15,11 @@ public class SaveDict
         // Get string from Dictionaries.
         string value = GetLine(data);
         string value2 = GetLine(data2);
+        string path = Application.persistentDataPath + "/dict.txt";
+        string path2 = Application.persistentDataPath + "/dict2.txt";
         // Saves the Dictionary to the file
-        File.WriteAllText(Application.persistentDataPath + "/dict.txt", value);
-        File.WriteAllText(Application.persistentDataPath + "/dict2.txt", value2);
+        File.WriteAllText(path, value);
+        File.WriteAllText(path2, value2);
 
         // Get dictionary again.
         //var result = GetDict(Application.persistentDataPath + "/dict.txt");
@@ -29,29 +31,40 @@ public class SaveDict
     }
 
 
-    public static void LoadDictionary(Dictionary<string,int> rating, Dictionary<string, int> check) 
+    public static void LoadDictionary(LevelData level,Dictionary<string,int> rating, Dictionary<string, int> check) 
     {
-        //Gets all the value in the dictionary
-        var result = GetDict(Application.persistentDataPath + "/dict.txt");
-        var result2 = GetDict(Application.persistentDataPath + "/dict2.txt");
         int r = 0;
-        Debug.Log(Application.persistentDataPath);
-        foreach (var pair in result)
+        string path = Application.persistentDataPath + "/dict.txt";
+        string path2 = Application.persistentDataPath + "/dict2.txt";
+        if (File.Exists(path))
         {
-            
-            //If there is no key for this Level
-            if (!rating.TryGetValue(pair.Key, out r))
+            //Gets all the value in the dictionary
+            var result = GetDict(path);
+
+            foreach (var pair in result)
             {
-                //Load the data of the dictionaries text file back into the actual Dictionaries
-                rating.Add(pair.Key, pair.Value);
-                Debug.Log("Creating " + pair +" dictionary");
-            }
-            else //If the Level already has a key
-            {               
-                rating[pair.Key] = pair.Value;
-                Debug.Log("Changing " + pair + " value in Dictionary");
+
+                //If there is no key for this Level
+                if (!rating.TryGetValue(pair.Key, out r))
+                {
+                    //Load the data of the dictionaries text file back into the actual Dictionaries
+                    rating.Add(pair.Key, pair.Value);
+                    Debug.Log("Creating " + pair + " dictionary");
+                }
+                else //If the Level already has a key
+                {
+                    rating[pair.Key] = pair.Value;
+                    Debug.Log("Changing " + pair + " value in Dictionary");
+                }
             }
         }
+        else 
+        {
+            SaveDictionary(level);
+            Debug.Log("Cant find");
+        }
+
+        var result2 = GetDict(path2);
 
         foreach (var pair in result2)
         {
@@ -67,6 +80,8 @@ public class SaveDict
                 check[pair.Key] = pair.Value;
             }
         }
+
+        Debug.Log(Application.persistentDataPath);
     }
 
     public static void ClearDictionary(Dictionary<string, int> rating, Dictionary<string, int> check) 
