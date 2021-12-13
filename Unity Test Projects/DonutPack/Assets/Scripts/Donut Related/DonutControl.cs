@@ -22,16 +22,25 @@ public class DonutControl : MonoBehaviour
     private Ray leftCatapultToProjectile;
     Touch touch;
 
+    [SerializeField]
+    private GameObject donut;
 
     private void Start()
     {
+        SetupDonut();
+    }
+
+    public void SetupDonut() 
+    {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         dm = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
+        donut = GameObject.FindGameObjectWithTag("Donut");
+        Debug.Log("Found "+donut);
         //Make the next Donut the same one
-        dm.NextDonut = this.gameObject;
+        dm.NextDonut = donut.gameObject;
 
         //Set the Rigidbody of this Donut
-        rb = GetComponent<Rigidbody2D>();
+        rb = donut.GetComponent<Rigidbody2D>();
         //Makes sure Kinematic is enabled
         rb.isKinematic = true;
         rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
@@ -68,6 +77,7 @@ public class DonutControl : MonoBehaviour
         }
         LineRendererUpdate();
     }
+
 
     void DragStart()
     {
@@ -111,7 +121,9 @@ public class DonutControl : MonoBehaviour
 
     void LineRendererUpdate()
     {
-        Vector2 catapultToProjectile = transform.position - catapultLineFront.transform.position;
+        Transform d = donut.transform;
+
+        Vector2 catapultToProjectile = d.position - catapultLineFront.transform.position;
         leftCatapultToProjectile.direction = catapultToProjectile;
         Vector3 holdPoint = leftCatapultToProjectile.GetPoint(catapultToProjectile.magnitude + circleRadius);
         catapultLineFront.SetPosition(1, holdPoint);
@@ -123,7 +135,7 @@ public class DonutControl : MonoBehaviour
         //Gives the Donut enough time to be launched
         yield return new WaitForSeconds(releaseTime);
         //Detachs the Donut from the Sling shot (If this wasnt here the Donut would never get launched)
-        GetComponent<SpringJoint2D>().enabled = false;
+        donut.GetComponent<SpringJoint2D>().enabled = false;
         //Disable this script so that the Line Renderers dont continue to follow the Donut
         this.enabled = false;
         yield return new WaitForSeconds(0.1f);
@@ -137,15 +149,22 @@ public class DonutControl : MonoBehaviour
         {
             SpawnAfterRelease();
         }
+
+        yield return new WaitForEndOfFrame();
+        //Wait for a tiny bit until you setup Donut (Otherwise it wont get the new Donut that was spawned)
+        SetupDonut();
     }
 
     public void SpawnAfterRelease() 
     {
         dm.SpawnDonut();
+        this.enabled = true;  
         //Turn the band back on
         BandScript.BandVisible = 1;
-        Destroy(this.gameObject);
+        Destroy(donut.gameObject);
+          
         //Tell The Game Manager that i have shot a Donut from the Slingshot
         gm.IncreaseDonutShots();
     }
+
 }

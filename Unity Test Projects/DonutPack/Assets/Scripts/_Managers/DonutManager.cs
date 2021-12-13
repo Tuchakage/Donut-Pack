@@ -24,7 +24,6 @@ public class DonutManager : MonoBehaviour
 
         //Add all the components so that the Donut can be shot from the sling shot
         Donut.AddComponent<Rigidbody2D>();
-        Donut.AddComponent<DonutControl>();
         Donut.AddComponent<SpringJoint2D>();
         Donut.GetComponent<CircleCollider2D>().enabled = true;
         Donut.GetComponent<SpringJoint2D>().connectedBody = GameObject.Find("Hook").GetComponent<Rigidbody2D>();

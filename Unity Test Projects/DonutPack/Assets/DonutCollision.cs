@@ -28,13 +28,14 @@ public class DonutCollision : MonoBehaviour
             //Increment Score
             ScoreManager.IncrementScore(1);
             //Spawn Another Donut In and delete the one that collided with the Package
-            StartCoroutine(RespawnDonut(col.gameObject));
+            StartCoroutine(RespawnDonut());
             Destroy(this.gameObject, 5f);
         }
     }
 
-    IEnumerator RespawnDonut(GameObject go) 
+    IEnumerator RespawnDonut() 
     {
+        GameObject go = GameObject.Find("Control");
         //Gives the Donut enough time to be launched
         yield return new WaitForSeconds(0.5f);
         //Respawn Donut

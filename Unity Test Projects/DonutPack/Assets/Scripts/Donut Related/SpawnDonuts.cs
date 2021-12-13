@@ -32,15 +32,13 @@ public class SpawnDonuts : MonoBehaviour
         {
             //Spawn in another Donut
             GameObject donut = Instantiate(NextDonut, new Vector2(0.730080068f, -1.10299993f), Quaternion.identity);
-            donut.transform.parent = transform;
+            donut.transform.parent = null;           
             donut.name = "Donut";
             //Make it so we can see the Donut
             donut.SetActive(true);
             donut.GetComponent<Rigidbody2D>().isKinematic = true;
             //Enable SpringJoin2D Component
             donut.GetComponent<SpringJoint2D>().enabled = true;
-            //Enable Donut Control Script
-            donut.GetComponent<DonutControl>().enabled = true;
             //Tells the game that a Donut has been spawned
             donutSpawned++;
             donutRemaining -= 1;

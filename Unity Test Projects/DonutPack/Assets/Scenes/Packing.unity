@@ -445,7 +445,6 @@ GameObject:
   - component: {fileID: 108539268}
   - component: {fileID: 108539267}
   - component: {fileID: 108539266}
-  - component: {fileID: 108539265}
   - component: {fileID: 108539270}
   m_Layer: 0
   m_Name: Ball
@@ -453,25 +452,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &108539265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108539264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c94924b6dc7274742aabec3c339a108d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDragDistance: 3
-  releaseTime: 0.15
-  rb: {fileID: 108539266}
-  Hook: {fileID: 213968425}
-  catapultLineFront: {fileID: 1719186097}
-  catapultLineBack: {fileID: 280558939}
+  m_IsActive: 1
 --- !u!50 &108539266
 Rigidbody2D:
   serializedVersion: 4
@@ -611,7 +592,7 @@ GameObject:
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &140568085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3531,7 +3512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _pausePanel: {fileID: 1575602267}
-  _toBeDisabled: {fileID: 0}
+  _toBeDisabled: {fileID: 1796873580}
   Sprinkles: {fileID: 1938461453963477472, guid: 50b305acd409a124c84f424b827c46fc, type: 3}
 --- !u!114 &1704673750
 MonoBehaviour:
@@ -3800,7 +3781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1722942105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4044,6 +4025,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1767341348}
   m_CullTransparentMesh: 1
+--- !u!1 &1796873580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796873582}
+  - component: {fileID: 1796873581}
+  m_Layer: 0
+  m_Name: Donut Launcher
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1796873581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796873580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94924b6dc7274742aabec3c339a108d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDragDistance: 5
+  releaseTime: 0.15
+  rb: {fileID: 0}
+  Hook: {fileID: 213968425}
+  catapultLineFront: {fileID: 1719186097}
+  catapultLineBack: {fileID: 280558939}
+  donut: {fileID: 0}
+--- !u!4 &1796873582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796873580}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.4811697, y: -0.16224453, z: -1.9723364}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1806924019
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,23 +9,14 @@ public class PauseGame : MonoBehaviour
     [SerializeField] private GameObject _pausePanel;
     [SerializeField] private GameObject _toBeDisabled;
     public GameObject Sprinkles;
-    private string currentSceneName;
     private void Start()
     {
         //Make sure that the game is not paused when a new scene is loaded
         Unpause();
-
-        currentSceneName = SceneManager.GetActiveScene().name;
-
     }
     public void Pause()
     {
         _pausePanel.SetActive(true);
-        //Find the Donut that needs to be disabled in the Packing Scene before fully pausing
-        if (currentSceneName == "Packing")
-        {
-            _toBeDisabled = GameObject.FindGameObjectWithTag("Donut");
-        }
         _toBeDisabled.SetActive(false);
         Time.timeScale = 0f;
     }
