@@ -16,11 +16,11 @@ public class DonutManager : MonoBehaviour
         Donut = GameObject.FindGameObjectWithTag("Donut");
         Debug.Log(Donut);
         //Change Scale
-        Donut.transform.localScale = new Vector3(0.0645455122f, 0.0787723586f, 0.583067f);
+        Donut.transform.localScale = new Vector3(0.140325993f, 0.140325993f, 0.140325993f);
         //Rotate Donut
         Donut.transform.rotation = Quaternion.Euler(0, 0, 0);
         //Change Position
-        Donut.transform.position = new Vector2(-0.381000012f, -0.666999996f);
+        Donut.transform.position = new Vector2(0.730080068f, -1.10299993f);
 
         //Add all the components so that the Donut can be shot from the sling shot
         Donut.AddComponent<Rigidbody2D>();

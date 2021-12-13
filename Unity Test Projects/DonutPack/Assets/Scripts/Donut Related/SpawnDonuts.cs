@@ -31,7 +31,7 @@ public class SpawnDonuts : MonoBehaviour
         if (donutSpawned < maxDonut)
         {
             //Spawn in another Donut
-            GameObject donut = Instantiate(NextDonut, new Vector2(-0.381000012f, -0.666999996f), Quaternion.identity);
+            GameObject donut = Instantiate(NextDonut, new Vector2(0.730080068f, -1.10299993f), Quaternion.identity);
             donut.transform.parent = transform;
             donut.name = "Donut";
             //Make it so we can see the Donut
