@@ -82,17 +82,6 @@ public class RatingManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //FOR TESTING DELETE LATER
-        if (currentSceneName == "FinalRating") 
-        {
-            ratingsForLevel.Add("Ingredients", 3);
-            ratingsForLevel.Add("RollABall", 3);
-            ratingsForLevel.Add("Packing", 3);
-            FinalRatingCalc();
-        }
-        
-
     }
 
     // called when the game is terminated
@@ -181,10 +170,10 @@ public class RatingManager : MonoBehaviour
         }
     }
 
-    public void RatingForRollABall(float timeRemaining, float maxTime)
+    public void RatingForRollABall(float ballSize, float maxBallSize)
     {
         //If the rating hasnt been applied yet and the time remaining is more than the max time (Consistently putting the ingredients into the right place in good time)
-        if (timeRemaining > maxTime && !ratingApplied)
+        if (ballSize == maxBallSize && !ratingApplied)
         {
             //If there is no Key
             if (!ratingsForLevel.TryGetValue("RollABall", out result))
@@ -201,7 +190,7 @@ public class RatingManager : MonoBehaviour
             //Tell the GameManager that the rating has been applied so it cant call it again
             ratingApplied = true;
         }
-        else if (timeRemaining > maxTime / 2 && timeRemaining < maxTime && !ratingApplied) //If the time left is more than half of the max time and less than max time then you get 2 stars
+        else if (ballSize > maxBallSize / 2 && ballSize < maxBallSize && !ratingApplied) //If the time left is more than half of the max time and less than max time then you get 2 stars
         {
             //If there is no Key
             if (!ratingsForLevel.TryGetValue("RollABall", out result))
@@ -218,7 +207,7 @@ public class RatingManager : MonoBehaviour
             //Tell the GameManager that the rating has been applied so it cant call it again
             ratingApplied = true;
         }
-        else if (timeRemaining < maxTime / 2 && !ratingApplied) // If time left is less than half of the max time
+        else if (ballSize < maxBallSize / 2 && !ratingApplied) // If time left is less than half of the max time
         {
             //If there is no Key
             if (!ratingsForLevel.TryGetValue("RollABall", out result))
@@ -308,15 +297,19 @@ public class RatingManager : MonoBehaviour
     {
 
         //Add up the Total Score for all the ratings
-        //totalscore = ratingsForLevel["Ingredients"] + ratingsForLevel["RollABall"] +ratingsForLevel["Packing"];
+        totalscore = ratingsForLevel["Ingredients"] + ratingsForLevel["RollABall"] +ratingsForLevel["Packing"];
         Debug.Log(totalscore);
-        if (totalscore <= 9)
-        {
-            SetFinalRating(1);
-        }
-        else 
+        if (totalscore == 9)
         {
             SetFinalRating(3);
+        }
+        else if (totalscore >= 5 && totalscore < 9)
+        {
+            SetFinalRating(2);
+        }
+        else if (totalscore <= 4)
+        {
+            SetFinalRating(1);
         }
     }
 

@@ -26,7 +26,7 @@ public class SwipeControlsNew : MonoBehaviour
     public Rigidbody2D _rb;
     [SerializeField] private Vector2 _desiredScale;
     public Vector3 _currentSize;
-    [SerializeField] private Vector3 _maxSize;
+    public Vector3 _maxSize;
     
     
     void Update ()

@@ -11,6 +11,9 @@ public class FinishLineScript : MonoBehaviour
     public bool hasCrossedFinishLine;
     [SerializeField] private LevelChanger lc;
 
+    [SerializeField]
+    private Transform player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,13 @@ public class FinishLineScript : MonoBehaviour
                 Invoke("StopEverything", 1f);
                 lc.ShowWinningScreen();
                 //The Rating Of The Player depends on the time remaining in the game
-                rm.RatingForRollABall(tc.timeRemaining, tc.maxTimer);
+
+                //Get the current scale of the ball
+                float scale = player.transform.localScale.x;
+                //Send the current scale of the ball and the max size to the Ratings Level
+                rm.RatingForRollABall(scale, _playerControls._maxSize.x);
+                
+                Debug.Log(player.transform.localScale);
             }
         }
     }

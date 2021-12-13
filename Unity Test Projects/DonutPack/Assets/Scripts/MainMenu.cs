@@ -112,7 +112,6 @@ public class MainMenu : MonoBehaviour
     {
         SaveDict.ClearDictionary(ld.levelRating, ld.isLevelComplete);
         SaveDict.SaveDictionary(ld);
-
     }
 
 
