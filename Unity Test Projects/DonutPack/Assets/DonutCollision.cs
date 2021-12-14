@@ -36,7 +36,7 @@ public class DonutCollision : MonoBehaviour
 
     IEnumerator RespawnDonut() 
     {
-        GameObject go = GameObject.Find("Control");
+        GameObject go = GameObject.Find("Donut Launcher");
         //Gives the Donut enough time to be launched
         yield return new WaitForSeconds(0.5f);
         //Respawn Donut
