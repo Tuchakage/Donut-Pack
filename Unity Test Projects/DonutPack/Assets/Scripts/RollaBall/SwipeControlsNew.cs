@@ -25,10 +25,10 @@ public class SwipeControlsNew : MonoBehaviour
     [SerializeField] private float _maxSpeed;
     public Rigidbody2D _rb;
     [SerializeField] private Vector2 _desiredScale;
+    [SerializeField] private bool isMoving;
     public Vector3 _currentSize;
     public Vector3 _maxSize;
-    
-    
+
     void Update ()
     {
         _currentSize = _player.transform.localScale;
@@ -75,6 +75,7 @@ public class SwipeControlsNew : MonoBehaviour
         {
             swipeDirection = Swipe.Up;
             _rb.velocity = new Vector2(0f, 1f) *_playerSpeed;
+            isMoving = true;
             IncreaseSize();
             IncreaseSpeed();
             // Swipe down
@@ -84,15 +85,18 @@ public class SwipeControlsNew : MonoBehaviour
         } else if (currentSwipe.x < 0 && currentSwipe.y > 0 - tweakFactor && currentSwipe.y < tweakFactor) {
             swipeDirection = Swipe.Left;
             _rb.velocity = new Vector2(-1f, 0f) * _playerSpeed;
+            isMoving = true;
             // Swipe right
         } else if (currentSwipe.x > 0  && currentSwipe.y > 0 - tweakFactor && currentSwipe.y < tweakFactor) {
             swipeDirection = Swipe.Right;
             _rb.velocity = new Vector2(1f, 0f) * _playerSpeed;
+            isMoving = true;
             // Swipe up left
         } else if (currentSwipe.y > 0 && currentSwipe.x < 0 ) {
             swipeDirection = Swipe.UpLeft;
             _rb.velocity = new Vector2(-1f, 1f) * _playerSpeed;
             _rb.drag = 0.05f;
+            isMoving = true;
             IncreaseSize();
             IncreaseSpeed();
             // Swipe up right
@@ -100,6 +104,7 @@ public class SwipeControlsNew : MonoBehaviour
             swipeDirection = Swipe.UpRight;
             _rb.velocity = new Vector2(1f, 1f) * _playerSpeed;
             _rb.drag = 0.05f;
+            isMoving = true;
             IncreaseSize();
             IncreaseSpeed();
             // Swipe down left
@@ -110,9 +115,9 @@ public class SwipeControlsNew : MonoBehaviour
         {
             swipeDirection = Swipe.DownRight;
         }
-        
             } 
-        } else {
+        } else
+        {
             swipeDirection = Swipe.None;
             //debugInfo.text = "No swipe"; // if you display this, you will lose the debug text when you stop swiping
         }

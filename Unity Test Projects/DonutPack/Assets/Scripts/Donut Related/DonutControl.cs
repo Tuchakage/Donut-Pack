@@ -142,6 +142,9 @@ public class DonutControl : MonoBehaviour
         //Turn off the band
         BandScript.BandVisible = 0;
 
+        dm.donutRemaining--;
+        dm.donutRemainingText.text = $"Donuts Remaining: " + dm.donutRemaining;
+
         //Wait a few seconds until spawning in the Next Donut
         yield return new WaitForSeconds(2f);
         //If the variable isnt null

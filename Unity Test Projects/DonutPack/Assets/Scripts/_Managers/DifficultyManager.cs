@@ -54,6 +54,11 @@ public class DifficultyManager : MonoBehaviour
             //Set The Conveyor Speed
             GameObject.Find("Conveyor").GetComponent<MovingConveyor>().SetConveyorSpeed(DifficultySystem.conveyorSpeed);
         }
+        else if (currentSceneName == "Roll-A-Ball")
+        {
+            //Set Timer for roll a ball
+            GameObject.Find("GameController").GetComponent<TimerController>().SetTimer(DifficultySystem.maxTimeRollABall);
+        }
         else if (currentSceneName == "Packing") 
         {
             GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>().SetMaxDonuts(DifficultySystem.maxDonuts);

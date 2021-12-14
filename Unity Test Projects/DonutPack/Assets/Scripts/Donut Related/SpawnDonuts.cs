@@ -15,7 +15,7 @@ public class SpawnDonuts : MonoBehaviour
     {
         //Starts at 1 because 1 would have already been spawned
         donutSpawned = 1;
-        donutRemaining = donutSpawned;
+        donutRemaining = maxDonut;
         donutRemainingText = GameObject.Find("DonutRemaining").GetComponent<TextMeshProUGUI>();
         donutRemainingText.text = $"Donuts Remaining: " + maxDonut;
     }
@@ -23,7 +23,7 @@ public class SpawnDonuts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        donutRemaining = maxDonut;
+
     }
 
     public void SpawnDonut() 
@@ -41,8 +41,6 @@ public class SpawnDonuts : MonoBehaviour
             donut.GetComponent<SpringJoint2D>().enabled = true;
             //Tells the game that a Donut has been spawned
             donutSpawned++;
-            donutRemaining -= 1;
-            donutRemainingText.text = $"Donuts Remaining: " + donutRemaining;
         }
         else 
         {

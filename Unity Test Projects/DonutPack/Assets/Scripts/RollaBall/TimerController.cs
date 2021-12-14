@@ -57,5 +57,10 @@ public class TimerController : MonoBehaviour
 
         timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
+
+    public void SetTimer(float timer)
+    {
+        maxTimer = timer;
+    }
 }
 

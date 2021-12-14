@@ -29,7 +29,7 @@ public class PacketSpawn : MonoBehaviour
     public void SpawnPacket()
     {
         nextSpawn = Time.time + spawnRate;
-        randX = Random.Range(-8, 8);
+        randX = Random.Range(-14, 14);
         whereToSpawn = new Vector2(randX, transform.position.y);
         GameObject clonedPacket = Instantiate(packetSpawnObject, whereToSpawn, Quaternion.identity);
         clonedPacket.GetComponent<Animator>();

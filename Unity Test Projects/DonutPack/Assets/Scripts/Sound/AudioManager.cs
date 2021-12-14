@@ -30,15 +30,9 @@ public class AudioManager : MonoBehaviour
             Play("MainMenuBGM");
         }
 
-        if (SceneManager.GetActiveScene().name == "IngredientsTutorial")
+        if (SceneManager.GetActiveScene().name == "IngredientsTutorial" || SceneManager.GetActiveScene().name == "Ingredients")
         {
             Play("Ingredients Tutorial Music");
-            
-        }
-        if (SceneManager.GetActiveScene().name == "Ingredients") 
-        {
-            Play("Ingredients Tutorial Music");
-            Play("Conveyor Belt");
         }
         if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball")
         {
