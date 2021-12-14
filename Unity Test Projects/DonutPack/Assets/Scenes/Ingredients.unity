@@ -4279,7 +4279,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Right Ingredient
-    clip: {fileID: 8300000, guid: a7ed25bdcbdcc614a9a7a2ad87ebb595, type: 3}
+    clip: {fileID: 8300000, guid: edc9dc05cf8243642b3bfb6e023e642c, type: 3}
     volume: 0.75
     pitch: 1
     loop: 0
