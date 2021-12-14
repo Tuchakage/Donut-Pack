@@ -19,6 +19,7 @@ public class DonutCollision : MonoBehaviour
         if (col.tag == "Donut") 
         {
             spriteRenderer.sprite = packets[1];
+            FindObjectOfType<AudioManager>().Play("Wrap");
             //Make the Package fall down quicker
             this.gameObject.GetComponent<Rigidbody2D>().gravityScale = 3f;
             //Make the Donut invisible

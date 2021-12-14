@@ -23,7 +23,7 @@ public class RockCollision : MonoBehaviour
         {
             if (sc._playerSpeed >= 7 && _player.transform.localScale.x > 1)
             {
-                sc._rb.velocity = new Vector2(0, 0);
+                //sc._rb.velocity = new Vector2(0, 0);
                 sc._playerSpeed = 3.5f;
                 _player.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             }

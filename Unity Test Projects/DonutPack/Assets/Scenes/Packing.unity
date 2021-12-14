@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NextDonut: {fileID: 0}
   donutSpawned: 0
-  maxDonut: 3
+  maxDonut: 15
   donutRemaining: 0
   donutRemainingText: {fileID: 0}
 --- !u!4 &27779437
@@ -608,7 +608,7 @@ MonoBehaviour:
   packetSpawnObject: {fileID: 5964640076376088373, guid: d1866d64bf0e1c14b992bc36391301aa, type: 3}
   randX: 0
   whereToSpawn: {x: 0, y: 0}
-  spawnRate: 5
+  spawnRate: 4
   nextSpawn: 0
   anim: {fileID: 0}
 --- !u!4 &140568086
@@ -872,7 +872,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &200870986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1344,7 +1344,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1225.5718, y: 205.20062}
+  m_SizeDelta: {x: 968.6625, y: 122.6833}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &443807303
 MonoBehaviour:
@@ -1393,8 +1393,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 81.12
+  m_fontSizeBase: 81.12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1810,6 +1810,12 @@ MonoBehaviour:
   - name: Slingshot Release
     clip: {fileID: 8300000, guid: 26b58969bd150654e8bc4fefaba29863, type: 3}
     volume: 0.35
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Wrap
+    clip: {fileID: 8300000, guid: 2ed9d29c1ef2f374f9c1f786c52d857b, type: 3}
+    volume: 0.75
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -2751,8 +2757,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 81.12
+  m_fontSizeBase: 81.12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2817,8 +2823,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 373, y: -7}
-  m_SizeDelta: {x: 1419.5896, y: 201.7454}
+  m_AnchoredPosition: {x: 192.71405, y: -0.000061035156}
+  m_SizeDelta: {x: 865.0506, y: 116.1814}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &1483986329
 GameObject:
