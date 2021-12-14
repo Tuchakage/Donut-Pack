@@ -1548,7 +1548,7 @@ RectTransform:
   m_GameObject: {fileID: 1065208040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5353134, y: 3.0706267, z: 1.5353134}
+  m_LocalScale: {x: 2.4229028, y: 4.8458056, z: 2.4229028}
   m_Children:
   - {fileID: 1003899157}
   m_Father: {fileID: 949302668}
@@ -1556,7 +1556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.64, y: -390}
+  m_AnchoredPosition: {x: 10.64, y: -395.21}
   m_SizeDelta: {x: 240, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065208042
@@ -1760,7 +1760,7 @@ RectTransform:
   m_GameObject: {fileID: 1129066537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5353134, y: 3.0706267, z: 1.5353134}
+  m_LocalScale: {x: 2.4229028, y: 4.8458056, z: 2.4229028}
   m_Children:
   - {fileID: 20656280}
   - {fileID: 885372724}
@@ -1771,7 +1771,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.64, y: -92}
+  m_AnchoredPosition: {x: -223, y: -78}
   m_SizeDelta: {x: 240, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129066539
@@ -2072,7 +2072,7 @@ RectTransform:
   m_GameObject: {fileID: 1138142061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.4817, y: 2.9634, z: 1.4817}
+  m_LocalScale: {x: 2.4229028, y: 4.8458056, z: 2.4229028}
   m_Children:
   - {fileID: 1131643099}
   m_Father: {fileID: 949302668}
@@ -2591,7 +2591,7 @@ RectTransform:
   m_GameObject: {fileID: 1578066625}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5353134, y: 3.0706267, z: 1.5353134}
+  m_LocalScale: {x: 2.4229028, y: 4.8458056, z: 2.4229028}
   m_Children:
   - {fileID: 1388976949}
   m_Father: {fileID: 949302668}
@@ -2599,7 +2599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.64, y: -92}
+  m_AnchoredPosition: {x: 10.64, y: -61.141}
   m_SizeDelta: {x: 240, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578066627
@@ -3410,7 +3410,7 @@ RectTransform:
   m_GameObject: {fileID: 1924361682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5353134, y: 3.0706267, z: 1.5353134}
+  m_LocalScale: {x: 2.4229028, y: 4.8458056, z: 2.4229028}
   m_Children:
   - {fileID: 1607531889}
   - {fileID: 1032504229}
@@ -3421,7 +3421,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.64, y: -390}
+  m_AnchoredPosition: {x: 298, y: -78}
   m_SizeDelta: {x: 240, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1924361684
@@ -3528,6 +3528,42 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 245648994}
+        m_TargetAssemblyTypeName: DifficultySystem, Assembly-CSharp
+        m_MethodName: SetMaxAmntItems
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 245648994}
+        m_TargetAssemblyTypeName: DifficultySystem, Assembly-CSharp
+        m_MethodName: SetConveyorSpeed
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 100
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 245648994}
+        m_TargetAssemblyTypeName: DifficultySystem, Assembly-CSharp
+        m_MethodName: SetTimeForIngredients
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 60
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1924361685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3607,7 +3643,7 @@ RectTransform:
   m_GameObject: {fileID: 1940280969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.535313, y: 3.070627, z: 1.535313}
+  m_LocalScale: {x: 2.4229028, y: 4.8458056, z: 2.4229028}
   m_Children:
   - {fileID: 1634172625}
   m_Father: {fileID: 949302668}
@@ -3615,7 +3651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -36, y: 0}
   m_SizeDelta: {x: 240, y: 60}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1940280971

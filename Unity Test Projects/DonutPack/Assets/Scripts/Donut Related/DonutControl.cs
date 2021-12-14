@@ -83,6 +83,7 @@ public class DonutControl : MonoBehaviour
     {
         //Enabled Kinematic when you touch the screen
         rb.isKinematic = true;
+        FindObjectOfType<AudioManager>().Play("Slingshot Pull");
     }
     void Dragging()
     {
@@ -103,7 +104,8 @@ public class DonutControl : MonoBehaviour
     {
         //Disable Kinematic when you stop touching the screen
         rb.isKinematic = false;
-
+        FindObjectOfType<AudioManager>().Stop("Slingshot Pull");
+        FindObjectOfType<AudioManager>().Play("Slingshot Release");
         StartCoroutine(Release());
     }
 

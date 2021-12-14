@@ -40,6 +40,7 @@ public class IcingCollision : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
+        
         //If the Chocolate icing touches the Donut
         if (col.gameObject.name == "Chocolate_Icing(Clone)") 
         {
@@ -69,6 +70,7 @@ public class IcingCollision : MonoBehaviour
         //If any type of icing touches the Donut
         if (col.gameObject.tag == "Icing") 
         {
+            FindObjectOfType<AudioManager>().Stop("Icing Machine");
             //Re enable the shaking mechanics
             sd.enabled = true;
             //Re enable Sprinkles Colliders

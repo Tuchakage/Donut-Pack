@@ -10,6 +10,11 @@ public class FrostingMachine : MonoBehaviour
     private List<GameObject> Icing = new List<GameObject>(); //List Of Icing
     [SerializeField]
     private bool pressedButton; //Makes it so you can only press the button once
+
+    private void Start()
+    {
+        FindObjectOfType<AudioManager>().Play("Icing Machine");
+    }
     //Press on Chocolate button to activate this function
     public void SpawnChoccyIcing() 
     {
@@ -19,6 +24,7 @@ public class FrostingMachine : MonoBehaviour
             //Spawn the Chocolate Icing
             Instantiate(Icing[0], spawnLocation.transform.position, Quaternion.identity);
             pressedButton = true;
+            FindObjectOfType<AudioManager>().Play("Splatter");
         }
     }
 
