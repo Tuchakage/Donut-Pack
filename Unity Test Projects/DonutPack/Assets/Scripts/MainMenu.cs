@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
         LoadLevel();
         //Find how many Levels there are
         int amntofLevels = GameObject.FindGameObjectsWithTag("Level").Length;
-        Debug.Log("Amount Of Levels: " + amntofLevels);
+        //Debug.Log("Amount Of Levels: " + amntofLevels);
 
         foreach (GameObject level in GameObject.FindGameObjectsWithTag("Level")) 
         {
