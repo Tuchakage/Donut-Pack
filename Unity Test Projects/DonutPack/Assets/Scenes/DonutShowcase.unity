@@ -1030,6 +1030,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Clapping
+    clip: {fileID: 8300000, guid: 71a005b4ee68c024aa8cd61e6a3a6e6a, type: 3}
+    volume: 0.75
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1699699761
 Transform:
   m_ObjectHideFlags: 0

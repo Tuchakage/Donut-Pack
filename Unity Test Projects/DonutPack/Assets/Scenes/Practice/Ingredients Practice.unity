@@ -1434,7 +1434,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &386599286
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7358,8 +7358,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.024368607, y: 0.05}
-  m_Size: {x: 5.352447, y: 2.0623615}
+  m_Offset: {x: -0.024368698, y: -0.46}
+  m_Size: {x: 5.352447, y: 1.02}
   m_Direction: 1
 --- !u!114 &1507854795
 MonoBehaviour:
@@ -10208,6 +10208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4af695ec25a3f4095bf2fbbc8d3131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camAnim: {fileID: 0}
   ShakeDetectionThreshold: 0.2
   MinShakeInterval: 0.2
   Sprinkles: {fileID: 0}

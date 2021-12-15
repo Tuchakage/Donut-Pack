@@ -9,6 +9,7 @@ public class DifficultySystem : MonoBehaviour
     public static float maxTimeIngredients, maxTimeRollABall; //Set the Max amount of time you have for Ingredients and Roll A Ball Level
     public static float conveyorSpeed; //Set the speed of the Conveyor Belt
     public static int levelnumber; //Set the Level Number
+    public static float spawnTimeForIngredients; //Set the spawn time for the ingredients
 
     //Functions called by Buttons (Value is also set in the buttons)
     public void SetMaxAmntItems(int maxitems)
@@ -43,5 +44,10 @@ public class DifficultySystem : MonoBehaviour
         levelnumber = ln;
         DifficultyManager dm = GameObject.Find("DifficultyManager").GetComponent<DifficultyManager>();
         dm.SetLevelNumber(levelnumber);       
+    }
+
+    public void SetSpawnTime(float time) 
+    {
+        spawnTimeForIngredients = time;
     }
 }

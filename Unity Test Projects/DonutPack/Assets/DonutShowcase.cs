@@ -12,6 +12,7 @@ public class DonutShowcase : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("Clapping");
         //Since the game is paused from the last scene, Unpause it
         Time.timeScale = 1f;
         Donut = GameObject.FindGameObjectWithTag("Donut");

@@ -16,9 +16,23 @@ public class PauseGame : MonoBehaviour
     }
     public void Pause()
     {
-        _pausePanel.SetActive(true);
-        _toBeDisabled.SetActive(false);
-        Time.timeScale = 0f;
+        if (SceneManager.GetActiveScene().name == "Ingredients" || SceneManager.GetActiveScene().name == "Ingredients Practice")
+        {
+            DragController dc = GameObject.Find("DragController").GetComponent<DragController>();
+            if (!dc.isDragActive)
+            {
+                _pausePanel.SetActive(true);
+                _toBeDisabled.SetActive(false);
+                Time.timeScale = 0f;
+            }
+        }
+        else 
+        {
+            _pausePanel.SetActive(true);
+            _toBeDisabled.SetActive(false);
+            Time.timeScale = 0f;
+        }
+
     }
 
     public void Unpause()

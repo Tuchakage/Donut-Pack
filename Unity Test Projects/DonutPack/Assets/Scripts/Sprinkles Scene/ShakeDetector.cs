@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(PhysicsController))]
 public class ShakeDetector : MonoBehaviour
 {
+    public Animator camAnim;
     //If the Acceleration is above the threshold in this variable then the shake will happen
     public float ShakeDetectionThreshold;
     //Makes it so we detect shakes a certain amount of time per second
@@ -27,18 +28,19 @@ public class ShakeDetector : MonoBehaviour
     void Update()
     {
 
-        if (Input.acceleration.sqrMagnitude >= sqrShakeDetectionThreshold && Time.unscaledTime >= timeSinceLastShake + MinShakeInterval) 
-        {
-            physicsController.ShakeRigidbodies(Input.acceleration);
-            timeSinceLastShake = Time.unscaledTime;
-        }
+        //if (Input.acceleration.sqrMagnitude >= sqrShakeDetectionThreshold && Time.unscaledTime >= timeSinceLastShake + MinShakeInterval) 
+        //{
+        //    physicsController.ShakeRigidbodies(Input.acceleration);
+        //    timeSinceLastShake = Time.unscaledTime;
+        //}
 
-        if (Input.acceleration.sqrMagnitude >= 10) 
+        if (Input.acceleration.sqrMagnitude >= 3) 
         {
             Debug.Log("Shake Detected");
             FindObjectOfType<AudioManager>().Play("Shaker");
             //Randomly spawns in Sprinkles between 2 points
             TimeIndicator indicator = Instantiate(Sprinkles, new Vector3(Random.Range(-2.52f, 2.88f), 3, 0), Quaternion.identity).GetComponent<TimeIndicator>();
+            camAnim.SetTrigger("shake");
         }
         
     }
