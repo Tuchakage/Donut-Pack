@@ -11,6 +11,10 @@ public class SprinkleMainMenuSpawner : MonoBehaviour
     public float nextSpawn;
     public float timeToDestroy;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     // Update is called once per frame
     void Update()
     {

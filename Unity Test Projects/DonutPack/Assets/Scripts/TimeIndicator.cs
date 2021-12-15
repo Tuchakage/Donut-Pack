@@ -69,6 +69,7 @@ public class TimeIndicator : MonoBehaviour
         {
             //Turns the number value in the time variable into a string with a - sign infront of it 
             timertext.text = "- " + time.ToString() + "s";
+            timertext.color = Color.red;
         }
 
     }

@@ -472,7 +472,12 @@ public class Container : MonoBehaviour
         }
         else if (this.CompareTag("Border")) // If an item hits the borders of the game
         {
-            Destroy(col.gameObject, 2f);
+            Destroy(col.gameObject);
+            GameObject badbin = GameObject.Find("BadBin");
+            //If you just let the Ingredient go past
+            gm.loseTime(3, badbin.transform.position);
+            FindObjectOfType<AudioManager>().Play("Bad Ingredient");
+
         }
 
     }

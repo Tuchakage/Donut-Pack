@@ -70,10 +70,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -2390,4 +2388,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Practice/Roll-A-Ball-TutorialPractice.unity
   - Assets/Scenes/Practice/PackingTutorial Practice.unity
   playerPath: D:/Users/tucha/Documents/GitHub/Donut-Pack/Unity Test Projects/Build
-    Version/Prototype.apk
+    Version/V3.aab
