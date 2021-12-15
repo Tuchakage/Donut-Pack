@@ -36,6 +36,12 @@ public class PauseGame : MonoBehaviour
 
     public void RestartLevel()
     {
+        if (SceneManager.GetActiveScene().name == "Packing") 
+        {
+            //Make sure to delete the Donut in the scene already
+            GameObject donut = GameObject.Find("Donut");
+            Destroy(donut);
+        }
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

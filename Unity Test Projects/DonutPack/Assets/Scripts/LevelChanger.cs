@@ -66,9 +66,40 @@ public class LevelChanger : MonoBehaviour
         {
             SceneManager.LoadScene("Packing");
         }
-        else if (currentSceneName == "Packing") 
+        else if (currentSceneName == "Packing")
         {
             SceneManager.LoadScene("FinalRating");
+        }
+
+
+    }
+
+    public void PracticeLevels() 
+    {
+        //For Practice Levels
+        if (currentSceneName == "IngredientsTutorialPractice")
+        {
+            SceneManager.LoadScene("Ingredients Practice");
+        }
+        else if (currentSceneName == "Roll-A-Ball-TutorialPractice")
+        {
+            SceneManager.LoadScene("Roll A Ball Practice");
+        }
+        else if (currentSceneName == "ShakeTutorialPractice") 
+        {
+            SceneManager.LoadScene("Shake Practice");
+        }
+        else if (currentSceneName == "Shake Practice")
+        {
+            //Find the Donut that was created
+            GameObject donut = GameObject.FindGameObjectWithTag("Donut");
+            //Make it so it cant be destroyed when a new scene is loaded
+            donut.AddComponent<DontDestroyOnLoad>();
+            SceneManager.LoadScene("DonutShowcase Practice");
+        }
+        else if (currentSceneName == "DonutShowcase Practice")
+        {
+            SceneManager.LoadScene("Packing Practice");
         }
     }
 

@@ -13,28 +13,20 @@ public class DonutManager : MonoBehaviour
     private void Start()
     {
         currentSceneName = currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "Packing")
+        if (currentSceneName == "Packing" || currentSceneName == "Packing Practice")
         {
             //Find the Donut Object and save it
             Donut = GameObject.FindGameObjectWithTag("Donut");
-            //Change Scale
-            Donut.transform.localScale = new Vector3(0.140325993f, 0.140325993f, 0.140325993f);
-            //Rotate Donut
-            Donut.transform.rotation = Quaternion.Euler(0, 0, 0);
-            //Change Position
-            Donut.transform.position = new Vector2(0.730080068f, -1.10299993f);
-
-            //Add all the components so that the Donut can be shot from the sling shot
-            Donut.AddComponent<Rigidbody2D>();
-            Donut.AddComponent<SpringJoint2D>();
-            Donut.GetComponent<CircleCollider2D>().enabled = true;
-            Donut.GetComponent<SpringJoint2D>().connectedBody = GameObject.Find("Hook").GetComponent<Rigidbody2D>();
-            Donut.GetComponent<SpringJoint2D>().frequency = 1.5f;
+            Donut.name = "Pretend DonutPrefab(Used To Spawn in multiple of this Donut";
+            //Spawn The Donut far away from scene
+            Donut.transform.position = new Vector2(1000, 1000);
             SpawnDonuts ds = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
-            //Destroy the DontDestroyOnLoad so we can keep respawning the Donut
-            Destroy(Donut.GetComponent<DontDestroyOnLoad>());
+            ds.NextDonut = Donut;
+            //Spawn in another Donut
+            ds.SpawnDonut();
+  
         }
-        else if (currentSceneName == "DonutShowcase") 
+        else if (currentSceneName == "DonutShowcase" || currentSceneName == "DonutShowcase Practice") 
         {
             //Find the Donut Object and save it
             Donut = GameObject.FindGameObjectWithTag("Donut");

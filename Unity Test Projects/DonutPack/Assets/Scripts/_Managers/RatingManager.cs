@@ -62,14 +62,23 @@ public class RatingManager : MonoBehaviour
         //If the Scene has Gameplay
         if (currentSceneName == "Ingredients" || currentSceneName == "Shake" || currentSceneName == "Roll-A-Ball" || currentSceneName == "Packing")
         {
-            ClearList();         
+            ClearList();
             FindStars();
-            
+
             //Then disable the Win Screen
             winScreen = GameObject.Find("Win Screen");
             winScreen.SetActive(false);
         }
-        else if (currentSceneName == "FinalRating") 
+        else if (currentSceneName == "Ingredients Practice" || currentSceneName == "Shake Practice" || currentSceneName == "Roll A Ball Practice" || currentSceneName == "Packing Practice") 
+        {
+            ClearList();
+            FindStars();
+
+            //Then disable the Win Screen
+            winScreen = GameObject.Find("Win Screen");
+            winScreen.SetActive(false);
+        }
+        else if (currentSceneName == "FinalRating")
         {
             ClearList();
             FindStars();

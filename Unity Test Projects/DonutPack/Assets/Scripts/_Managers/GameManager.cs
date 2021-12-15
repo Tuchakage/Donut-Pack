@@ -37,11 +37,14 @@ public class GameManager : MonoBehaviour
         timeRemaining = maxTimer;
         lc = GetComponent<LevelChanger>();
         rm = GameObject.Find("RatingManager").GetComponent<RatingManager>();
-        if (SceneManager.GetActiveScene().name == "Packing")
-        sd = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
+        if (SceneManager.GetActiveScene().name == "Packing" || SceneManager.GetActiveScene().name == "Packing Practice") 
+        {
+            sd = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
+        }
+        
         //Only for the shaker scene
         startTimer = false;
-        if (SceneManager.GetActiveScene().name == "Shake")
+        if (SceneManager.GetActiveScene().name == "Shake" || SceneManager.GetActiveScene().name == "Shake Practice")
         {
             //Disable the timer text
             timertext.enabled = false;
@@ -53,13 +56,13 @@ public class GameManager : MonoBehaviour
     {
         
         //Win Condition for Ingredients Scene
-        if (SceneManager.GetActiveScene().name == "Ingredients")
+        if (SceneManager.GetActiveScene().name == "Ingredients" || SceneManager.GetActiveScene().name == "Ingredients Practice")
         {
             DisplayTime(timeRemaining);
             Timer();
             IngredientsWinningCondition();
         }
-        else if (SceneManager.GetActiveScene().name == "Shake") //If we are in Shaker scene
+        else if (SceneManager.GetActiveScene().name == "Shake" || SceneManager.GetActiveScene().name == "Shake Practice") //If we are in Shaker scene
         {
             DisplayTime(timeRemaining);
             //When this is set to true then start the timer (Will be set to true by the IcingCollision script)
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour
                 Timer();
             }
         }
-        else if (SceneManager.GetActiveScene().name == "Packing") 
+        else if (SceneManager.GetActiveScene().name == "Packing" || SceneManager.GetActiveScene().name == "Packing Practice") 
         {
             PackingConditions();
         }
@@ -90,7 +93,7 @@ public class GameManager : MonoBehaviour
             //The Game is finished
             isGameFinished = true;
             //If not on the Shaking Scene
-            if (SceneManager.GetActiveScene().name != "Shake")
+            if (SceneManager.GetActiveScene().name != "Shake" && SceneManager.GetActiveScene().name != "Shake Practice")
             {          
                 lc.ShowLosingScreen();
             }

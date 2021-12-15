@@ -87,6 +87,30 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("IngredientsTutorial");
     }
+    public void PracticeLevel1Tutorial()
+    {
+        SceneManager.LoadScene("IngredientsTutorialPractice");
+    }
+
+    public void ShowTutorialForLevel2() 
+    {
+        SceneManager.LoadScene("Roll-A-Ball-Tutorial");
+    }
+
+    public void PracticeLevel2Tutorial()
+    {
+        SceneManager.LoadScene("Roll-A-Ball-TutorialPractice");
+    }
+
+    public void ShowTutorialForLevel3() 
+    {
+        SceneManager.LoadScene("ShakeTutorial");
+    }
+
+    public void PracticeLevel3Tutorial()
+    {
+        SceneManager.LoadScene("ShakeTutorialPractice");
+    }
     public void PlayLevel1()
     {
         SceneManager.LoadScene("Ingredients");

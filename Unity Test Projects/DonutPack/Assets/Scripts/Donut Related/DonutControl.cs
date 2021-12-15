@@ -34,10 +34,8 @@ public class DonutControl : MonoBehaviour
     {
         gm = GameObject.Find("GameManager").GetComponent<GameManager>();
         dm = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
-        donut = GameObject.FindGameObjectWithTag("Donut");
+        donut = GameObject.Find("Donut");
         Debug.Log("Found "+donut);
-        //Make the next Donut the same one
-        dm.NextDonut = donut.gameObject;
 
         //Set the Rigidbody of this Donut
         rb = donut.GetComponent<Rigidbody2D>();
@@ -75,7 +73,13 @@ public class DonutControl : MonoBehaviour
                 DragRelease();
             }
         }
-        LineRendererUpdate();
+
+        //If there is no Donut, it means that the game is finished and we no longer need to run this function
+        if (donut != null) 
+        {
+            LineRendererUpdate();
+        }
+        
     }
 
 
@@ -162,11 +166,12 @@ public class DonutControl : MonoBehaviour
 
     public void SpawnAfterRelease() 
     {
+        Destroy(donut.gameObject);
         dm.SpawnDonut();
         this.enabled = true;  
         //Turn the band back on
         BandScript.BandVisible = 1;
-        Destroy(donut.gameObject);
+        
           
         //Tell The Game Manager that i have shot a Donut from the Slingshot
         gm.IncreaseDonutShots();

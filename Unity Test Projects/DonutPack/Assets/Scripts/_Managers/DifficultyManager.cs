@@ -47,19 +47,19 @@ public class DifficultyManager : MonoBehaviour
         Debug.Log("OnSceneLoaded: " + scene.name);
 
         //If the Scene that is loading is the Ingredients Scene
-        if (currentSceneName == "Ingredients")
+        if (currentSceneName == "Ingredients" || currentSceneName == "Ingredients Practice")
         {
             //Set the max amount of items for Ingredients Level depending on value of buttons
             GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>().SetMaxAmntOfItem(DifficultySystem.maxamntitem);
             //Set The Conveyor Speed
             GameObject.Find("Conveyor").GetComponent<MovingConveyor>().SetConveyorSpeed(DifficultySystem.conveyorSpeed);
         }
-        else if (currentSceneName == "Roll-A-Ball")
+        else if (currentSceneName == "Roll-A-Ball" || currentSceneName == "Roll A Ball Practice")
         {
             //Set Timer for roll a ball
             GameObject.Find("GameController").GetComponent<TimerController>().SetTimer(DifficultySystem.maxTimeRollABall);
         }
-        else if (currentSceneName == "Packing") 
+        else if (currentSceneName == "Packing" || currentSceneName == "Packing Practice") 
         {
             GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>().SetMaxDonuts(DifficultySystem.maxDonuts);
         }

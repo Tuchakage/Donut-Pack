@@ -30,16 +30,16 @@ public class AudioManager : MonoBehaviour
             Play("MainMenuBGM");
         }
 
-        if (SceneManager.GetActiveScene().name == "IngredientsTutorial" || SceneManager.GetActiveScene().name == "Ingredients")
+        if (SceneManager.GetActiveScene().name == "IngredientsTutorial" || SceneManager.GetActiveScene().name == "Ingredients" || SceneManager.GetActiveScene().name == "Ingredients Practice" || SceneManager.GetActiveScene().name == "IngredientsTutorialPractice")
         {
             Play("Ingredients Tutorial Music");
         }
-        if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball")
+        if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball" || SceneManager.GetActiveScene().name == "Roll-A-Ball-TutorialPractice" || SceneManager.GetActiveScene().name == "Roll-A-Ball Practice")
         {
             Play("Roll-A-Ball-BGM");
         }
 
-        if (SceneManager.GetActiveScene().name == "ShakeTutorial" || SceneManager.GetActiveScene().name == "Shake")
+        if (SceneManager.GetActiveScene().name == "ShakeTutorial" || SceneManager.GetActiveScene().name == "Shake" || SceneManager.GetActiveScene().name == "ShakeTutorialPractice" || SceneManager.GetActiveScene().name == "Shake Practice")
         {
             Play("FrostingBGM");
         }

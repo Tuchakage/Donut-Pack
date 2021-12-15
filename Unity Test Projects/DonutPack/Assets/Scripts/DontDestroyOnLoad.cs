@@ -17,15 +17,15 @@ public class DontDestroyOnLoad : MonoBehaviour
 
     void Awake()
     {
-        if (instance)
-        {
-            Debug.Log("already an instance so destroying new one");
-            DestroyImmediate(gameObject);
-            return;
+        //if (instance)
+        //{
+        //    Debug.Log("already an instance so destroying new one");
+        //    DestroyImmediate(gameObject);
+        //    return;
 
-        }
+        //}
 
-        instance = this;
+        //instance = this;
 
         DontDestroyOnLoad(gameObject);
     }
