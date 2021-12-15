@@ -42,6 +42,6 @@ public class DifficultySystem : MonoBehaviour
     {
         levelnumber = ln;
         DifficultyManager dm = GameObject.Find("DifficultyManager").GetComponent<DifficultyManager>();
-        dm.SetLevelNumber(levelnumber);
+        dm.SetLevelNumber(levelnumber);       
     }
 }

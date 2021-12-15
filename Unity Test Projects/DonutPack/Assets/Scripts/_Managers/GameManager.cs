@@ -14,8 +14,8 @@ public class GameManager : MonoBehaviour
     public TMP_Text timertext;
     [SerializeField]
     private float timeRemaining; //This variable will change
-    [SerializeField]
-    private float maxTimer; //This variable wont change
+
+    public float maxTimer; //This variable wont change
 
     public int amntContainersComplete; //Indicates how many of the containers have been completed
     [SerializeField]

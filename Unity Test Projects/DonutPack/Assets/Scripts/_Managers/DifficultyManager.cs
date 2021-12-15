@@ -53,6 +53,7 @@ public class DifficultyManager : MonoBehaviour
             GameObject.Find("ItemSpawner").GetComponent<ItemSpawner>().SetMaxAmntOfItem(DifficultySystem.maxamntitem);
             //Set The Conveyor Speed
             GameObject.Find("Conveyor").GetComponent<MovingConveyor>().SetConveyorSpeed(DifficultySystem.conveyorSpeed);
+            GameObject.Find("GameManager").GetComponent<GameManager>().maxTimer = DifficultySystem.maxTimeIngredients;
         }
         else if (currentSceneName == "Roll-A-Ball" || currentSceneName == "Roll A Ball Practice")
         {

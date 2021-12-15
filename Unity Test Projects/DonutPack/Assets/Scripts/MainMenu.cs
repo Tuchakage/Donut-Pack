@@ -30,14 +30,13 @@ public class MainMenu : MonoBehaviour
         LoadLevel();
         //Find how many Levels there are
         int amntofLevels = GameObject.FindGameObjectsWithTag("Level").Length;
-
+        Debug.Log("Amount Of Levels: " + amntofLevels);
 
         foreach (GameObject level in GameObject.FindGameObjectsWithTag("Level")) 
         {
-
             LevelNumber ln = level.GetComponent<LevelNumber>();
             //Check the Level Number
-            //Debug.Log(level.name+" "+ln.levelNumber);
+            Debug.Log(level.name+" "+ln.levelNumber);
 
             //Disable All Child Game Objects of the Level button object
             for (int i = 0; i < level.transform.childCount; i++)

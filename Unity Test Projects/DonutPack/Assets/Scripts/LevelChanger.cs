@@ -68,6 +68,7 @@ public class LevelChanger : MonoBehaviour
         }
         else if (currentSceneName == "Packing")
         {
+            Destroy(GameObject.FindGameObjectWithTag("Donut"));
             SceneManager.LoadScene("FinalRating");
         }
 
