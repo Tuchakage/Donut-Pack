@@ -40,7 +40,7 @@ public class IcingCollision : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        
+
         //If the Chocolate icing touches the Donut
         if (col.gameObject.name == "Chocolate_Icing(Clone)") 
         {

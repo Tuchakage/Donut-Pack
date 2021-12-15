@@ -111,6 +111,17 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("ShakeTutorialPractice");
     }
+
+    public void ShowTutorialForLevel4()
+    {
+        SceneManager.LoadScene("PackingTutorial");
+    }
+    
+    public void PracticeLevel4Tutorial()
+    {
+        SceneManager.LoadScene("PackingTutorialPractice");
+    }
+    
     public void PlayLevel1()
     {
         SceneManager.LoadScene("Ingredients");
@@ -125,6 +136,12 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Shake");
     }
+
+    public void PlayLevel4()
+    {
+        SceneManager.LoadScene("Packing");
+    }
+    
     public void QuitGame()
     {
         Application.Quit();

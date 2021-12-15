@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
         {
             Play("Ingredients Tutorial Music");
         }
-        if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball" || SceneManager.GetActiveScene().name == "Roll-A-Ball-TutorialPractice" || SceneManager.GetActiveScene().name == "Roll-A-Ball Practice")
+        if (SceneManager.GetActiveScene().name == "Roll-A-Ball-Tutorial" || SceneManager.GetActiveScene().name == "Roll-A-Ball" || SceneManager.GetActiveScene().name == "Roll-A-Ball-TutorialPractice" || SceneManager.GetActiveScene().name == "Roll A Ball Practice")
         {
             Play("Roll-A-Ball-BGM");
         }
@@ -44,9 +44,14 @@ public class AudioManager : MonoBehaviour
             Play("FrostingBGM");
         }
 
-        if (SceneManager.GetActiveScene().name == "Packing")
+        if (SceneManager.GetActiveScene().name == "Packing" || SceneManager.GetActiveScene().name == "PackingTutorial" || SceneManager.GetActiveScene().name == "Packing Practice" || SceneManager.GetActiveScene().name == "PackingTutorial Practice")
         {
             Play("PackingBGM");
+        }
+
+        if (SceneManager.GetActiveScene().name == "FinalRating")
+        {
+            Play("FinalShowCaseBGM");
         }
     }
 

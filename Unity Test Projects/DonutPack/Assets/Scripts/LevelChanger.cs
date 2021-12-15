@@ -64,7 +64,7 @@ public class LevelChanger : MonoBehaviour
         }
         else if (currentSceneName == "DonutShowcase")
         {
-            SceneManager.LoadScene("Packing");
+            SceneManager.LoadScene("PackingTutorial");
         }
         else if (currentSceneName == "Packing")
         {
@@ -98,6 +98,10 @@ public class LevelChanger : MonoBehaviour
             SceneManager.LoadScene("DonutShowcase Practice");
         }
         else if (currentSceneName == "DonutShowcase Practice")
+        {
+            SceneManager.LoadScene("PackingTutorial Practice");
+        }
+        else if (currentSceneName == "PackingTutorial Practice")
         {
             SceneManager.LoadScene("Packing Practice");
         }
