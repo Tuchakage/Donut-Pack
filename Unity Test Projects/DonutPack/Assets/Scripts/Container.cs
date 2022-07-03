@@ -47,7 +47,7 @@ public class Container : MonoBehaviour
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
-                if (amntgoodmilk < items.maxAmntOfItem) 
+                if (amntgoodmilk < items.maxAmntOfItem)
                 {
                     //Increment this variable
                     amntgoodmilk++;
@@ -86,7 +86,7 @@ public class Container : MonoBehaviour
                 //If you put the wrong object into the wrong container then you lose time
                 gm.loseTime(losttime, this.transform.position);
                 //If there is already ingredients in this container and then a wrong item is put into the container
-                if (amntgoodmilk > 0) 
+                if (amntgoodmilk > 0)
                 {
                     //Decrease the amount of Milk
                     amntgoodmilk--;
@@ -101,7 +101,7 @@ public class Container : MonoBehaviour
                         //Tell the game manager that the container is no longer full if it was full
                         wasFull();
                         spriteRenderer.sprite = containerFill[4];
-                        
+
                     }
                     else if (amntgoodmilk == items.maxAmntOfItem / 2)
                     {
@@ -211,7 +211,7 @@ public class Container : MonoBehaviour
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
-                if (amntsalt < items.maxAmntOfItem) 
+                if (amntsalt < items.maxAmntOfItem)
                 {
 
                     //Increment this variable 
@@ -294,7 +294,7 @@ public class Container : MonoBehaviour
                 //If you put the right object in the right container you get more time
                 gm.addTime(addedtime, this.transform.position);
                 //If the container is not full yet
-                if (amntsugar < items.maxAmntOfItem) 
+                if (amntsugar < items.maxAmntOfItem)
                 {
                     //Increment this variable 
                     amntsugar++;
@@ -445,6 +445,16 @@ public class Container : MonoBehaviour
                 }
             }
         }
+        else if (this.gameObject.name == "FCollider") //For when the ingredient is falling from the sky
+        {
+            if (!isBeingDragged.pickedUp) 
+            {
+                //Find the Bin Object
+                spriteRenderer = GameObject.Find("Bin").GetComponent<SpriteRenderer>();
+                //Enable the Bin Open Game Object
+                spriteRenderer.sprite = bin[1];
+            }
+        }
 
         else if (this.gameObject.name == "Bin") //If the gameObject this script is on is the bin
         {
@@ -484,7 +494,7 @@ public class Container : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (this.gameObject.name == "Bin") //If the gameObject this script is on is the bin
+        if (this.gameObject.name == "Bin" || this.gameObject.name == "FCollider") //If the gameObject this script is on is the bin
         {
             //Disables the Bin Open Game Object when the item leaves the collider of the bin
             spriteRenderer.sprite = bin[0];
