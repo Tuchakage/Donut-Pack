@@ -44,7 +44,7 @@ public class AudioManager : MonoBehaviour
             Play("FrostingBGM");
         }
 
-        if (SceneManager.GetActiveScene().name == "Packing" || SceneManager.GetActiveScene().name == "PackingTutorial" || SceneManager.GetActiveScene().name == "Packing Practice" || SceneManager.GetActiveScene().name == "PackingTutorial Practice")
+        if (SceneManager.GetActiveScene().name == "PackingTutorial" || SceneManager.GetActiveScene().name == "Packing" || SceneManager.GetActiveScene().name == "Packing Practice" || SceneManager.GetActiveScene().name == "PackingTutorial Practice")
         {
             Play("PackingBGM");
         }

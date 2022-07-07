@@ -13,10 +13,11 @@ public class DonutManager : MonoBehaviour
     private void Start()
     {
         currentSceneName = currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "Packing" || currentSceneName == "Packing Practice")
+        if (currentSceneName == "Packing")
         {
             //Find the Donut Object and save it
             Donut = GameObject.FindGameObjectWithTag("Donut");
+            Donut.SetActive(true);
             Donut.name = "Pretend DonutPrefab(Used To Spawn in multiple of this Donut";
             //Spawn The Donut far away from scene
             Donut.transform.position = new Vector2(1000, 1000);
@@ -24,7 +25,10 @@ public class DonutManager : MonoBehaviour
             ds.NextDonut = Donut;
             //Spawn in another Donut
             ds.SpawnDonut();
-  
+        }
+        else if (currentSceneName == "Packing Practice")
+        {
+            Donut.SetActive(false);
         }
         else if (currentSceneName == "DonutShowcase" || currentSceneName == "DonutShowcase Practice") 
         {

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Practice/PackingTutorial Practice.unity
+- path: Assets/Scenes/ShakeTutorial.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
