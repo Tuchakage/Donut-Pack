@@ -15832,7 +15832,7 @@ IL_0166:
 
 IL_0171:
 	{
-		// if (SceneManager.GetActiveScene().name == "Packing" || SceneManager.GetActiveScene().name == "PackingTutorial" || SceneManager.GetActiveScene().name == "Packing Practice" || SceneManager.GetActiveScene().name == "PackingTutorial Practice")
+		// if (SceneManager.GetActiveScene().name == "PackingTutorial" || SceneManager.GetActiveScene().name == "Packing" || SceneManager.GetActiveScene().name == "Packing Practice" || SceneManager.GetActiveScene().name == "PackingTutorial Practice")
 		IL2CPP_RUNTIME_CLASS_INIT(SceneManager_tEC9D10ECC0377F8AE5AEEB5A789FFD24364440FA_il2cpp_TypeInfo_var);
 		Scene_t5495AD2FDC587DB2E94D9BDE2B85868BFB9A92EE  L_39;
 		L_39 = SceneManager_GetActiveScene_mB9A5037FFB576B2432D0BFEF6A161B7C4C1921A4(/*hidden argument*/NULL);
@@ -15840,7 +15840,7 @@ IL_0171:
 		String_t* L_40;
 		L_40 = Scene_get_name_m38F195D7CA6417FED310C23E4D8E86150C7835B8((Scene_t5495AD2FDC587DB2E94D9BDE2B85868BFB9A92EE *)(&V_0), /*hidden argument*/NULL);
 		bool L_41;
-		L_41 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_40, _stringLiteral8A34509A14CB9C8EF38DB42A3B1E122E7D23C61B, /*hidden argument*/NULL);
+		L_41 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_40, _stringLiteral0D2219AE8BB37A399C8B5AED5E0E23D9E3574B36, /*hidden argument*/NULL);
 		if (L_41)
 		{
 			goto IL_01d5;
@@ -15854,7 +15854,7 @@ IL_0171:
 		String_t* L_43;
 		L_43 = Scene_get_name_m38F195D7CA6417FED310C23E4D8E86150C7835B8((Scene_t5495AD2FDC587DB2E94D9BDE2B85868BFB9A92EE *)(&V_0), /*hidden argument*/NULL);
 		bool L_44;
-		L_44 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_43, _stringLiteral0D2219AE8BB37A399C8B5AED5E0E23D9E3574B36, /*hidden argument*/NULL);
+		L_44 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_43, _stringLiteral8A34509A14CB9C8EF38DB42A3B1E122E7D23C61B, /*hidden argument*/NULL);
 		if (L_44)
 		{
 			goto IL_01d5;
@@ -20427,126 +20427,139 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DonutManager_Start_mA85C83AEBEA9863EFF1C
 		__this->set_currentSceneName_5(L_2);
 		String_t* L_3 = V_1;
 		__this->set_currentSceneName_5(L_3);
-		// if (currentSceneName == "Packing" || currentSceneName == "Packing Practice")
+		// if (currentSceneName == "Packing")
 		String_t* L_4 = __this->get_currentSceneName_5();
 		bool L_5;
 		L_5 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_4, _stringLiteral8A34509A14CB9C8EF38DB42A3B1E122E7D23C61B, /*hidden argument*/NULL);
-		if (L_5)
+		if (!L_5)
 		{
-			goto IL_0040;
+			goto IL_009f;
 		}
 	}
-	{
-		String_t* L_6 = __this->get_currentSceneName_5();
-		bool L_7;
-		L_7 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_6, _stringLiteralA94BAADE37386E0469FF64B8CA7C5BEBA26780EA, /*hidden argument*/NULL);
-		if (!L_7)
-		{
-			goto IL_00a5;
-		}
-	}
-
-IL_0040:
 	{
 		// Donut = GameObject.FindGameObjectWithTag("Donut");
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_8;
-		L_8 = GameObject_FindGameObjectWithTag_mFC215979EDFED361F88C336BF9E187F24434C63F(_stringLiteralB5D21B626383BA892001F5D71C255684C1F96088, /*hidden argument*/NULL);
-		__this->set_Donut_6(L_8);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_6;
+		L_6 = GameObject_FindGameObjectWithTag_mFC215979EDFED361F88C336BF9E187F24434C63F(_stringLiteralB5D21B626383BA892001F5D71C255684C1F96088, /*hidden argument*/NULL);
+		__this->set_Donut_6(L_6);
+		// Donut.SetActive(true);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_7 = __this->get_Donut_6();
+		NullCheck(L_7);
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_7, (bool)1, /*hidden argument*/NULL);
 		// Donut.name = "Pretend DonutPrefab(Used To Spawn in multiple of this Donut";
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_8 = __this->get_Donut_6();
+		NullCheck(L_8);
+		Object_set_name_m87C4006618ADB325ABE5439DF159E10DD8DD0781(L_8, _stringLiteral524F0C9C0DD1570327557EA7D139606503C2F459, /*hidden argument*/NULL);
+		// Donut.transform.position = new Vector2(1000, 1000);
 		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_9 = __this->get_Donut_6();
 		NullCheck(L_9);
-		Object_set_name_m87C4006618ADB325ABE5439DF159E10DD8DD0781(L_9, _stringLiteral524F0C9C0DD1570327557EA7D139606503C2F459, /*hidden argument*/NULL);
-		// Donut.transform.position = new Vector2(1000, 1000);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_10 = __this->get_Donut_6();
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_10;
+		L_10 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_9, /*hidden argument*/NULL);
+		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_11;
+		memset((&L_11), 0, sizeof(L_11));
+		Vector2__ctor_m9F1F2D5EB5D1FF7091BB527AC8A72CBB309D115E_inline((&L_11), (1000.0f), (1000.0f), /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_12;
+		L_12 = Vector2_op_Implicit_m4FA146E613DBFE6C1C4B0E9B461D622E6F2FC294_inline(L_11, /*hidden argument*/NULL);
 		NullCheck(L_10);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_11;
-		L_11 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_10, /*hidden argument*/NULL);
-		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_12;
-		memset((&L_12), 0, sizeof(L_12));
-		Vector2__ctor_m9F1F2D5EB5D1FF7091BB527AC8A72CBB309D115E_inline((&L_12), (1000.0f), (1000.0f), /*hidden argument*/NULL);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_13;
-		L_13 = Vector2_op_Implicit_m4FA146E613DBFE6C1C4B0E9B461D622E6F2FC294_inline(L_12, /*hidden argument*/NULL);
-		NullCheck(L_11);
-		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_11, L_13, /*hidden argument*/NULL);
+		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_10, L_12, /*hidden argument*/NULL);
 		// SpawnDonuts ds = GameObject.Find("DonutSpawner").GetComponent<SpawnDonuts>();
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_14;
-		L_14 = GameObject_Find_m20157C941F1A9DA0E33E0ACA1324FAA41C2B199B(_stringLiteralD811108BD3F7D718846A5D3D6D91BF046D9B32FA, /*hidden argument*/NULL);
-		NullCheck(L_14);
-		SpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB * L_15;
-		L_15 = GameObject_GetComponent_TisSpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB_m1DFE6C65D44802541DFDFB01EF1984DDA47437C8(L_14, /*hidden argument*/GameObject_GetComponent_TisSpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB_m1DFE6C65D44802541DFDFB01EF1984DDA47437C8_RuntimeMethod_var);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_13;
+		L_13 = GameObject_Find_m20157C941F1A9DA0E33E0ACA1324FAA41C2B199B(_stringLiteralD811108BD3F7D718846A5D3D6D91BF046D9B32FA, /*hidden argument*/NULL);
+		NullCheck(L_13);
+		SpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB * L_14;
+		L_14 = GameObject_GetComponent_TisSpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB_m1DFE6C65D44802541DFDFB01EF1984DDA47437C8(L_13, /*hidden argument*/GameObject_GetComponent_TisSpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB_m1DFE6C65D44802541DFDFB01EF1984DDA47437C8_RuntimeMethod_var);
 		// ds.NextDonut = Donut;
-		SpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB * L_16 = L_15;
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_17 = __this->get_Donut_6();
-		NullCheck(L_16);
-		L_16->set_NextDonut_4(L_17);
+		SpawnDonuts_tD4E359AC8A9AC822A5194532EC2D6DD89AFB10BB * L_15 = L_14;
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_16 = __this->get_Donut_6();
+		NullCheck(L_15);
+		L_15->set_NextDonut_4(L_16);
 		// ds.SpawnDonut();
-		NullCheck(L_16);
-		SpawnDonuts_SpawnDonut_m05A504AA6E5CDD094C7E1239B0739680CFAE75C5(L_16, /*hidden argument*/NULL);
+		NullCheck(L_15);
+		SpawnDonuts_SpawnDonut_m05A504AA6E5CDD094C7E1239B0739680CFAE75C5(L_15, /*hidden argument*/NULL);
 		// }
 		return;
 	}
 
-IL_00a5:
+IL_009f:
+	{
+		// else if (currentSceneName == "Packing Practice")
+		String_t* L_17 = __this->get_currentSceneName_5();
+		bool L_18;
+		L_18 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_17, _stringLiteralA94BAADE37386E0469FF64B8CA7C5BEBA26780EA, /*hidden argument*/NULL);
+		if (!L_18)
+		{
+			goto IL_00be;
+		}
+	}
+	{
+		// Donut.SetActive(false);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_19 = __this->get_Donut_6();
+		NullCheck(L_19);
+		GameObject_SetActive_mCF1EEF2A314F3AE85DA581FF52EB06ACEF2FFF86(L_19, (bool)0, /*hidden argument*/NULL);
+		// }
+		return;
+	}
+
+IL_00be:
 	{
 		// else if (currentSceneName == "DonutShowcase" || currentSceneName == "DonutShowcase Practice")
-		String_t* L_18 = __this->get_currentSceneName_5();
-		bool L_19;
-		L_19 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_18, _stringLiteral19D343DF8BF563254F4406F0725BCB7D76D55392, /*hidden argument*/NULL);
-		if (L_19)
-		{
-			goto IL_00c9;
-		}
-	}
-	{
 		String_t* L_20 = __this->get_currentSceneName_5();
 		bool L_21;
-		L_21 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_20, _stringLiteral8D5B4D40868F13E2E1D92C93DB88F13141EFB3AE, /*hidden argument*/NULL);
-		if (!L_21)
+		L_21 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_20, _stringLiteral19D343DF8BF563254F4406F0725BCB7D76D55392, /*hidden argument*/NULL);
+		if (L_21)
 		{
-			goto IL_0145;
+			goto IL_00e2;
+		}
+	}
+	{
+		String_t* L_22 = __this->get_currentSceneName_5();
+		bool L_23;
+		L_23 = String_op_Equality_m2B91EE68355F142F67095973D32EB5828B7B73CB(L_22, _stringLiteral8D5B4D40868F13E2E1D92C93DB88F13141EFB3AE, /*hidden argument*/NULL);
+		if (!L_23)
+		{
+			goto IL_015e;
 		}
 	}
 
-IL_00c9:
+IL_00e2:
 	{
 		// Donut = GameObject.FindGameObjectWithTag("Donut");
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_22;
-		L_22 = GameObject_FindGameObjectWithTag_mFC215979EDFED361F88C336BF9E187F24434C63F(_stringLiteralB5D21B626383BA892001F5D71C255684C1F96088, /*hidden argument*/NULL);
-		__this->set_Donut_6(L_22);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_24;
+		L_24 = GameObject_FindGameObjectWithTag_mFC215979EDFED361F88C336BF9E187F24434C63F(_stringLiteralB5D21B626383BA892001F5D71C255684C1F96088, /*hidden argument*/NULL);
+		__this->set_Donut_6(L_24);
 		// Donut.transform.localScale = new Vector3(0.138480365f, 0.169003621f, 1.25095189f);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_23 = __this->get_Donut_6();
-		NullCheck(L_23);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_24;
-		L_24 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_23, /*hidden argument*/NULL);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_25;
-		memset((&L_25), 0, sizeof(L_25));
-		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_25), (0.138480365f), (0.169003621f), (1.25095189f), /*hidden argument*/NULL);
-		NullCheck(L_24);
-		Transform_set_localScale_mF4D1611E48D1BA7566A1E166DC2DACF3ADD8BA3A(L_24, L_25, /*hidden argument*/NULL);
-		// Donut.transform.rotation = Quaternion.Euler(0, 0, 0);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_26 = __this->get_Donut_6();
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_25 = __this->get_Donut_6();
+		NullCheck(L_25);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_26;
+		L_26 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_25, /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_27;
+		memset((&L_27), 0, sizeof(L_27));
+		Vector3__ctor_m57495F692C6CE1CEF278CAD9A98221165D37E636_inline((&L_27), (0.138480365f), (0.169003621f), (1.25095189f), /*hidden argument*/NULL);
 		NullCheck(L_26);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_27;
-		L_27 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_26, /*hidden argument*/NULL);
-		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_28;
-		L_28 = Quaternion_Euler_m37BF99FFFA09F4B3F83DC066641B82C59B19A9C3((0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
-		NullCheck(L_27);
-		Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4(L_27, L_28, /*hidden argument*/NULL);
-		// Donut.transform.position = new Vector2(0.13f, 1.3f);
-		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_29 = __this->get_Donut_6();
+		Transform_set_localScale_mF4D1611E48D1BA7566A1E166DC2DACF3ADD8BA3A(L_26, L_27, /*hidden argument*/NULL);
+		// Donut.transform.rotation = Quaternion.Euler(0, 0, 0);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_28 = __this->get_Donut_6();
+		NullCheck(L_28);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_29;
+		L_29 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_28, /*hidden argument*/NULL);
+		Quaternion_t6D28618CF65156D4A0AD747370DDFD0C514A31B4  L_30;
+		L_30 = Quaternion_Euler_m37BF99FFFA09F4B3F83DC066641B82C59B19A9C3((0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
 		NullCheck(L_29);
-		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_30;
-		L_30 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_29, /*hidden argument*/NULL);
-		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_31;
-		memset((&L_31), 0, sizeof(L_31));
-		Vector2__ctor_m9F1F2D5EB5D1FF7091BB527AC8A72CBB309D115E_inline((&L_31), (0.129999995f), (1.29999995f), /*hidden argument*/NULL);
-		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_32;
-		L_32 = Vector2_op_Implicit_m4FA146E613DBFE6C1C4B0E9B461D622E6F2FC294_inline(L_31, /*hidden argument*/NULL);
-		NullCheck(L_30);
-		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_30, L_32, /*hidden argument*/NULL);
+		Transform_set_rotation_m1B5F3D4CE984AB31254615C9C71B0E54978583B4(L_29, L_30, /*hidden argument*/NULL);
+		// Donut.transform.position = new Vector2(0.13f, 1.3f);
+		GameObject_tC000A2E1A7CF1E10FD7BA08863287C072207C319 * L_31 = __this->get_Donut_6();
+		NullCheck(L_31);
+		Transform_tA8193BB29D4D2C7EC04918F3ED1816345186C3F1 * L_32;
+		L_32 = GameObject_get_transform_m16A80BB92B6C8C5AB696E447014D45EDF1E4DE34(L_31, /*hidden argument*/NULL);
+		Vector2_tBB32F2736AEC229A7BFBCE18197EC0F6AC7EC2D9  L_33;
+		memset((&L_33), 0, sizeof(L_33));
+		Vector2__ctor_m9F1F2D5EB5D1FF7091BB527AC8A72CBB309D115E_inline((&L_33), (0.129999995f), (1.29999995f), /*hidden argument*/NULL);
+		Vector3_t65B972D6A585A0A5B63153CF1177A90D3C90D65E  L_34;
+		L_34 = Vector2_op_Implicit_m4FA146E613DBFE6C1C4B0E9B461D622E6F2FC294_inline(L_33, /*hidden argument*/NULL);
+		NullCheck(L_32);
+		Transform_set_position_mB169E52D57EEAC1E3F22C5395968714E4F00AC91(L_32, L_34, /*hidden argument*/NULL);
 	}
 
-IL_0145:
+IL_015e:
 	{
 		// }
 		return;
