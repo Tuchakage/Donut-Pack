@@ -550,19 +550,25 @@ extern void RatingManager_SetFinalRating_m0221CDB3A8584A5946F1886C7AB5969BD8612D
 extern void RatingManager__ctor_mF31BFB04788FF8C95B4A576D0A56F22DBF00AE0F (void);
 // 0x0000010D System.Void RatingManager::.cctor()
 extern void RatingManager__cctor_m751022410DDD40AB8FCE2A810B1C1FCFB16B0D46 (void);
-// 0x0000010E System.Void Test::Start()
+// 0x0000010E System.Void VideoManager::PlayVideo()
+extern void VideoManager_PlayVideo_m25A5AA9D152768277925A6BE942EC00FAF1DEB2C (void);
+// 0x0000010F System.Void VideoManager::StopVideo()
+extern void VideoManager_StopVideo_m4B761623655258BBBCE5694054073953DFC5D0B9 (void);
+// 0x00000110 System.Void VideoManager::.ctor()
+extern void VideoManager__ctor_mB5D382779E7296662E64C9945FEC6BEA0B30E749 (void);
+// 0x00000111 System.Void Test::Start()
 extern void Test_Start_m4D6FA0B24EBFD6471F4596A93EC95EC1EB5355D8 (void);
-// 0x0000010F System.Void Test::Update()
+// 0x00000112 System.Void Test::Update()
 extern void Test_Update_m85FFE4CC559D42AAFA74D4DEAE19415052BB70D0 (void);
-// 0x00000110 System.Void Test::.ctor()
+// 0x00000113 System.Void Test::.ctor()
 extern void Test__ctor_m1C2B5E11A339FD79C0C458FB86723E5F2B74545C (void);
-// 0x00000111 System.Void RollaBall.RockSpawner::Start()
+// 0x00000114 System.Void RollaBall.RockSpawner::Start()
 extern void RockSpawner_Start_mD23984F14FD40C62CFF6577D6C9AA34711964637 (void);
-// 0x00000112 System.Void RollaBall.RockSpawner::SpawnObstaclesRandom()
+// 0x00000115 System.Void RollaBall.RockSpawner::SpawnObstaclesRandom()
 extern void RockSpawner_SpawnObstaclesRandom_m277BFA4AA0616B4D76B07812992CFC9F90E3D3BC (void);
-// 0x00000113 System.Void RollaBall.RockSpawner::.ctor()
+// 0x00000116 System.Void RollaBall.RockSpawner::.ctor()
 extern void RockSpawner__ctor_m75A730BA6DD4EBF8A3A2E80E3622093143099E0A (void);
-static Il2CppMethodPointer s_methodPointers[275] = 
+static Il2CppMethodPointer s_methodPointers[278] = 
 {
 	DifficultySystem_SetMaxAmntItems_m0197DFA9A70422E25E8368F00461819FB8EC3A33,
 	DifficultySystem_SetConveyorSpeed_mEABBB078D97543D4E67916D1C6B3BA0950B77158,
@@ -833,6 +839,9 @@ static Il2CppMethodPointer s_methodPointers[275] =
 	RatingManager_SetFinalRating_m0221CDB3A8584A5946F1886C7AB5969BD8612D19,
 	RatingManager__ctor_mF31BFB04788FF8C95B4A576D0A56F22DBF00AE0F,
 	RatingManager__cctor_m751022410DDD40AB8FCE2A810B1C1FCFB16B0D46,
+	VideoManager_PlayVideo_m25A5AA9D152768277925A6BE942EC00FAF1DEB2C,
+	VideoManager_StopVideo_m4B761623655258BBBCE5694054073953DFC5D0B9,
+	VideoManager__ctor_mB5D382779E7296662E64C9945FEC6BEA0B30E749,
 	Test_Start_m4D6FA0B24EBFD6471F4596A93EC95EC1EB5355D8,
 	Test_Update_m85FFE4CC559D42AAFA74D4DEAE19415052BB70D0,
 	Test__ctor_m1C2B5E11A339FD79C0C458FB86723E5F2B74545C,
@@ -840,7 +849,7 @@ static Il2CppMethodPointer s_methodPointers[275] =
 	RockSpawner_SpawnObstaclesRandom_m277BFA4AA0616B4D76B07812992CFC9F90E3D3BC,
 	RockSpawner__ctor_m75A730BA6DD4EBF8A3A2E80E3622093143099E0A,
 };
-static const int32_t s_InvokerIndices[275] = 
+static const int32_t s_InvokerIndices[278] = 
 {
 	1405,
 	1437,
@@ -1117,13 +1126,16 @@ static const int32_t s_InvokerIndices[275] =
 	1740,
 	1740,
 	1740,
+	1740,
+	1740,
+	1740,
 };
 extern const CustomAttributesCacheGenerator g_AssemblyU2DCSharp_AttributeGenerators[];
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	275,
+	278,
 	s_methodPointers,
 	0,
 	NULL,

@@ -13,7 +13,7 @@ public class DonutManager : MonoBehaviour
     private void Start()
     {
         currentSceneName = currentSceneName = SceneManager.GetActiveScene().name;
-        if (currentSceneName == "Packing")
+        if (currentSceneName == "Packing" || currentSceneName == "Packing Practice")
         {
             //Find the Donut Object and save it
             Donut = GameObject.FindGameObjectWithTag("Donut");
@@ -25,10 +25,6 @@ public class DonutManager : MonoBehaviour
             ds.NextDonut = Donut;
             //Spawn in another Donut
             ds.SpawnDonut();
-        }
-        else if (currentSceneName == "Packing Practice")
-        {
-            Donut.SetActive(false);
         }
         else if (currentSceneName == "DonutShowcase" || currentSceneName == "DonutShowcase Practice") 
         {
