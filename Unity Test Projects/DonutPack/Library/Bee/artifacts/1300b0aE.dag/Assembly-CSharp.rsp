@@ -379,6 +379,7 @@
 "Assets/Scripts/_Managers/DonutManager.cs"
 "Assets/Scripts/_Managers/GameManager.cs"
 "Assets/Scripts/_Managers/RatingManager.cs"
+"Assets/Scripts/_Managers/VideoManager.cs"
 "Assets/Test.cs"
 -langversion:8.0
 
